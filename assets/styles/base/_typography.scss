@@ -1,0 +1,55 @@
+@import "typeplate-starter-kit/scss/typeplate";
+@import "typeface";
+
+h1, h2, h3, h4, h5 {
+    text-shadow: 0 1px 1px #4d4d4d;
+}
+
+h1, h2, h3, h4, body > header .typl8-beta {
+    @extend %zelda;
+    line-height: 1.2;
+}
+
+h1 small,
+body > header small {
+    display: block;
+}
+
+h5 {
+    font-style: italic;
+}
+
+h6 {
+    font-variant: small-caps;
+    color: $red;
+    font-size: inherit;
+    float: left;
+    margin-right:4px;
+    margin-right: .22rem;
+    line-height: inherit;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+
+
+html.fonts-loaded {
+    font-family: Linux Libertine, Georgia, serif;
+}
+
+.character-quote {
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+// Quotes
+blockquote {
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+.tagline {
+    font-style: italic;
+    font-weight: bold;
+    padding: 0;
+}

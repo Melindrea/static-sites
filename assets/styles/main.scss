@@ -1,0 +1,253 @@
+html * {
+    box-sizing: border-box;
+}
+
+@import "colours";
+@import "variables";
+@import "system/mixins";
+@import "system/functions";
+@import "system/anonymous-styles";
+
+@import "base/typography";
+@import "base/layout";
+@import "base/images";
+@import "base/list";
+@import "base/links";
+
+@import "navigation";
+
+.clearfix {
+    @extend %clearfix;
+}
+
+.non-semantic-protector {
+    position: relative;
+    z-index: 1;
+    margin: -4rem -88px 0 -88px; /* 88 = 4*18 + 16 */
+}
+
+.ribbon {
+    text-align: center;
+    font-size: 16px !important;
+    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+    width: 100%;
+
+    position: relative;
+    background: #842c64; /* #ba89b6;*/
+    padding: 1.5em 2em; /* Adjust to suit */
+    margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -1em;
+        /*border: 1.5em solid #986794;*/
+        border: 1.5em solid #620a42;
+        z-index: -1;
+    }
+    &:before {
+        left: -2em;
+        border-right-width: 1.5em;
+        border-left-color: transparent;
+    }
+    &:after {
+        right: -2em;
+        border-left-width: 1.5em;
+        border-right-color: transparent;
+    }
+
+    .ribbon-content {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            border-style: solid;
+            border-color: #4a002a transparent transparent transparent;
+            bottom: -1em;
+        }
+
+        &:before {
+            left: 0;
+            border-width: 1em 0 0 1em;
+        }
+        &:after {
+            right: 0;
+            border-width: 1em 1em 0 0;
+        }
+    }
+}
+
+html {
+    text-shadow: rgba(255, 255, 255, .4) 0 1px 0;
+    color: $red;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/$red+0,1f0000+100 */
+    background: rgb(100,0,0); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(100,0,0,1) 0%, rgba(31,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(100,0,0,1)), color-stop(100%,rgba(31,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(100,0,0,1) 0%,rgba(31,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(100,0,0,1) 0%,rgba(31,0,0,1) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(100,0,0,1) 0%,rgba(31,0,0,1) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(100,0,0,1) 0%,rgba(31,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$red', endColorstr='#1f0000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    background-attachment: fixed;
+}
+
+
+body > footer {
+      font-size: 0.7rem;
+      text-align: center;
+      padding: 0.5rem;
+
+    ul {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      color: $brown-medium-light;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    li:after {
+      content: '/';
+      padding-left: 2px;
+    }
+
+    li:last-child:after {
+      content: '';
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+
+        &:link,
+        &:visited {
+          color: $brown-medium-light;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+          text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+          color: $brown-light;
+        }
+    }
+
+}
+
+body, html {
+  margin: 0;
+}
+
+body > header {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: $red;
+
+    .logo {
+        opacity: 0.9;
+
+        img {
+          max-width: 300px;
+        }
+    }
+}
+
+main {
+    background: url('/assets/images/parchment.jpg');
+    padding: 4rem;
+
+    border: 1px solid $red;
+    border-radius: 0 0 120px 120px / 0 0 6px 6px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 15px;
+      left: 10px;
+      width: 50%;
+      height: 20%;
+      max-width: 300px;
+      box-shadow :0 15px 10px rgba(0, 0, 0, 0.7);
+      transform: rotate(-3deg);
+    }
+
+    &:after{
+      right: 10px;
+      left: auto;
+      transform: rotate(3deg);
+    }
+}
+
+
+.intro {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+code,
+kbd,
+pre,
+samp {
+    font-family: Source Code Pro, Courier, monospace;
+}
+
+ul {
+    list-style: square;
+}
+
+ul ul {
+    list-style: disc;
+}
+
+ul ul ul {
+    list-style: circle;
+}
+ol {
+    list-style: upper-roman;
+}
+
+ol ol {
+    list-style: decimal;
+}
+
+ol ol ol {
+    list-style: lower-alpha;
+}
+
+abbr {
+     color: $red-light;
+}
+
+mark,
+::selection {
+    background: $purple;
+    color: $purple-light;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: $purple;
+    color: $purple-light;
+    text-shadow: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.portrait {
+    display: block;
+    margin: 0 auto;
+}
+

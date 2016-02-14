@@ -1,0 +1,56 @@
+%inner-container {
+    @include inner-container;
+}
+
+%container {
+    @include container;
+}
+
+%clearfix {
+    @include clearfix;
+}
+
+
+%reset-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+%inline-list {
+    @extend %reset-list;
+    li {
+        display: inline-block;
+    }
+}
+
+%ornamented-list {
+    @extend %inline-list;
+    li {
+        &:after,
+        &:first-child:before {
+            content: "\b7";
+            font-weight: bold;
+        }
+
+        &:after {
+            padding-left: 2px;
+        }
+
+        &:before {
+            padding-right: 2px;
+        }
+    }
+}
+
+%nav-anchor {
+    text-decoration: none;
+    display: inline-block;
+}
+
+%zelda {
+    .fonts-loaded & {
+        font-family: Zelda, Linux Libertine;
+        font-weight: normal;
+    }
+}

@@ -1,0 +1,44 @@
+#content a {
+    position: relative;
+    color: $green-medium-light;
+    text-decoration: none;
+
+    &::before,
+    &::after {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: #3f0000; /*colour of the underlines*/
+        content: '';
+        transition: transform 0.3s;
+        transform: scale(0.85);
+    }
+
+    &::after {
+        opacity: 0;
+        transition: top 0.3s, opacity 0.3s, transform 0.3s;
+    }
+
+    &:hover::before,
+    &:hover::after,
+    &:focus::before,
+    &:focus::after {
+        transform: scale(1);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        top: 0%;
+        opacity: 1;
+    }
+
+    &:visited {
+        color: #030;
+    }
+
+    &:active {
+        color: $green-light;
+    }
+}

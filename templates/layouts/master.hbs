@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>{{ siteTitle title }}</title>
+
+    <!-- build:css /assets/styles/main.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="/node_modules/normalize-opentype.css/normalize-opentype.css" />
+    <!-- endbower -->
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js /assets/scripts/head.js -->
+    <script src="/assets/scripts/modernizr.js"></script>
+    <!-- endbuild -->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body>
+{{> gtm }}
+    <header>
+      <a href="/" class="logo"><img src="/assets/images/logo-original.png" alt="Antonius M. Hogebrandt logo"></a><div class="typl8-beta">Antonius M. Hogebrandt <small>Author—Dreamer</small>
+       </div>
+      </header>
+<main>
+<div class="non-semantic-protector">
+<div class="ribbon">
+    <nav class="ribbon-content">
+          {{ navItems "root" }}
+            <div id="current">Current page / Main content</div>
+    </nav>
+    </div>
+</div>
+  <div id="content">
+    {% body %}
+      </div><!-- content -->
+    </main>
+<footer>
+    <ul>
+        <li><a href="#content">Top</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+    <ul>
+        <li><a href="/privacy-cookies">Privacy &amp; cookies</a></li>
+        <li><a href="/colophone">Colophone</a></li>
+        <li><a href="https://antoniusm.com">Copyright © 2016</a></li>
+    </ul>
+    <ul>
+        <li>Last updated {{ lastUpdated }}</li>
+    </ul>
+</footer>
+
+    <!-- smoosh -->
+    <script src="/node_modules/fontfaceobserver/fontfaceobserver.js"></script>
+    <script src="/assets/scripts/fontLoader.js"></script>
+    <!-- endsmoosh -->
+    <!-- build:js /assets/scripts/foot.js -->
+    <!-- bower:js -->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <!-- endbower -->
+    <script src="/assets/scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+  </html>

@@ -1,0 +1,14 @@
+---
+title: Thoughts &amp; Ramblings
+layout: master
+---
+
+<h1>Enjoy my musings</h1>
+
+{{#posts}}
+<ul>
+  {{#each items}}
+    <li><a href="{{link-to key "posts"}}">{{data.title}}</a></li>
+  {{/each}}
+</ul>
+{{/posts}}

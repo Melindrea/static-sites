@@ -1,0 +1,42 @@
+nav {
+
+    ul {
+        @extend %inline-list;
+        font-size: 1rem;
+        font-size: $typl8-font-size px;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        color: $green-medium-dark;  /* link colour */
+        text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
+        text-decoration: none;
+        letter-spacing: 1px;
+        margin: 0 .1rem;
+        padding: .5rem;
+        font-weight: bold;
+
+        &:visited {
+          color: $green-medium-dark;
+        }
+
+        &:active,
+        &:hover,
+        &:focus {
+            color: $green-medium-light;
+            text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+
+        }
+
+        &[aria-describedby=current] {
+          color: $green-dark;
+        }
+    }
+}
+
+#current {
+    display: none;
+}

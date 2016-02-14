@@ -1,0 +1,23 @@
+{
+  "name": "antoniusm.se",
+  "description": "Author site for Antonius M. Hogebrandt",
+  "main": "",
+  "authors": [
+    "Marie Hogebrandt <iam@mariehogebrandt.se>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "https://antoniusm.se",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dev-dependencies": {},
+  "devDependencies": {
+    "typeplate-starter-kit": "^2.1.0"
+  }
+}

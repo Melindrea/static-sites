@@ -1,0 +1,18 @@
+---
+layout: sidebar
+---
+<article class="status-publish format-standard hentry">
+    <header>
+        <h1 class="entry-title">{{ pageTitle }}</h1>
+    </header>
+    <div class="entry-content">
+{{#markdown}}
+{% body %}
+{{/markdown}}
+    </div>
+    <footer class="entry-footer">
+        <div class="entry-meta">
+            Posted <time datetime="{{ moment posted format="YYYY-MM-DDTHH:mm:ssZ"}}">{{ moment posted 'YYYY-MM-DD' }}</time>
+        </div>
+    </footer>
+</article>

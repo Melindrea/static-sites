@@ -1,0 +1,25 @@
+title: AntoniusM.se
+titleSeparator: "/"
+copyright: "2016 Antonius M. Hogebrandt"
+language: en
+publishedDate: "February 2, 2016 15:00:00 GMT"
+
+navigation:
+    index:
+        path: /
+        item: Home
+    contact:
+        path: /contact
+        item: Contact
+    works:
+        path: /works
+        item: Works
+    press:
+        path: /press
+        item: Press
+    now:
+        path: /now
+        item: Now
+    blog:
+        path: /blog
+        item: Blog
