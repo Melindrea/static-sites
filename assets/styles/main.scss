@@ -242,12 +242,15 @@ mark,
     text-shadow: none;
 }
 
-img {
-    max-width: 100%;
+.entry-footer {
+  border-top: 2px solid $red;
+}
+.entry-meta {
+  font-style: italic;
+  font-size: 85%;
 }
 
-.portrait {
-    display: block;
-    margin: 0 auto;
+article header {
+    margin-right: -2rem;
+    margin-left: -2rem;
 }
-

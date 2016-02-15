@@ -149,6 +149,11 @@
   main {
     margin: 0 16.666666666666664%;
   }
+
+    main p {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
 }
 /* @media screen and (min-width: 1200px) */
 @media screen and (min-width: 75em) {
@@ -166,9 +171,10 @@
     font-size: 1em;
   }
 
-  main {
-    margin: 0 27.77777777777778%;
-  }
+    main p {
+        padding-right: 4rem;
+        padding-left: 4rem;
+    }
 }
 /* @media screen and (min-width: 1680px) */
 @media screen and (min-width: 105em) {

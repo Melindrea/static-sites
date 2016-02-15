@@ -3,6 +3,20 @@ title: Why write?
 pageTitle: Why? What? Why?
 layout: post
 posted: 2016-02-14 21:00:03
+article: true
+metaType: article
+excerpt: Why and what do I write? A brief runthrough of the threads forming my literary tapestry, and what drives me to explore the themes and stories I do.
+category: Writing Process
+tags:
+    - writing
+    - personal
+featuredImage:
+    revSource: writing.f66bf846.jpg
+    src: writing.jpg
+    alt: Old books and a pen
+    copyright:
+        photographer: Joanna Kosinska
+        url: http://joannakosinska.com/
 ---
 
 When I asked what I should write this first post on AntoniusM.se about, I had several more-or-less useful answers. I will, in fact, hold onto the "Ode to beverages" until later, and while it might be interesting to put in some thoughts on where this will be in a year, I'll leave soothsaying to those less cynical than I am.

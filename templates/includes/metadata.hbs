@@ -1,0 +1,46 @@
+<title>{{ siteTitle title }}</title>
+<link rel="canonical" href="{{ canonical }}">
+{{#if excerpt}}
+    <meta name="description" content="{{ excerpt }}"{{#if hasFeed}} class="p-summary"{{/if}}>
+{{/if}}
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="{{ title }}">
+{{#if excerpt}}
+    <meta itemprop="description" content="{{ excerpt }}">
+{{/if}}
+
+{{#if featuredImage }}
+    <meta itemprop="image" content="{{ pkg.homepage }}/assets/image/gallery/{{ featuredImage.revSrc }}">
+{{/if}}
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+{{#if excerpt}}
+    <meta name="twitter:description" content="{{ excerpt }}">
+{{/if}}
+<meta name="twitter:creator" content="@melindrea">
+{{#if featuredImage }}
+    <!-- Twitter summary card with large image must be at least 280x150px -->
+    <meta name="twitter:image:src" content="{{ pkg.homepage }}/assets/image/gallery/{{ featuredImage.revSrc }}">
+{{/if}}
+<!-- Open Graph data -->
+<meta property="og:title" content="{{ title }}">
+<meta property="og:type" content="{{ metaType }}">
+<meta property="og:url" content="{{ canonical }}">
+{{#if featuredImage}}
+    <meta property="og:image" content="{{ pkg.homepage }}/assets/image/gallery/{{ featuredImage.revSrc }}">
+{{/if}}
+
+{{#if excerpt}}
+    <meta property="og:description" content="{{ excerpt }}">
+{{/if}}
+<meta property="og:site_name" content="AntoniusM.se">
+
+{{#if article}}
+    <meta property="article:published_time" content="{{ moment posted format="YYYY-MM-DDTHH:mm:ssZ" }}">
+    <meta property="article:modified_time" content="{{ moment lastUpdated format="YYYY-MM-DDTHH:mm:ssZ" }}">
+    <meta property="article:section" content="{{ category }}">
+    <meta property="article:tag" content="{{ tags }}">
+{{/if}}

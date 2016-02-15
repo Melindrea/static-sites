@@ -42,7 +42,8 @@ siteData.base = buildDir;
 
 app.data({
   site: siteData,
-  gtm: config.gtm
+  gtm: config.gtm,
+  pkg: config.pkg
 });
 
 /**
@@ -152,13 +153,14 @@ app.task('robots', function () {
             useragent: '*',
             sitemap: 'https://antoniusm.se/sitemap.xml'
         }))
-        .pipe(app.dest('build/robots.txt'));
+        .pipe(app.dest('build'));
 });
 
 app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'images', 'styles', 'well-known']);
 
 app.task('images', function () {
-    return app.src('assets/images/**/*')
+    return app.src('assets/images/**/**.{jpg,png}')
+    // return app.src('assets/images/gallery/writing.jpg')
         .pipe(gp.cache(gp.imagemin({
             progressive: true,
             interlaced: true,
@@ -226,7 +228,9 @@ app.task('cache-busting', function () {
 
     return app.src(buildDir + '/**')
         .pipe(revAll.revision())
-        .pipe(app.dest(deployDir));
+        .pipe(app.dest(deployDir))
+        .pipe(revAll.manifestFile())
+        .pipe(app.dest(buildDir));
 });
 
 app.task('default', ['jshint', 'build', 'assets', 'modernizr', 'useref'], function () {

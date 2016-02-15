@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-  <head>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/WebSite"> <!--<![endif]-->
+  <head {{#if hasFeed}} class="h-feed"{{/if}}>
     <meta charset="utf-8">
-    <title>{{ siteTitle title }}</title>
+    {{> metadata }}
 
     <!-- build:css /assets/styles/main.css -->
     <!-- bower:css -->
@@ -17,25 +17,10 @@
 
     <!-- build:js /assets/scripts/head.js -->
     <script src="/assets/scripts/modernizr.js"></script>
+    <script src="/node_modules/picturefill/dist/picturefill.js"></script>
     <!-- endbuild -->
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    {{> favicons }}
   </head>
 
   <body>
@@ -53,7 +38,7 @@
     </nav>
     </div>
 </div>
-  <div id="content">
+  <div id="content" itemscope itemtype="http://schema.org/Article">
     {% body %}
       </div><!-- content -->
     </main>
@@ -68,7 +53,7 @@
         <li><a href="https://antoniusm.com">Copyright © 2016</a></li>
     </ul>
     <ul>
-        <li>Last updated {{ lastUpdated }}</li>
+        <li>{{> lastUpdated }}</li>
     </ul>
 </footer>
 
