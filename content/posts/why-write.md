@@ -11,7 +11,7 @@ tags:
     - writing
     - personal
 featuredImage:
-    revSource: writing.f66bf846.jpg
+    revSrc: writing.f66bf846.jpg
     src: writing.jpg
     alt: Old books and a pen
     copyright:

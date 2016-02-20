@@ -1,0 +1,21 @@
+#!/bin/bash
+
+cd "$1"
+mkdir -p {thumbnails,1024w,640w,320w}
+
+echo 'Creating thumbnails'
+mogrify -path thumbnails -thumbnail 200x100^ -gravity center -extent 200x100 -auto-orient *.jpg
+
+echo 'Scaling to 1024 width'
+mogrify -path 1024w -resize 1024x\> -auto-orient *.jpg
+
+echo 'Scaling to 640 width'
+mogrify -path 640w -resize 640x\> -auto-orient *.jpg
+
+echo 'Scaling to 320 width'
+mogrify -path 320w -resize 320x\> -auto-orient *.jpg
+
+echo -e '\nFiles:'
+ls -R
+
+echo 'DONE'

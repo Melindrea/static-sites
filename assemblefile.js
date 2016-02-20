@@ -223,6 +223,14 @@ app.task('build', ['clean', 'load'], function () {
     }));
 });
 
+app.task('sitemap',function () {
+    return app.src('build/**/*.html')
+        .pipe(gp.sitemap({
+                siteUrl: config.pkg.homepage
+        })) // Returns sitemap.xml
+        .pipe(app.dest(buildDir));
+});
+
 app.task('cache-busting', function () {
     var revAll = new RevAll({ dontRenameFile: [/^\/favicon$/g, '.html', '.xml', '.txt'] });
 
@@ -233,9 +241,10 @@ app.task('cache-busting', function () {
         .pipe(app.dest(buildDir));
 });
 
-app.task('default', ['jshint', 'build', 'assets', 'modernizr', 'useref'], function () {
+app.task('default', ['jshint', 'build', 'assets', 'modernizr', 'useref', 'sitemap'], function () {
   return app.src(buildDir + '/**/*').pipe(gp.size({title: 'build', gzip: true}));
 });
+
 
 /**
  * Expose your instance of assemble to the CLI
