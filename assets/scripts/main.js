@@ -1,5 +1,6 @@
 // The following code sets up the galleries and individual thumbnail-scripts, unless the window-width < 500px
-$(document).ready(function() {
+
+$(function () {
     'use strict';
 
     var defaultValues = {
@@ -37,5 +38,15 @@ $(document).ready(function() {
                 }
             }
         ));
+    });
+
+    $('.js-pullquote').each(function () {
+        var $parentParagraph = $(this).parent('p');
+
+        $parentParagraph.css('position', 'relative');
+
+        $(this).clone()
+            .addClass('pullquote')
+            .prependTo($parentParagraph);
     });
 });

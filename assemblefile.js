@@ -175,7 +175,7 @@ app.task('styles', function () {
     return app.src('assets/styles/main.scss')
         .pipe(gp.sourcemaps.init())
         .pipe(gp.sass({
-                outputStyle: 'nested', // libsass doesn't support expanded yet
+                outputStyle: 'expanded',
                 precision: 10,
                 includePaths: ['.', './bower_components']
             }).on('error', gp.sass.logError)
@@ -206,7 +206,7 @@ app.task('modernizr', function () {
  * Build task
  */
 
-app.task('build', ['clean', 'load'], function () {
+app.task('build', ['load'], function () {
   return app.toStream('pages')
     .pipe(app.toStream('posts'))
     .on('error', console.log)

@@ -70,14 +70,7 @@
     "deployDir": "build/Release"
   },
   "scripts": {
-    "build": "assemble",
-    "postbuild": "node lib/html-validator.js && node lib/html-validator.js",
     "postinstall": "bower install && bundle install",
-    "predeploy": "export NODE_ENV=production; npm run build",
-    "deploy": "assemble cache-busting && ./bin/deploy",
-    "predrydeploy": "npm run predeploy",
-    "drydeploy": "assemble cache-busting",
-    "server": "cd build && python -m SimpleHTTPServer 9000",
-    "readme": "verb readme"
+    "server": "cd build && python -m SimpleHTTPServer 9000"
   }
 }
