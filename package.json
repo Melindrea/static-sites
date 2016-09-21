@@ -71,6 +71,7 @@
   },
   "scripts": {
     "postinstall": "bower install && bundle install",
-    "server": "cd build && python -m SimpleHTTPServer 9000"
+    "server": "cd build && python -m SimpleHTTPServer 9000",
+    "images": ""
   }
 }

@@ -23,10 +23,10 @@ pre-deploy:
 	@export NODE_ENV=production && make build
 	@assemble cache-busting
 
-deploy: pre-deploy
+deploy: pre-deploy ## Deploys the site
 	rsync -rltvzp --checksum --delete ~/projects/antoniusm.se/build/Release/* root@vps:/srv/web/antoniusm.se
 
-dry-deploy: pre-deploy
+dry-deploy: pre-deploy ## Does a dry eeploy of the site
 	rsync -rltvzp --dry-run --checksum --delete ~/projects/antoniusm.se/build/Release/* root@vps:/srv/web/antoniusm.se
 
 

@@ -1,0 +1,19 @@
+Adapted from http://www.mora-foto.it/en/tutorials-gimp/age-a-photo.html
+
+1. Crop to 1200x630 ratio
+2. Desaturate: Average
+3. Set foreground colour to `#dab383`
+4. New layer, use foreground colour
+5. With new layer: Opacity 40%, Mode Colour, Merge down
+6. Set contrast to -25
+7. Duplicate the working layer
+8. With duplicate layer: Gaussian blur, 20px
+9. With duplicate layer: Mode Overlay, Merge down
+10. Setup curve: Up at the top, down at the bottom
+11. New layer, use foreground colour
+12. With new layer: Opacity 40%, Mode Darken only, Merge down
+13. Scale to 1200x630px
+14. Open texture as layer
+15. With texture layer: Mode Overlay, Merge down
+16. Run `bin/process-images assets/raw/NAME_OF_FOLDER` in `antoniusm.se`
+17. `cp -R assets/raw/NAME_OF_FOLDER/* assets/images/gallery`
