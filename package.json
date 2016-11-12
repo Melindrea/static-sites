@@ -3,14 +3,13 @@
   "description": "Author site for Antonius M. Hogebrandt",
   "main": "",
   "authors": [
-    "Marie Hogebrandt <iam@mariehogebrandt.se>"
+    "Antonius Marie Hogebrandt <iam@mariehogebrandt.se>"
   ],
   "license": "MIT",
   "moduleType": [],
   "homepage": "https://antoniusm.se",
   "private": true,
   "devDependencies": {
-    "assemble": "^0.9.0",
     "assemble-permalinks": "^0.3.1",
     "browser-sync": "^2.11.1",
     "chalk": "^1.1.1",
@@ -41,9 +40,11 @@
     "gulp-smoosher": "0.0.9",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-tag-version": "^1.3.0",
+    "gulp-typeset": "0.0.2",
     "gulp-uglify": "^1.5.2",
     "gulp-useref": "^3.0.5",
     "handlebars": "^4.0.5",
+    "handlebars-helpers": "^0.7.5",
     "helper-link-to": "^0.1.2",
     "helper-markdown": "^0.2.1",
     "helper-moment": "^0.1.0",
@@ -55,12 +56,16 @@
     "magnific-popup": "^1.0.1",
     "main-bower-files": "^2.11.1",
     "mixin-deep": "^1.1.3",
+    "mkdirp": "^0.5.1",
     "moment": "^2.11.2",
     "normalize-opentype.css": "^0.2.4",
     "normalize.css": "^3.0.3",
     "picturefill": "^3.0.2",
+    "relative-dest": "^0.1.0",
+    "rss": "^1.2.1",
     "sprintf-js": "^1.0.3",
     "through2": "^2.0.1",
+    "typogr": "^0.6.6",
     "walk": "^2.3.9",
     "yamljs": "^0.2.4",
     "yargs": "^3.32.0"
@@ -70,8 +75,6 @@
     "deployDir": "build/Release"
   },
   "scripts": {
-    "postinstall": "bower install && bundle install",
-    "server": "cd build && python -m SimpleHTTPServer 9000",
-    "images": ""
+    "server": "cd build && python -m SimpleHTTPServer 9000"
   }
 }

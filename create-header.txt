@@ -15,5 +15,4 @@ Adapted from http://www.mora-foto.it/en/tutorials-gimp/age-a-photo.html
 13. Scale to 1200x630px
 14. Open texture as layer
 15. With texture layer: Mode Overlay, Merge down
-16. Run `bin/process-images assets/raw/NAME_OF_FOLDER` in `antoniusm.se`
-17. `cp -R assets/raw/NAME_OF_FOLDER/* assets/images/gallery`
+16. Run `make images folder=<foldername>` in `antoniusm.se`

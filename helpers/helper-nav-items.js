@@ -7,7 +7,7 @@ module.exports.navItems = function (level) {
         pageName = view.basename.split('.'),
         pageSlug = pageName[0],
         parentSlug = '', // [todo] - find
-        navigationConfig = this.options.site.navigation,
+        navigationConfig = this.site.navigation,
         nav = {}, navItems = [], heading = '', slug;
 
     if (level === 'root') {
@@ -19,6 +19,7 @@ module.exports.navItems = function (level) {
             heading = '<h2>' + navigationConfig[slug].item + '</h2>\n';
         }
     }
+
     // Visit non-inherited enumerable keys
     Object.keys(nav).forEach(function (key) {
         var isCurrentPage = (key === pageSlug),

@@ -2,10 +2,11 @@
 
 var path = require('path'),
     merge = require('mixin-deep'),
-    extname = require('gulp-extname'),
     permalinks = require('assemble-permalinks'),
     getDest = require('./plugins/get-dest'),
     viewEvents = require('./plugins/view-events'),
+    drafts = require('./plugins/drafts'),
+    rss = require('./plugins/rss'),
     git = require('gulp-git'),
     bump = require('gulp-bump'),
     robots = require('gulp-robots'),
@@ -18,6 +19,7 @@ var path = require('path'),
     RevAll = require('gulp-rev-all'),
     config = require('./config'),
     assemble = require('assemble'),
+    typogr = require('./plugins/typogr'),
     app = assemble();
 
 /**
@@ -61,10 +63,28 @@ app.create('posts', {
 
 app.posts.use(
     permalinks(
-        ':site.base/blog/:filename/index.html'
+        ':site.base/blog/:strip(filename)/index.html',
+        {
+            strip: function (filename) {
+                return filename.substring(4);
+            }
+        }
     )
 );
-app.pages.use(permalinks(':site.base/:filename/index.html'));
+app.pages.use(
+    permalinks(
+        ':site.base/:permalink(filename)',
+        {
+            permalink: function (filename) {
+                if (filename === 'index') {
+                    return 'index.html';
+                }
+
+                return filename + '/index.html';
+            }
+        }
+    )
+);
 
 /**
  * Register a handlebars helper for processing markdown.
@@ -79,6 +99,7 @@ app.helpers('helpers/*.js');
 app.helper('log', function (val) {
     console.log(val);
 });
+app.helpers(require('handlebars-helpers')());
 
 /**
  * Tasks for loading and rendering our templates
@@ -87,9 +108,7 @@ app.helper('log', function (val) {
 app.task('load', function (cb) {
     app.partials('templates/includes/*.hbs');
     app.layouts('templates/layouts/*.hbs');
-    app.page('content/pages/index.hbs')
-        .permalink(':site.base/index.html');
-    app.pages(['content/pages/**.hbs', '!content/pages/index.hbs']);
+    app.pages('content/pages/**.hbs');
     app.posts('content/posts/*.md');
     cb();
 });
@@ -156,10 +175,10 @@ app.task('robots', function () {
         .pipe(app.dest('build'));
 });
 
-app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'images', 'styles', 'well-known']);
+app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'styles', 'well-known']);
 
 app.task('images', function () {
-    return app.src('assets/images/**/**.{jpg,png}')
+    return app.src('assets/images/**/**.{jpg,jpeg,png}')
     // return app.src('assets/images/gallery/writing.jpg')
         .pipe(gp.cache(gp.imagemin({
             progressive: true,
@@ -207,23 +226,27 @@ app.task('modernizr', function () {
  */
 
 app.task('build', ['load'], function () {
-  return app.toStream('pages')
+  return app.use(drafts('posts'))
+    .use(rss('posts'))
+    .toStream('pages')
     .pipe(app.toStream('posts'))
     .on('error', console.log)
     .pipe(app.renderFile('md'))
     .on('error', console.log)
-    .pipe(extname())
+    .pipe(typogr())
     .pipe(smoosher({ // [todo] - can this be moved to assemble?
         base: '.'
     }))
     .pipe(app.dest(function (file) {
         file.path = file.data.permalink;
         file.base = path.dirname(file.path);
+        file.extname = '.html';
+
         return file.base;
     }));
 });
 
-app.task('sitemap',function () {
+app.task('sitemap', function () {
     return app.src('build/**/*.html')
         .pipe(gp.sitemap({
                 siteUrl: config.pkg.homepage
@@ -241,7 +264,7 @@ app.task('cache-busting', function () {
         .pipe(app.dest(buildDir));
 });
 
-app.task('default', ['jshint', 'build', 'assets', 'modernizr', 'useref', 'sitemap'], function () {
+app.task('default', ['jshint', 'assets', 'images', 'build', 'modernizr', 'useref', 'sitemap'], function () {
   return app.src(buildDir + '/**/*').pipe(gp.size({title: 'build', gzip: true}));
 });
 

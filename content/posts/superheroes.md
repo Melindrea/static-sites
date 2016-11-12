@@ -16,11 +16,12 @@ featuredImage:
     alt: Sepia word cloud
     copyright:
         photographer: Antonius M. Hogebrandt
+draft: true
 ---
 
 ## Mio Sund aka Duality
 
-Spoonie powerhouse with a tricked out wheelchair (courtesy of an inventor friend). Fey can boost feir physical abilities for a short time.
+Spoonie powerhouse with a tricked-out wheelchair (courtesy of an inventor friend). Fey can boost feir physical abilities for a short time.
 
 *Note: Pictured without feir wheelchair*
 

@@ -27,7 +27,7 @@
   <body>
 {{> gtm }}
     <header>
-      <a href="/" class="logo"><img src="/assets/images/logo-original.png" alt="Antonius M. Hogebrandt logo"></a><div class="typl8-beta">Antonius M. Hogebrandt <small>Author—Dreamer</small>
+      <a href="/" class="logo"><img src="/assets/images/logo-original.png" alt="Antonius M. Hogebrandt logo"></a><div class="typl8-beta">Antonius M. Hogebrandt <small>Author—-Dreamer</small>
        </div>
       </header>
 <main>
@@ -39,7 +39,7 @@
     </nav>
     </div>
 </div>
-  <div id="content" itemscope itemtype="http://schema.org/Article">
+  <div id="content" class="content" itemscope itemtype="http://schema.org/Article">
     {% body %}
       </div><!-- content -->
     </main>
@@ -51,7 +51,7 @@
     <ul>
         <li><a href="/privacy-cookies">Privacy &amp; cookies</a></li>
         <li><a href="/colophone">Colophone</a></li>
-        <li><a href="https://antoniusm.com">Copyright © 2016</a></li>
+        <li>{{ copyright }}</li>
     </ul>
     <ul>
         <li>{{> lastUpdated }}</li>

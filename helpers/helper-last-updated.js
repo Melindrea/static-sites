@@ -1,10 +1,16 @@
 'use strict';
-module.exports.lastUpdated = function () {
-    var fs = require('fs'),
-        moment = require('moment'),
-        file = this.context.view.path,
-        fileStats = fs.statSync(file),
-        lastUpdated = moment(fileStats.mtime);
+module.exports.lastUpdated = function (format) {
+    var moment = require('moment'),
+        file = this.view,
+        time,
+        lastUpdated;
 
-        return lastUpdated.format();
+        if (file.stat) {
+            time = file.stat.mtime || file.stat.birthtime;
+        }
+
+        lastUpdated = moment(time);
+
+        // console.log(file.path, lastUpdated.format());
+        return lastUpdated.format(format);
 };

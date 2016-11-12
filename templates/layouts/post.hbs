@@ -14,6 +14,13 @@ layout: master
 {{/markdown}}
     </div>
     <footer class="entry-footer">
+        <nav class="clearfix">
+    <ul class="pager">
+        {{#if pager.prev}}{{#with pager.prev}}<li class="previous"><a href="{{linkTo key 'posts'}}" title="{{data.title}}"><span aria-hidden="true">&larr;</span> {{data.title}}</a></li>{{/with}}{{/if}}
+        {{#if pager.next}}{{#with pager.next}}<li class="next"><a href="{{linkTo key 'posts'}}" title="{{data.title}}">{{data.title}} <span aria-hidden="true">&rarr;</span></a></li>{{/with}}{{/if}}
+  </ul>
+</nav>
+
         <dl class="entry-meta typl8-lining">
             <dt>Posted</dt>
             <dd><time itemprop="datePublished" datetime="{{ moment posted format="YYYY-MM-DDTHH:mm:ssZ" }}">{{ moment posted 'YYYY-MM-DD' }}</time></dd>

@@ -29,6 +29,8 @@ deploy: pre-deploy ## Deploys the site
 dry-deploy: pre-deploy ## Does a dry eeploy of the site
 	rsync -rltvzp --dry-run --checksum --delete ~/projects/antoniusm.se/build/Release/* root@vps:/srv/web/antoniusm.se
 
+images: ## Process raw images and copy to assets
+	if [ -d assets/raw/$(folder) ]; then ./bin/process-images assets/raw/$(folder) && cp -R assets/raw/$(folder)/* assets/images/gallery; fi
 
 .PHONY: help
 help:

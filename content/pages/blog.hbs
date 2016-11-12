@@ -7,19 +7,10 @@ excerpt: List of blog posts on various topics including random facts, inspiratio
 
 <h1>Enjoy my musings</h1>
 
-{{#posts}}
 <ul>
-    <li><a href="/blog/777-game/">777-game, a WIP teaser</a></li>
-    <li><a href="/blog/the-evaluation/">The Evaluation, flash fiction</a></li>
-    <li><a href="/blog/the-well-below-the-valley/">Cover reveal: The Well Below the Valley</a></li>
-    <li><a href="/blog/non-binary/">Being non-binary, to me</a></li>
-    <li><a href="/blog/deep-pov/">My issues with Deep PoV</a></li>
-    <li><a href="/blog/the-mourning-ocean/">The Mourning Ocean--A Landscape</a></li>
-    <li><a href="/blog/revising-angelmaker/">Look at revision &amp; cover reveal</a></li>
-    <li><a href="/blog/ramblings/">The anatomy of an author, or Building Ethos</a></li>
-    <li><a href="/blog/review-haunting/">Review: The Haunting of Hill House</a></li>
-    <li><a href="/blog/the-forgotten-violin/">The Forgotten Violin, flash fiction</a></li>
-    <li><a href="/blog/coauthor-midnatt/">Midnatt, the cat</a></li>
-    <li><a href="/blog/why-write/">Why write?</a></li>
-</ul>
+{{#posts}}
+    {{#withSort items "data.posted" reverse="true"}}
+        <li><a href="{{linkTo key "posts"}}">{{data.title}} <small><time datetime="{{moment data.posted format="YYYY-MM-DDTHH:mm:ssZ"}}">{{moment data.posted format="MMMM Do, YYYY"}}</time></small></a></li>
+    {{/withSort}}
 {{/posts}}
+</ul>

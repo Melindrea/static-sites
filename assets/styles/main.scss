@@ -283,3 +283,63 @@ article header {
     color: #030;
     @extend %zelda;
 }
+
+.ord {
+    @extend sup;
+}
+
+.caps {
+    font-variant: small-caps;
+    font-weight: 600;
+}
+
+.amp {
+    font-family: Georgia, Linux Libertine, serif;
+    font-size: 1.06em;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 20px 0;
+  text-align: center;
+  list-style: none;
+  a {
+    text-shadow: none;
+  }
+}
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: rgba($color-primary-0, 0.2);
+  border: 1px solid $color-primary-3;
+  border-radius: 3px;
+  color: $color-complement-3;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 0.9em;
+
+    &::before,
+    &::after {
+        position: relative;
+    }
+}
+.pager li > a:hover,
+.pager li > a:active,
+.pager li > a:focus {
+    background-color: rgba($color-primary-1, 0.9);
+    &::before,
+    &::after {
+        position: relative;
+    }
+}
+
+.pager .next > a,
+.pager .next > span {
+  float: right;
+}
+.pager .previous > a,
+.pager .previous > span {
+  float: left;
+}
