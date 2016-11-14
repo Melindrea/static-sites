@@ -86,6 +86,7 @@ app.pages.use(
     )
 );
 
+
 /**
  * Register a handlebars helper for processing markdown.
  * This could also be done with a gulp plugin, or a
@@ -110,6 +111,7 @@ app.task('load', function (cb) {
     app.layouts('templates/layouts/*.hbs');
     app.pages('content/pages/**.hbs');
     app.posts('content/posts/*.md');
+
     cb();
 });
 
@@ -166,6 +168,10 @@ app.task('well-known', function () {
     return app.copy('assets/well-known/**', 'build/.well-known');
 });
 
+app.task('images-copy', function () {
+    return app.copy('processed/images/**/**.{jpg,jpeg,png}', 'build/assets/images');
+});
+
 app.task('robots', function () {
     return app.src('build/index.html')
         .pipe(robots({
@@ -179,7 +185,6 @@ app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'styles', 'well-kn
 
 app.task('images', function () {
     return app.src('assets/images/**/**.{jpg,jpeg,png}')
-    // return app.src('assets/images/gallery/writing.jpg')
         .pipe(gp.cache(gp.imagemin({
             progressive: true,
             interlaced: true,
@@ -187,7 +192,7 @@ app.task('images', function () {
             // as hooks for embedding and styling
             svgoPlugins: [{cleanupIDs: false}]
         })))
-        .pipe(app.dest(buildDir + '/assets/images'));
+        .pipe(app.dest('processed/images'));
 });
 
 app.task('styles', function () {
@@ -264,7 +269,7 @@ app.task('cache-busting', function () {
         .pipe(app.dest(buildDir));
 });
 
-app.task('default', ['jshint', 'assets', 'images', 'build', 'modernizr', 'useref', 'sitemap'], function () {
+app.task('default', ['jshint', 'assets', 'images-copy', 'build', 'modernizr', 'useref', 'sitemap'], function () {
   return app.src(buildDir + '/**/*').pipe(gp.size({title: 'build', gzip: true}));
 });
 
