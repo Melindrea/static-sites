@@ -1,25 +1,15 @@
 ---
 layout: master
 ---
-<article class="status-publish format-standard hentry">
-    <header>
-        <h1 class="entry-title">{{ pageTitle }}</h1>
-        {{#if featuredImage}}{{#with featuredImage}}
-            {{> image }}
-        {{/with}}{{/if}}
-    </header>
+<article class="hentry {{ taxonomies }}">
+    {{> header}}
     <div class="entry-content">
 {{#markdown}}
 {% body %}
 {{/markdown}}
     </div>
     <footer class="entry-footer">
-        <nav class="clearfix">
-    <ul class="pager">
-        {{#if pager.prev}}{{#with pager.prev}}<li class="previous"><a href="{{linkTo key 'posts'}}" title="{{data.title}}"><span aria-hidden="true">&larr;</span> {{data.title}}</a></li>{{/with}}{{/if}}
-        {{#if pager.next}}{{#with pager.next}}<li class="next"><a href="{{linkTo key 'posts'}}" title="{{data.title}}">{{data.title}} <span aria-hidden="true">&rarr;</span></a></li>{{/with}}{{/if}}
-  </ul>
-</nav>
+        {{> display-pager }}
 
         <dl class="entry-meta typl8-lining">
             <dt>Posted</dt>
@@ -31,23 +21,4 @@ layout: master
         </dl>
     </footer>
 </article>
-<div id="disqus_thread"></div>
-<script>
-/**
-* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-*/
-var disqus_config = function () {
-this.page.url = '{{ canonical }}'; // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = '{{ canonical false}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-
-s.src = '//antoniusm.disqus.com/embed.js';
-
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{{> comments }}

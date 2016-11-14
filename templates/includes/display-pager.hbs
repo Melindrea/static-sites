@@ -1,2 +1,6 @@
-{{#if pager.prev}}{{#with pager.prev}}&lt;=&nbsp;<a href="{{link-to key 'posts'}}" title="{{data.title}}">{{data.title}}</a>{{/with}}{{else}}<span>no previous posts</span>{{/if}}&nbsp;|&nbsp;
-{{#if pager.next}}{{#with pager.next}}<a href="{{link-to key 'posts'}}" title="{{data.title}}">{{data.title}}</a>&nbsp;=&gt;{{/with}}{{else}}<span>no more posts</span>{{/if}}
+<nav class="clearfix">
+    <ul class="pager">
+        {{#if pager.prev}}{{#with pager.prev}}<li class="previous"><a href="{{linkTo key 'posts'}}" title="{{data.title}}"><span aria-hidden="true">&larr;</span> {{data.title}}</a></li>{{/with}}{{/if}}
+        {{#if pager.next}}{{#with pager.next}}<li class="next"><a href="{{linkTo key 'posts'}}" title="{{data.title}}">{{data.title}} <span aria-hidden="true">&rarr;</span></a></li>{{/with}}{{/if}}
+  </ul>
+</nav>

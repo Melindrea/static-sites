@@ -9,6 +9,7 @@ module.exports = (function () {
         argv = require('yargs').argv,
         dataDir = argv.dataDir || 'data',
         siteConfig =  YAML.load(dataDir + '/site.yaml'),
+        blogConfig = YAML.load(dataDir + '/blog.yaml'),
         error = chalk.bold.red,
         warning = chalk.yellow,
         info = chalk.cyan,
@@ -29,7 +30,8 @@ module.exports = (function () {
                 info: info,
                 debug: debug,
                 success: success,
-                gtm: 'GTM-N2JHDQ'
+                gtm: 'GTM-N2JHDQ',
+                blog: blogConfig
             };
         case 'prod':
         case 'production':
@@ -43,7 +45,8 @@ module.exports = (function () {
                 info: info,
                 debug: debug,
                 success: success,
-                gtm: 'GTM-PFTL8C'
+                gtm: 'GTM-PFTL8C',
+                blog: blogConfig
             };
         default:
             throw new Error('Environment Not Recognized');

@@ -1,0 +1,6 @@
+<header>
+    <h1 class="entry-title">{{ pageTitle }}</h1>
+    {{#if featuredImage}}{{#with featuredImage}}
+        {{> image }}
+    {{/with}}{{/if}}
+</header>
