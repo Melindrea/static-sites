@@ -9,7 +9,8 @@ excerpt: "In the final stages of revision of the novella Änglamakerskan, I here
 category: Writing
 tags:
     - revision
-    - cover
+    - cover reveal
+    - writing process
 featuredImage:
     revSrc: revision-angelmaker.9b5a6501.jpg
     src: revision-angelmaker.jpg

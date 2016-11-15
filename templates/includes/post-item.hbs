@@ -1,0 +1,11 @@
+<li><article class="post hentry {{ taxonomies }}"><a href="{{linkTo key "posts"}}">
+    <header>
+        <h2 class="entry-title">{{data.title}}</h2>
+        <div class="entry-meta">
+            Posted <time class="updated" datetime="{{moment data.posted format="YYYY-MM-DDTHH:mm:ssZ"}}">{{moment data.posted format="MMMM Do, YYYY"}}</time>
+        </div>
+    </header>
+        <div class="entry-summary">
+        <span>{{ data.excerpt }}</span>
+        </div>
+</a></article></li>

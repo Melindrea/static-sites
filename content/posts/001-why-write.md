@@ -6,10 +6,10 @@ posted: 2016-02-14 21:00:03
 article: true
 metaType: article
 excerpt: Why and what do I write? A brief runthrough of the threads forming my literary tapestry, and what drives me to explore the themes and stories I do.
-category: Writing Process
+category: Writing
 tags:
-    - writing
-    - personal
+    - writing process
+    - imho
 featuredImage:
     revSrc: writing.f66bf846.jpg
     src: writing.jpg

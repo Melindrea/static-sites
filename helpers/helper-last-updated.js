@@ -11,6 +11,5 @@ module.exports.lastUpdated = function (format) {
 
         lastUpdated = moment(time);
 
-        // console.log(file.path, lastUpdated.format());
         return lastUpdated.format(format);
 };

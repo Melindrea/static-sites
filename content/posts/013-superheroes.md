@@ -6,9 +6,9 @@ posted: 2016-11-13 01:40:13
 article: true
 metaType: article
 excerpt: An introduction to the six permanent members of the contemporary superhero team Stockholm Sentinels, from a serialised novel posted as each chapter is written.
-category: Writing
+category: Characters
 tags:
-    - contemporary stories
+    - contemporary
     - superheroes
 featuredImage:
     revSrc: superheros.39729a63.jpg

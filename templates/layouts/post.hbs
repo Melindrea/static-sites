@@ -15,9 +15,13 @@ layout: master
             <dt>Posted</dt>
             <dd><time itemprop="datePublished" datetime="{{ moment posted format="YYYY-MM-DDTHH:mm:ssZ" }}">{{ moment posted 'YYYY-MM-DD' }}</time></dd>
             <dt>Category</dt>
-            <dd>{{ category }}</dd>
+            <dd><a href="{{ link-to-taxonomy category }}">{{ category }}</a></dd>
             <dt>Tags</dt>
-            <dd itemprop="keywords">{{ tags }}</dd>
+            <dd itemprop="keywords">
+                <ul class="inline">{{#each tags}}
+                    <li class="tag"><a href="{{ link-to-taxonomy this }}">{{ this }}</a></li>
+                {{/each}}</ul>
+            </dd>
         </dl>
     </footer>
 </article>

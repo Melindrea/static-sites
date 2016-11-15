@@ -6,7 +6,7 @@ posted: 2016-03-07 07:05:13
 article: true
 metaType: article
 excerpt: A 5-star review of The Haunting of Hill House, by Shirley Jackson, an iconic ghost story from 1959. 4 people seek scientific evidence of the supernatural.
-category: Reviews
+category: Review
 tags:
     - literary horror
     - ghosts

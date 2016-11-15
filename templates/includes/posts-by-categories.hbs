@@ -1,0 +1,7 @@
+<ul class="entry-list">
+{{#posts}}
+    {{#withCategory items ../name}}
+        {{> post-item }}
+    {{/withCategory}}
+{{/posts}}
+</ul>

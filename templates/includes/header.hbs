@@ -1,5 +1,5 @@
 <header>
-    <h1 class="entry-title">{{ pageTitle }}</h1>
+    <h1 class="entry-title">{{ pageTitle }}{{#if subTitle}} <small>{{ subTitle }}</small>{{/if}}</h1>
     {{#if featuredImage}}{{#with featuredImage}}
         {{> image }}
     {{/with}}{{/if}}

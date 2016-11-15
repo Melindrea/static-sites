@@ -1,7 +1,6 @@
 'use strict';
 module.exports.taxonomies = function () {
     var slugify = require('underscore.string/slugify'),
-        category,
         ret = [],
         data = this.data;
 

@@ -61,6 +61,80 @@ app.create('posts', {
   }
 });
 
+app.create('archives');
+
+app.archives
+    .use(permalinks(
+        ':site.base/blog/:permalink(filename)',
+        {
+            permalink: function (filename) {
+                var name = filename.substr(5),
+                    folder;
+
+                if (name === 'index') {
+                    return 'index.html';
+                }
+
+                folder = name.replace('::', '/');
+
+                return folder + '/index.html';
+            }
+        }
+    ));
+
+var blog = config.blog;
+
+for (var key in blog.indices) {
+   var data = blog.indices[key],
+        content = '{{> header }}\n{{> blurb }}\n{{> ' + data.list + ' }}';
+
+   app.archive('blog-' + key + '.hbs', {
+        content: content,
+        data: data
+    });
+}
+
+for (var key in blog.taxonomies) {
+    var taxonomyType = blog.taxonomies[key];
+
+    for (var taxonomyKey in taxonomyType) {
+        var data = taxonomyType[taxonomyKey],
+            content = '{{> header }}\n{{> blurb }}\n{{> posts-by-' + key + ' }}';
+
+        data.pageTitle = data.name;
+        if (key === 'categories') {
+            data.subTitle = 'Category';
+            data.title = data.title + ' / Category';
+            data.type = 'category';
+        } else if (key === 'tags') {
+            data.subTitle = 'Tag';
+            data.title = data.title + ' / Tag';
+            data.type = 'tag';
+        }
+
+        app.archive('blog-' + key + '::' + taxonomyKey + '.hbs', {
+            content: content,
+            data: data
+        });
+    }
+}
+
+
+
+app.task('temp', ['load'], function () {
+  return app.toStream('archives')
+    .on('error', console.log)
+    .pipe(app.renderFile())
+    .on('error', console.log)
+    .pipe(app.dest(function (file) {
+        file.path = file.data.permalink;
+        file.base = path.dirname(file.path);
+        file.extname = '.html';
+
+        return file.base;
+    }));
+});
+
 app.posts.use(
     permalinks(
         ':site.base/blog/:strip(filename)/index.html',
@@ -234,6 +308,7 @@ app.task('build', ['load'], function () {
   return app.use(drafts('posts'))
     .use(rss('posts'))
     .toStream('pages')
+    .pipe(app.toStream('archives'))
     .pipe(app.toStream('posts'))
     .on('error', console.log)
     .pipe(app.renderFile('md'))

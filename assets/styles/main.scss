@@ -300,10 +300,6 @@ article header {
 
 // todo: move these to a "blog" section
 
-.entry-list {
-    list-style: none;
-}
-
 .pager {
   padding-left: 0;
   margin: 20px 0;
@@ -348,4 +344,29 @@ article header {
 .pager .previous > a,
 .pager .previous > span {
   float: left;
+}
+
+.entry-list {
+    list-style: none;
+
+    .entry-meta {
+        margin-top: -1.4rem;
+    }
+
+    .hentry {
+        padding-bottom: 0.4rem;
+        border-bottom: 2px solid $red;
+        margin-bottom: 1.2rem;
+    }
+    a {
+        &:link,
+        &:visited {
+            color: $red;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-1;
+        }
+    }
 }

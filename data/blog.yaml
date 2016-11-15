@@ -3,31 +3,226 @@ taxonomies:
         writing:
                 name: Writing
                 title: About my writing
-                pageTitle: Enjoy my musings
-                excerpt: Some stuff for the head
+                excerpt: The category "Writing" has posts relating to my writing process, revision and similar information. It's a catch-all category.
                 blurb: What to write about this category
-                featuredImage:
-                    revSrc: superheros.39729a63.jpg
-                    src: superheros.jpg
-                    alt: Aurora Boreali in sepia
-                    copyright:
-                        photographer: Diogo Kamioka
                 metaType: website
                 layout: master
 
-    tags:
-        superheroes:
-                name: Superheroes
-                title: About my writing
-                pageTitle: Enjoy my musings
+        personal-life:
+                name: Personal Life
+                title: Relating to my personal life
                 excerpt: Some stuff for the head
                 blurb: What to write about this category
-                featuredImage:
-                    revSrc: superheros.39729a63.jpg
-                    src: superheros.jpg
-                    alt: Aurora Boreali in sepia
-                    copyright:
-                        photographer: Diogo Kamioka
+                metaType: website
+                layout: master
+
+        flash-fiction:
+                name: Flash Fiction
+                title: Shorter stories
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        review:
+                name: Review
+                title: Reviews
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        guest-post:
+                name: Guest Post
+                title: Guest posts
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        characters:
+                name: Characters
+                title: About characters
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+
+    tags:
+        superheroes:
+                name: superheroes
+                title: Superheroes
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        writing-process:
+                name: writing process
+                title: About my writing process
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        imho:
+                name: imho
+                title: My own thoughts
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        midnatt:
+                name: midnatt
+                title: My black cat
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        cute-things:
+                name: cute things
+                title: What it says on the tin
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        historical:
+                name: historical
+                title: Stories set in the past
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        magical-realism:
+                name: magical realism
+                title: Magic is around us
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        literary-horror:
+                name: literary horror
+                title: Horror written in a careful style
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        ghosts:
+                name: ghosts
+                title: All about the undead
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        five-stars:
+                name: five stars
+                title: 5 stars
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        mental-health:
+                name: mental health
+                title: About mental health issues
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        stream-of-consciousness:
+                name: stream of consciousness
+                title: Stream of Consciousness
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        revision:
+                name: revision
+                title: About revising
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        cover-reveal:
+                name: cover reveal
+                title: Covers; my own or others
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        landscape:
+                name: landscape
+                title: Written landscapes
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        ocean:
+                name: ocean
+                title: The vast ocean
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        writing-advice:
+                name: writing advice
+                title: Writing advice
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        gender:
+                name: gender
+                title: Gender theories
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        katherine-lampe:
+                name: Katherine Lampe
+                title: The author Katherine Lampe
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        teaser:
+                name: teaser
+                title: Teasers from stories
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        writing-game:
+                name: writing game
+                title: Writing games
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
+                metaType: website
+                layout: master
+
+        contemporary:
+                name: contemporary
+                title: Stories set in modern times
+                excerpt: Some stuff for the head
+                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -36,27 +231,10 @@ indices:
         excerpt: List of blog posts on various topics including random facts, inspiration and why I write, as well as short stories, written portraits and how-tos.
         title: Thoughts &amp; Ramblings
         pageTitle: Enjoy my musings
-        blurb: What to write about this category
-        featuredImage:
-                revSrc: superheros.39729a63.jpg
-                src: superheros.jpg
-                alt: Aurora Boreali in sepia
-                copyright:
-                    photographer: Diogo Kamioka
+        blurb: I have a mix of posts, everything from random facts and inspiration, to flash fiction and written portraits
         metaType: website
         layout: master
         list: posts
-    categories:
-        excerpt: List of blog posts on various topics including random facts, inspiration and why I write, as well as short stories, written portraits and how-tos.
-        title: Thoughts &amp; Ramblings
-        pageTitle: Enjoy my musings
-        blurb: What to write about this category
-        featuredImage:
-                revSrc: superheros.39729a63.jpg
-                src: superheros.jpg
-                alt: Aurora Boreali in sepia
-                copyright:
-                    photographer: Diogo Kamioka
-        metaType: website
-        layout: master
-        list: posts
+        widgets:
+            - categories
+            - tagcloud

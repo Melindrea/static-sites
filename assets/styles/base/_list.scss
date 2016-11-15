@@ -34,6 +34,7 @@ dd,
 ul,
 ol {
     margin-left: $base-margin;
+    padding-left: 0;
 }
 
 dt {
@@ -76,4 +77,39 @@ dt {
 dd.group {
     display: list-item;
     list-style: square inside;
+}
+
+.inline {
+    margin-left: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.tag {
+    > a {
+        background-color: rgba($color-primary-0, 0.2);
+        border: 1px solid $color-primary-3;
+        color: $color-complement-3;
+
+        border: 1px solid $red;
+        border-radius: 20px;
+        padding: 2px 5px;
+
+        &::before,
+        &::after {
+            position: relative;
+        }
+    }
+
+    > a:active,
+    > a:focus,
+    > a:hover {
+        background-color: rgba($color-primary-1, 0.9);
+        &::before,
+        &::after {
+            position: relative;
+        }
+    }
 }
