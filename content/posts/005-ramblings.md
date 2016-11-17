@@ -9,7 +9,6 @@ excerpt: I've lived with depression and anxiety my entire life. Without trying t
 category: Personal Life
 tags:
     - mental health
-    - stream of consciousness
 featuredImage:
     revSrc: ramblings.622daded.jpg
     src: ramblings.jpg

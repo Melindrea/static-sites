@@ -13,12 +13,11 @@ module.exports = plugin;
 function plugin(name) {
     return function(app) {
         var files = app.getViews(name);
+
         for (var file in files) {
             if (files[file].data.draft) {
                 delete files[file];
             }
         }
-
-        // console.log(files); s
     };
 }

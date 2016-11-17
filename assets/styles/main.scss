@@ -353,11 +353,16 @@ article header {
         margin-top: -1.4rem;
     }
 
-    .hentry {
-        padding-bottom: 0.4rem;
-        border-bottom: 2px solid $red;
-        margin-bottom: 1.2rem;
+    .even .featured-image {
+        float: left;
+        margin-right: 1.2rem;
     }
+
+    .odd .featured-image {
+        float: right;
+        margin-left: 1.2rem;
+    }
+
     a {
         &:link,
         &:visited {

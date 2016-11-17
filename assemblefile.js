@@ -6,20 +6,18 @@ var path = require('path'),
     getDest = require('./plugins/get-dest'),
     viewEvents = require('./plugins/view-events'),
     drafts = require('./plugins/drafts'),
+    taxonomies = require('./blog'),
     rss = require('./plugins/rss'),
     git = require('gulp-git'),
     bump = require('gulp-bump'),
-    robots = require('gulp-robots'),
     filter = require('gulp-filter'),
     tagVersion = require('gulp-tag-version'),
-    browserSync = require('browser-sync'),
     gp = require('gulp-load-plugins')(),
-    reload = browserSync.reload,
     smoosher = require('gulp-smoosher'),
-    RevAll = require('gulp-rev-all'),
     config = require('./config'),
     assemble = require('assemble'),
     typogr = require('./plugins/typogr'),
+    assets = require('./assets'),
     app = assemble();
 
 /**
@@ -35,9 +33,8 @@ app.onPermalink(/./, function (file, next) {
   next();
 });
 
-var buildDir = 'build',
+var buildDir = config.pkg.config.buildDir,
     tempDir = '.tmp',
-    deployDir = 'build/Release',
     siteData = config.site;
 
 siteData.base = buildDir;
@@ -61,80 +58,6 @@ app.create('posts', {
   }
 });
 
-app.create('archives');
-
-app.archives
-    .use(permalinks(
-        ':site.base/blog/:permalink(filename)',
-        {
-            permalink: function (filename) {
-                var name = filename.substr(5),
-                    folder;
-
-                if (name === 'index') {
-                    return 'index.html';
-                }
-
-                folder = name.replace('::', '/');
-
-                return folder + '/index.html';
-            }
-        }
-    ));
-
-var blog = config.blog;
-
-for (var key in blog.indices) {
-   var data = blog.indices[key],
-        content = '{{> header }}\n{{> blurb }}\n{{> ' + data.list + ' }}';
-
-   app.archive('blog-' + key + '.hbs', {
-        content: content,
-        data: data
-    });
-}
-
-for (var key in blog.taxonomies) {
-    var taxonomyType = blog.taxonomies[key];
-
-    for (var taxonomyKey in taxonomyType) {
-        var data = taxonomyType[taxonomyKey],
-            content = '{{> header }}\n{{> blurb }}\n{{> posts-by-' + key + ' }}';
-
-        data.pageTitle = data.name;
-        if (key === 'categories') {
-            data.subTitle = 'Category';
-            data.title = data.title + ' / Category';
-            data.type = 'category';
-        } else if (key === 'tags') {
-            data.subTitle = 'Tag';
-            data.title = data.title + ' / Tag';
-            data.type = 'tag';
-        }
-
-        app.archive('blog-' + key + '::' + taxonomyKey + '.hbs', {
-            content: content,
-            data: data
-        });
-    }
-}
-
-
-
-app.task('temp', ['load'], function () {
-  return app.toStream('archives')
-    .on('error', console.log)
-    .pipe(app.renderFile())
-    .on('error', console.log)
-    .pipe(app.dest(function (file) {
-        file.path = file.data.permalink;
-        file.base = path.dirname(file.path);
-        file.extname = '.html';
-
-        return file.base;
-    }));
-});
-
 app.posts.use(
     permalinks(
         ':site.base/blog/:strip(filename)/index.html',
@@ -145,6 +68,7 @@ app.posts.use(
         }
     )
 );
+
 app.pages.use(
     permalinks(
         ':site.base/:permalink(filename)',
@@ -176,6 +100,7 @@ app.helper('log', function (val) {
 });
 app.helpers(require('handlebars-helpers')());
 
+assets(app);
 /**
  * Tasks for loading and rendering our templates
  */
@@ -211,94 +136,7 @@ app.task('patch', function () { return bumpAndTag('patch'); });
 app.task('feature', function () { return bumpAndTag('minor'); });
 app.task('release', function () { return bumpAndTag('major'); });
 
-app.task('jshint', function () {
-    return app.src(
-            [
-                'assets/scripts/**/*.js',
-                '*.js',
-                'helpers/**/*.js'
-            ]
-        )
-        .pipe(reload({stream: true, once: true}))
-        .pipe(gp.jsvalidate())
-        .pipe(gp.jshint())
-        .pipe(gp.jshint.reporter('jshint-stylish'))
-        .pipe(gp.if(! browserSync.active, gp.jshint.reporter('fail')));
-});
 
-app.task('fonts', function () {
-    return app.copy('assets/fonts/**/*', 'build/assets/fonts');
-});
-
-app.task('favicon', function () {
-    return app.copy('assets/favicon/**/*', 'build/assets/favicon');
-});
-
-app.task('favicon2', function () {
-    return app.copy('assets/favicon.ico', 'build');
-});
-
-app.task('well-known', function () {
-    return app.copy('assets/well-known/**', 'build/.well-known');
-});
-
-app.task('images-copy', function () {
-    return app.copy('processed/images/**/**.{jpg,jpeg,png}', 'build/assets/images');
-});
-
-app.task('robots', function () {
-    return app.src('build/index.html')
-        .pipe(robots({
-            useragent: '*',
-            sitemap: 'https://antoniusm.se/sitemap.xml'
-        }))
-        .pipe(app.dest('build'));
-});
-
-app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'styles', 'well-known']);
-
-app.task('images', function () {
-    return app.src('assets/images/**/**.{jpg,jpeg,png}')
-        .pipe(gp.cache(gp.imagemin({
-            progressive: true,
-            interlaced: true,
-            // don't remove IDs from SVGs, they are often used
-            // as hooks for embedding and styling
-            svgoPlugins: [{cleanupIDs: false}]
-        })))
-        .pipe(app.dest('processed/images'));
-});
-
-app.task('styles', function () {
-    return app.src('assets/styles/main.scss')
-        .pipe(gp.sourcemaps.init())
-        .pipe(gp.sass({
-                outputStyle: 'expanded',
-                precision: 10,
-                includePaths: ['.', './bower_components']
-            }).on('error', gp.sass.logError)
-        )
-        .pipe(gp.pleeease({browsers: ['last 1 version']}))
-        .pipe(gp.sourcemaps.write())
-        .pipe(app.dest('.tmp/assets/styles'))
-        .pipe(reload({stream: true}));
-});
-
-app.task('useref', function () {
-    return app.src('build/**/**.html')
-        .pipe(gp.useref({searchPath: ['.tmp', 'assets', '.']}))
-        .pipe(gp.if('*.js', gp.jsvalidate()))
-        .pipe(gp.if('*.js', gp.uglify()))
-        .pipe(gp.if('*.css', gp.csso()))
-        .pipe(app.dest('build'));
-});
-
-
-app.task('modernizr', function () {
-    return app.src(['assets/**/**.{js,scss}', 'build/**/**.html'])
-        .pipe(gp.modernizr())
-        .pipe(app.dest('.tmp/assets/scripts'));
-});
 
 /**
  * Build task
@@ -307,6 +145,7 @@ app.task('modernizr', function () {
 app.task('build', ['load'], function () {
   return app.use(drafts('posts'))
     .use(rss('posts'))
+    .use(taxonomies('posts'))
     .toStream('pages')
     .pipe(app.toStream('archives'))
     .pipe(app.toStream('posts'))
@@ -331,16 +170,6 @@ app.task('sitemap', function () {
         .pipe(gp.sitemap({
                 siteUrl: config.pkg.homepage
         })) // Returns sitemap.xml
-        .pipe(app.dest(buildDir));
-});
-
-app.task('cache-busting', function () {
-    var revAll = new RevAll({ dontRenameFile: [/^\/favicon$/g, '.html', '.xml', '.txt'] });
-
-    return app.src(buildDir + '/**')
-        .pipe(revAll.revision())
-        .pipe(app.dest(deployDir))
-        .pipe(revAll.manifestFile())
         .pipe(app.dest(buildDir));
 });
 

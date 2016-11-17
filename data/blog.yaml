@@ -1,50 +1,54 @@
+helpers: 'blog/helpers/*.js'
+templates:
+    header: '{{> header }}{{#if blurb}}{{> blurb }}{{/if}}'
+permalink: ':site.base/blog/:permalink(filename)'
 taxonomies:
     categories:
         writing:
                 name: Writing
                 title: About my writing
                 excerpt: The category "Writing" has posts relating to my writing process, revision and similar information. It's a catch-all category.
-                blurb: What to write about this category
+                blurb: The category "Writing" has posts relating to my writing process, revision and similar information. It's a catch-all category.
                 metaType: website
                 layout: master
 
         personal-life:
                 name: Personal Life
                 title: Relating to my personal life
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: Personal accounts, digging into what makes me what and who I am.
+                blurb: Personal accounts, digging into what makes me what and who I am.
                 metaType: website
                 layout: master
 
         flash-fiction:
                 name: Flash Fiction
                 title: Shorter stories
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: Shorter stories, rarely longer than 1000 words, never longer than 2500.
+                blurb: Shorter stories, rarely longer than 1000 words, never longer than 2500.
                 metaType: website
                 layout: master
 
         review:
                 name: Review
                 title: Reviews
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: Reviews of books I liked or didn't, both in my genres and outside of them.
+                blurb: Reviews of books I liked or didn't, both in my genres and outside of them.
                 metaType: website
                 layout: master
 
         guest-post:
                 name: Guest Post
                 title: Guest posts
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: Posts that showcase other people; interviews, cover reveals and similar.
+                blurb: Posts that showcase other people; interviews, cover reveals and similar.
                 metaType: website
                 layout: master
 
         characters:
                 name: Characters
                 title: About characters
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: About the characters that are part of my world(s), whether showcases, interviews or digging into their psychology.
+                blurb: About the characters that are part of my world(s), whether showcases, interviews or digging into their psychology.
                 metaType: website
                 layout: master
 
@@ -53,40 +57,32 @@ taxonomies:
         superheroes:
                 name: superheroes
                 title: Superheroes
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: Posts relating to superheroes, whether my own or others.
+                blurb: Posts relating to superheroes, whether my own or others.
                 metaType: website
                 layout: master
 
         writing-process:
                 name: writing process
                 title: About my writing process
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: Details on how my specific writing process happens, from software to how I come up with characters.
+                blurb: Details on how my specific writing process happens, from software to how I come up with characters.
                 metaType: website
                 layout: master
 
         imho:
                 name: imho
                 title: My own thoughts
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: Highly personal opinions.
+                blurb: Highly personal opinions.
                 metaType: website
                 layout: master
 
         midnatt:
                 name: midnatt
                 title: My black cat
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
-                metaType: website
-                layout: master
-
-        cute-things:
-                name: cute things
-                title: What it says on the tin
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
+                excerpt: The most gorgeous black cat in the world, or at least our apartment. A lovely pest!
+                blurb: The most gorgeous black cat in the world, or at least our apartment. A lovely pest!
                 metaType: website
                 layout: master
 
@@ -94,7 +90,6 @@ taxonomies:
                 name: historical
                 title: Stories set in the past
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -102,7 +97,6 @@ taxonomies:
                 name: magical realism
                 title: Magic is around us
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -110,7 +104,6 @@ taxonomies:
                 name: literary horror
                 title: Horror written in a careful style
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -118,7 +111,6 @@ taxonomies:
                 name: ghosts
                 title: All about the undead
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -126,7 +118,6 @@ taxonomies:
                 name: five stars
                 title: 5 stars
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -134,15 +125,6 @@ taxonomies:
                 name: mental health
                 title: About mental health issues
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
-                metaType: website
-                layout: master
-
-        stream-of-consciousness:
-                name: stream of consciousness
-                title: Stream of Consciousness
-                excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -150,7 +132,6 @@ taxonomies:
                 name: revision
                 title: About revising
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -158,7 +139,6 @@ taxonomies:
                 name: cover reveal
                 title: Covers; my own or others
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -166,7 +146,6 @@ taxonomies:
                 name: landscape
                 title: Written landscapes
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -174,7 +153,6 @@ taxonomies:
                 name: ocean
                 title: The vast ocean
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -182,7 +160,6 @@ taxonomies:
                 name: writing advice
                 title: Writing advice
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -190,7 +167,6 @@ taxonomies:
                 name: gender
                 title: Gender theories
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -198,7 +174,6 @@ taxonomies:
                 name: Katherine Lampe
                 title: The author Katherine Lampe
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -206,7 +181,6 @@ taxonomies:
                 name: teaser
                 title: Teasers from stories
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -214,7 +188,6 @@ taxonomies:
                 name: writing game
                 title: Writing games
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 
@@ -222,7 +195,6 @@ taxonomies:
                 name: contemporary
                 title: Stories set in modern times
                 excerpt: Some stuff for the head
-                blurb: What to write about this category
                 metaType: website
                 layout: master
 

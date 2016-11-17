@@ -1,7 +1,7 @@
 <ul class="entry-list">
 {{#posts}}
-    {{#withSort items "data.posted" reverse="true"}}
+    {{#withSortIndex items "data.posted" reverse="true"}}
         {{> post-item }}
-    {{/withSort}}
+    {{/withSortIndex}}
 {{/posts}}
 </ul>

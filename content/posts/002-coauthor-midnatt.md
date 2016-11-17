@@ -9,7 +9,6 @@ excerpt: Introduction to my cute cat, who helps me write by being cuddly, or alt
 category: Personal Life
 tags:
     - midnatt
-    - cute things
 featuredImage:
     revSrc: midnatt.ec23932c.jpg
     src: midnatt.jpg
