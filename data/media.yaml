@@ -1,0 +1,86 @@
+galleries:
+    midnatt:
+        size: 640
+        items:
+            -
+                id: mommy
+                alt: A black and white cat
+                caption: Midnatt and her sister Mitzi's mother
+                src: mommy.jpg
+            -
+                id: midnatt-mitzi
+                alt: A tabby kitten, a black kitten and a finger
+                caption: Midnatt and Mitzi is quite fascinated by a human hand
+                src: midnatt-mitzi.jpg
+            -
+                id: midnatt-kitten
+                alt: Black kitten climbing a hand
+                caption: It's fun to explore Daddy, says Midnatt
+                src: midnatt-kitten.jpg
+            -
+                id: midnatt-first-trip
+                alt: Black kitten clinging to a man
+                caption: Are we there yet? Final leg on the trip to Midnatt's forever-home
+                src: midnatt-first-trip.jpg
+            -
+                id: midnatt-computer
+                alt: Black kitten sitting on a laptop
+                caption: This is how Mommy does it, right?
+                src: midnatt-computer.jpg
+            -
+                id: midnatt-selfie
+                alt: Partial picture of a black kitten's face
+                caption: My selfies are the cutest, says Midnatt
+                src: midnatt-selfie.jpg
+            -
+                id: midnatt-chair
+                alt: Black cat sleeping in an armchair
+                caption: After a long day of playing, napping, exploring, napping, eating and napping, Midnatt figures she deserves a nap
+                src: midnatt-chair.jpg
+            -
+                id: midnatt-karlstad
+                alt: Black cat sitting on the armrest of a sofa
+                caption: First time with Mommy's family to celebrate Christmas! At least the sofa is more-or-less safe from the army of kidlets and Other Cats
+                src: midnatt-karlstad.jpg
+            -
+                id: midnatt-shrimp
+                alt: Black cat eating whole shrimp
+                caption: "SHRIMP! For the first New Years dinner, Midnatt got her favourite food: whole shrimp"
+                src: midnatt-shrimp.jpg
+            -
+                id: midnatt-linn-zorro
+                alt: "Three cats on a door mat: black, white-gray and dark gray"
+                caption: Sometimes we cat sit Midnatt's aunt's cats. It goes okay. The white and gray is Linn, and the big gray one is Zorro
+                src: midnatt-linn-zorro.jpg
+            -
+                id: midnatt-tired
+                alt: Black cat covering her face with a paw
+                caption: Always when I'm sleeping!
+                src: midnatt-tired.jpg
+            -
+                id: midnatt-perch
+                alt: Black cat on a pedestal
+                caption: A favourite place to keep a look-out for enemies like flies, hands, feet or Other Cats
+                src: midnatt-perch.jpg
+            -
+                id: midnatt-cone
+                alt: Black cat sprawled on the floor, with a Cone of Shame
+                caption: The indignity! First travel, then put to sleep, and then wake up with a cone around the neck, and stitches on the tummy! It's just enough to ker-flop!
+                src: midnatt-cone.jpg
+            -
+                id: midnatt-sofa
+                alt: Black cat curled up in a corner, next to legs
+                caption: "Sometimes the favouritest place in the whole world: the sofa next to Mommy"
+                src: midnatt-sofa.jpg
+            -
+                id: midnatt-yoga
+                alt: Black cat curled up in a rolled-up yoga mat
+                caption: Ah, a fine example of cat yoga
+                src: midnatt-yoga.jpg
+
+sizes:
+    original: /assets/images/gallery/
+    1024: /assets/images/gallery/1024w/
+    640: /assets/images/gallery/640w/
+    320: /assets/images/gallery/320w/
+    thumbnail: /assets/images/gallery/thumbnails/

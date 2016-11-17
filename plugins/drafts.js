@@ -1,10 +1,4 @@
 /**
- * Expose `plugin`.
- */
-
-module.exports = plugin;
-
-/**
  * Assemble plugin to remove files marked as `draft` from a collection.
  *
  * @return {Function}
@@ -21,3 +15,9 @@ function plugin(name) {
         }
     };
 }
+
+/**
+ * Expose `plugin`.
+ */
+
+module.exports = plugin;

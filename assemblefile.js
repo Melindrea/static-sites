@@ -6,7 +6,7 @@ var path = require('path'),
     getDest = require('./plugins/get-dest'),
     viewEvents = require('./plugins/view-events'),
     drafts = require('./plugins/drafts'),
-    taxonomies = require('./blog'),
+    blog = require('./blog'),
     rss = require('./plugins/rss'),
     git = require('gulp-git'),
     bump = require('gulp-bump'),
@@ -18,6 +18,7 @@ var path = require('path'),
     assemble = require('assemble'),
     typogr = require('./plugins/typogr'),
     assets = require('./assets'),
+    gallery = require('./plugins/gallery'),
     app = assemble();
 
 /**
@@ -145,7 +146,9 @@ app.task('release', function () { return bumpAndTag('major'); });
 app.task('build', ['load'], function () {
   return app.use(drafts('posts'))
     .use(rss('posts'))
-    .use(taxonomies('posts'))
+    .use(blog('posts'))
+    .use(gallery('posts'))
+    .use(gallery('pages'))
     .toStream('pages')
     .pipe(app.toStream('archives'))
     .pipe(app.toStream('posts'))
