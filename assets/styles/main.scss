@@ -163,7 +163,7 @@ body > header {
 }
 
 main {
-    background: url('/assets/images/parchment.jpg');
+    background: url('/assets/images/parchment.jpeg');
     padding: 4rem;
 
     border: 1px solid $red;
@@ -356,11 +356,13 @@ article header {
     .even .featured-image {
         float: left;
         margin-right: 1.2rem;
+        transform: rotate(5deg);
     }
 
     .odd .featured-image {
         float: right;
         margin-left: 1.2rem;
+        transform: rotate(-5deg);
     }
 
     a {

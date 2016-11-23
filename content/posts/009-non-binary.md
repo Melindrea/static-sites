@@ -9,12 +9,7 @@ excerpt: Essay on what being non-binary means to me, as well as some terms that 
 category: Personal Life
 tags:
     - gender
-featuredImage:
-    revSrc: gender.56b1e8f5.jpg
-    src: gender.jpg
-    alt: Oil paints and used paintbrushes
-    copyright:
-        photographer: Lia Leslie
+featuredImage: gender
 ---
 
 Gender is very much visible in the current media, with the transphobic bathroom laws being enacted in at least parts of the US. For anyone who knows me from twitter, it's probably not escaped you that I'm neither straight, nor cis. And more-or-less not a woman.

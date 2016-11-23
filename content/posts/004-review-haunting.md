@@ -11,12 +11,7 @@ tags:
     - literary horror
     - ghosts
     - five stars
-featuredImage:
-    revSrc: haunting.04321dcd.jpg
-    src: haunting.jpg
-    alt: Houses staring down
-    copyright:
-        photographer: Okamatsu Fujikawa
+featuredImage: haunting
 ---
 
 *This five-star story is written by Shirley Jackson.*

@@ -11,12 +11,7 @@ tags:
     - historical
     - magical realism
     - ghosts
-featuredImage:
-    revSrc: evaluation.ecb48068.jpg
-    src: evaluation.jpg
-    alt: A house as seen through a fence
-    copyright:
-        photographer: Matt Jones
+featuredImage: evaluation
 ---
 
 She scanned the case book a final time before acknowledging the patient slouched in a chair across the table. Shackles held his arms behind him, and his legs fastened to the chair. Under the glower his face was ashen, and blonde tests of hair veiled his serene eyes.

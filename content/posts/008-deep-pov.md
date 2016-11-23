@@ -10,12 +10,7 @@ category: Writing
 tags:
     - revision
     - writing advice
-featuredImage:
-    revSrc: deep-pov.a1ae1534.jpg
-    src: deep-pov.jpg
-    alt: A fountain pen and writing in cursive on a notepad
-    copyright:
-        photographer: Aaron Burden
+featuredImage: deep-pov
 ---
 
 One of the big buzzwords of today's writing advice is *deep point of view*. For the uninitated, it's the idea of making everything about your point of view's view. Write only what they notice and how they notice it. This can be done in either first person or third person. Either way it's about immersing the reader in the narrative.

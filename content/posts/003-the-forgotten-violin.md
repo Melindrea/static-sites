@@ -10,12 +10,7 @@ category: Flash Fiction
 tags:
     - historical
     - magical realism
-featuredImage:
-    revSrc: forgotten-violin.08006bc3.jpg
-    src: forgotten-violin.jpg
-    alt: Opening into an old forest
-    copyright:
-        photographer: Antonius M. Hogebrandt
+featuredImage: forgotten-violin
 ---
 
 It was time. Her younger brother was dead. Nothing tied her to the farmstead, not anymore. Kari paused at the top of the hill and glanced back at what had been her home her entire life.

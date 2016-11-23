@@ -13,7 +13,19 @@
     @extend %polaroid;
 }
 
-header .featured-image {
+.featured-image--large {
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+.portrait {
+    display: block;
+    margin: 0 auto;
+    @extend %polaroid;
+}
+
+header .featured-image,
+.portrait {
     margin-bottom: 2rem;
 }
 img {
@@ -24,11 +36,6 @@ img {
 .inline-image {
     @extend %polaroid;
     display: inline-block;
-}
-
-.portrait {
-    display: block;
-    margin: 0 auto;
 }
 
 .gallery {

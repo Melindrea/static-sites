@@ -10,13 +10,7 @@ category: Writing
 tags:
     - writing process
     - imho
-featuredImage:
-    revSrc: writing.f66bf846.jpg
-    src: writing.jpg
-    alt: Old books and a pen
-    copyright:
-        photographer: Joanna Kosinska
-        url: http://joannakosinska.com/
+featuredImage: writing
 ---
 
 When I asked what I should write this first post on AntoniusM.se about, I had several more-or-less useful answers. I will, in fact, hold onto the "Ode to beverages" until later, and while it might be interesting to put in some thoughts on where this will be in a year, I'll leave soothsaying to those less cynical than I am.

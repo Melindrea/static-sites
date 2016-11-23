@@ -9,12 +9,7 @@ excerpt: Introduction to my cute cat, who helps me write by being cuddly, or alt
 category: Personal Life
 tags:
     - midnatt
-featuredImage:
-    revSrc: midnatt.ec23932c.jpg
-    src: midnatt.jpg
-    alt: Midnatt curled up in a desk tray
-    copyright:
-        photographer: Antonius M. Hogebrandt
+featuredImage: midnatt
 gallery: midnatt
 ---
 

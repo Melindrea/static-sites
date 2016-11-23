@@ -67,7 +67,11 @@ function assets(app) {
                 // as hooks for embedding and styling
                 svgoPlugins: [{cleanupIDs: false}]
             })))
-            .pipe(app.dest('processed/images'));
+            .pipe(app.dest(function (file) {
+                console.log(file.path);
+                file.path = file.path.replace('.jpg', '.jpeg');
+                return 'processed/images';
+            }));
     });
 
     app.task('styles', function () {
@@ -109,7 +113,7 @@ function assets(app) {
             .pipe(revAll.revision())
             .pipe(app.dest(deployDir))
             .pipe(revAll.manifestFile())
-            .pipe(app.dest(buildDir));
+            .pipe(app.dest('data'));
     });
 }
 

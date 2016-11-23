@@ -22,63 +22,178 @@ images:
     mommy:
         alt: A black and white cat
         caption: Midnatt and her sister Mitzi's mother
-        src: mommy.jpg
+        src: mommy.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-mitzi:
         alt: A tabby kitten, a black kitten and a finger
         caption: Midnatt and Mitzi is quite fascinated by a human hand
-        src: midnatt-mitzi.jpg
+        src: midnatt-mitzi.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-kitten:
         alt: Black kitten climbing a hand
         caption: It's fun to explore Daddy, says Midnatt
-        src: midnatt-kitten.jpg
+        src: midnatt-kitten.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-first-trip:
         alt: Black kitten clinging to a man
         caption: Are we there yet? Final leg on the trip to Midnatt's forever-home
-        src: midnatt-first-trip.jpg
+        src: midnatt-first-trip.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-computer:
         alt: Black kitten sitting on a laptop
         caption: This is how Mommy does it, right?
-        src: midnatt-computer.jpg
+        src: midnatt-computer.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-selfie:
         alt: Partial picture of a black kitten's face
         caption: My selfies are the cutest, says Midnatt
-        src: midnatt-selfie.jpg
+        src: midnatt-selfie.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-chair:
         alt: Black cat sleeping in an armchair
         caption: After a long day of playing, napping, exploring, napping, eating and napping, Midnatt figures she deserves a nap
-        src: midnatt-chair.jpg
+        src: midnatt-chair.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-karlstad:
         alt: Black cat sitting on the armrest of a sofa
         caption: First time with Mommy's family to celebrate Christmas! At least the sofa is more-or-less safe from the army of kidlets and Other Cats
-        src: midnatt-karlstad.jpg
+        src: midnatt-karlstad.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-shrimp:
         alt: Black cat eating whole shrimp
         caption: "SHRIMP! For the first New Years dinner, Midnatt got her favourite food: whole shrimp"
-        src: midnatt-shrimp.jpg
+        src: midnatt-shrimp.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-linn-zorro:
         alt: "Three cats on a door mat: black, white-gray and dark gray"
         caption: Sometimes we cat sit Midnatt's aunt's cats. It goes okay. The white and gray is Linn, and the big gray one is Zorro
-        src: midnatt-linn-zorro.jpg
+        src: midnatt-linn-zorro.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-tired:
         alt: Black cat covering her face with a paw
         caption: Always when I'm sleeping!
-        src: midnatt-tired.jpg
+        src: midnatt-tired.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-perch:
         alt: Black cat on a pedestal
         caption: A favourite place to keep a look-out for enemies like flies, hands, feet or Other Cats
-        src: midnatt-perch.jpg
+        src: midnatt-perch.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-cone:
         alt: Black cat sprawled on the floor, with a Cone of Shame
         caption: The indignity! First travel, then put to sleep, and then wake up with a cone around the neck, and stitches on the tummy! It's just enough to ker-flop!
-        src: midnatt-cone.jpg
+        src: midnatt-cone.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-sofa:
         alt: Black cat curled up in a corner, next to legs
         caption: "Sometimes the favouritest place in the whole world: the sofa next to Mommy"
-        src: midnatt-sofa.jpg
+        src: midnatt-sofa.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     midnatt-yoga:
         alt: Black cat curled up in a rolled-up yoga mat
         caption: Ah, a fine example of cat yoga
-        src: midnatt-yoga.jpg
+        src: midnatt-yoga.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
+    midnatt:
+        alt: Midnatt curled up in a desk tray
+        caption: Sepia cat in a desk tray
+        src: midnatt.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
+    evaluation:
+        src: evaluation.jpeg
+        alt: A house as seen through a fence
+        copyright:
+            photographer: Matt Jones
+    superheros:
+        src: superheros.jpeg
+        alt: Aurora Boreali in sepia
+        copyright:
+            photographer: Diogo Kamioka
+    chess:
+        src: chess.jpeg
+        alt: Wooden chess pieces
+        copyright:
+            photographer: Maarten van den Heuvel
+    well002:
+        src: well002.jpeg
+        alt: The lower part of the cover with the name Katherine Lampe on it
+        copyright:
+            photographer: Matt Davis
+    gender:
+        src: gender.jpeg
+        alt: Oil paints and used paintbrushes
+        copyright:
+            photographer: Lia Leslie
+    deep-pov:
+        src: deep-pov.jpeg
+        alt: A fountain pen and writing in cursive on a notepad
+        copyright:
+            photographer: Aaron Burden
+    landscape:
+        src: landscape.jpeg
+        alt: The raging ocean, as viewed from a cliff
+        copyright:
+            photographer: Frances Gunn
+    forgotten-violin:
+        src: forgotten-violin.jpeg
+        alt: Opening into an old forest
+        copyright:
+            photographer: Antonius M. Hogebrandt
+    revision-angelmaker:
+        src: revision-angelmaker.jpeg
+        alt: Screenshot of my composite mode Scrivener, with a background of a moor and the first few paragraphs of the story
+        copyright:
+            photographer: Antonius M. Hogebrandt
+    ramblings:
+        src: ramblings.jpeg
+        alt: Sepia word cloud
+        copyright:
+            photographer: Antonius M. Hogebrandt
+    old-photo:
+        src: old-photo.jpeg
+        alt: Sepia photo of Antonius M. Hogebrandt
+        copyright:
+            photographer: Sofie Haraké
+    haunting:
+        src: haunting.jpeg
+        alt: Houses staring down
+        copyright:
+            photographer: Okamatsu Fujikawa
+    writing:
+        src: writing.jpeg
+        alt: Old books and a pen
+        copyright:
+            photographer: Joanna Kosinska
+            url: http://joannakosinska.com/
+covers:
+    anglamakerskan:
+        src: anglamakerskan.jpeg
+        alt: The bottom half of a ghostly girl, with the tagline 'Can a haunted heart find strength to risk everything for the fate of the innocent dead?'
+        copyright:
+            designer: Kristine Wyllys
+            url: https://kristinewyllys.com/
+    well002:
+        src: well002.jpeg
+        alt: A desert valley with a well that's spraying colours
+        copyright:
+            designer: Matt Davis
+            url: https://twitter.com/GreyDevil13
 
 sizes:
     original: /assets/images/gallery/

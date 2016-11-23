@@ -1,6 +1,6 @@
 <li class="{{striped index}}">{{#with item}}<article class="clearfix post hentry {{ taxonomies }}"><a href="{{linkTo key "posts"}}">
     <header>
-        {{#if data.featuredImage}}<img src="/assets/images/gallery/320w/{{ data.featuredImage.src }}" class="featured-image" alt="{{ data.featuredImage.alt }} by {{ data.featuredImage.copyright.photographer }}">{{/if}}
+        {{#if data.featuredImage}}<img src="{{ data.featuredImage.320Url }}" class="featured-image" alt="{{ data.featuredImage.alt }} by {{ data.featuredImage.copyright.photographer }}">{{/if}}
         <h2 class="entry-title">{{data.title}}</h2>
         <div class="entry-meta">
             Posted <time class="updated" datetime="{{moment data.posted format="YYYY-MM-DDTHH:mm:ssZ"}}">{{moment data.posted format="MMMM Do, YYYY"}}</time>

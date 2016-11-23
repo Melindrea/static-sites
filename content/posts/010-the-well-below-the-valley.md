@@ -10,12 +10,7 @@ category: Guest Post
 tags:
     - cover reveal
     - Katherine Lampe
-featuredImage:
-    revSrc: well002.f4dd311c.jpg
-    src: well002.jpg
-    alt: The lower part of the cover with the name Katherine Lampe on it
-    copyright:
-        photographer: Matt Davis
+featuredImage: well002
 ---
 
 As a special post, today I'm introducing the cover of one of my favourite authors, [Katherine Lampe](https://theshadowsanctuary.wordpress.com/), whose next book--The Well Below the Valley--will be released in print and electronic editions August 2, 2016.

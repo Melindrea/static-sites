@@ -10,12 +10,7 @@ category: Flash Fiction
 tags:
     - landscape
     - ocean
-featuredImage:
-    revSrc: landscape.2acfd77e.jpg
-    src: landscape.jpg
-    alt: The raging ocean, as viewed from a cliff
-    copyright:
-        photographer: Frances Gunn
+featuredImage: landscape
 ---
 
 Cerulean waves tipped with lace cradled her as they pulled her from the warm cliff. They caressed her freckled legs and rounded hips. With the gentleness of a lover they guided her into the chilled water, away from the jagged cove striated with crimson and granite. She slipped, unresisting, into the primal eternity. It soothed her torn dress and smoothed her wrinkled forehead.

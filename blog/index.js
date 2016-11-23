@@ -54,7 +54,7 @@ function blog(name) {
 
         for (var key in blog.indices) {
             data = blog.indices[key];
-            content = blog.templates.header + '{{> ' + data.list + ' }}{{ tag-cloud }}';
+            content = blog.templates.header + '{{> ' + data.list + ' }}';
 
            app.archive('blog-' + key + '.hbs', {
                 content: content,

@@ -11,12 +11,7 @@ tags:
     - revision
     - cover reveal
     - writing process
-featuredImage:
-    revSrc: revision-angelmaker.9b5a6501.jpg
-    src: revision-angelmaker.jpg
-    alt: Screenshot of my composite mode Scrivener, with a background of a moor and the first few paragraphs of the story
-    copyright:
-        photographer: Antonius M. Hogebrandt
+featuredImage: revision-angelmaker
 ---
 
 As I promised last week, I will offer up a "dual feature" to make up for my computer exploding and thereby stopping me from posting anything last Monday. While I hope you'll want to read both of them, if you're only here for the [cover reveal](#cover) I won't hold it against you.
