@@ -12,6 +12,10 @@ tags:
     - cover reveal
     - writing process
 featuredImage: revision-angelmaker
+images:
+    cover-anglamakerskan:
+        size: 320
+        id: cover-anglamakerskan
 ---
 
 As I promised last week, I will offer up a "dual feature" to make up for my computer exploding and thereby stopping me from posting anything last Monday. While I hope you'll want to read both of them, if you're only here for the [cover reveal](#cover) I won't hold it against you.
@@ -152,7 +156,7 @@ On [Unsplash](https://unsplash.com) I found the perfect image, by the photograph
 
 So, without further ado: The cover of *Änglamakerskan*.
 
-<a href="/assets/images/covers/640w/anglamakerskan.jpg" data-rel="thumbnail">
-    <img alt="The bottom half of a ghostly girl, with the tagline 'Can a haunted heart find strength to risk everything for the fate of the innocent dead?'" src="/assets/images/covers/320w/anglamakerskan.jpg" width="320" height="480">
-</a>
+{{#with images.cover-anglamakerskan}}
+    {{> thumbnail }}
+{{/with}}
 

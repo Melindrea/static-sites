@@ -6,22 +6,22 @@
  */
 
 module.exports = function viewEvents(eventName) {
-  var method = 'on' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
+    var method = 'on' + eventName.charAt(0).toUpperCase() + eventName.slice(1);
 
-  return function(app) {
-    if (! (method in app)) {
-      app.handler(method);
-    }
+    return function(app) {
+        if (! (method in app)) {
+            app.handler(method);
+        }
 
-    app.use(function(app) {
-      return function() {
-        return function() {
-          this.on(eventName, function(view) {
-            app.emit(eventName, view);
-            app.handle(method, view);
-          });
-        };
-      };
-    });
-  };
+        app.use(function(app) {
+            return function() {
+                return function() {
+                    this.on(eventName, function(view) {
+                        app.emit(eventName, view);
+                        app.handle(method, view);
+                    });
+                };
+            };
+        });
+    };
 };

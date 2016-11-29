@@ -13,7 +13,6 @@ function plugin() {
             var images = [], image, sizeNames = [], url;
             function newImage(size)
             {
-                console.log(size);
                 image.size = size;
                 images.push(JSON.parse(JSON.stringify(image)));
             }
