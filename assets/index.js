@@ -16,6 +16,7 @@ function assets(app) {
                     'assets/scripts/**/*.js',
                     '*.js',
                     'helpers/**/*.js',
+                    'plugins/**/*.js',
                     'assets/*.js',
                     'blog/**/*.js'
                 ]

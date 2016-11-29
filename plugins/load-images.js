@@ -1,15 +1,23 @@
+'use strict';
+
 function plugin() {
    return function(app) {
        var config = require('./../config'),
            each = require('async-each'),
-           _ = require('underscore'),
            path = require('path'),
            gm = require('gm').subClass({imageMagick: true}),
            sizes = config.media.sizes,
            manifest = require('./../data/rev-manifest.json');
 
-       app.define('processImages', function(cb) {
-           var images = [], image, sizedImage, sizeNames = [];
+         app.define('processImages', function(cb) {
+            var images = [], image, sizeNames = [], url;
+            function newImage(size)
+            {
+                console.log(size);
+                image.size = size;
+                images.push(JSON.parse(JSON.stringify(image)));
+            }
+
            for (var key in sizes) {
                 sizeNames.push(key);
             }
@@ -20,25 +28,36 @@ function plugin() {
                image.id = imageId;
 
                for (key in sizes) {
-                  image[key + 'Url'] = sizes[key] + image.src;
+                    url = sizes[key].replace('<type>', 'gallery');
+                    image[key + 'Url'] = url + image.src;
               }
 
-              sizeNames.forEach(function (size) {
-                    image.size = size;
-                    images.push(JSON.parse(JSON.stringify(image)));
-              });
+              sizeNames.forEach(newImage);
            }
-           each(images, function(parsedImage, next) {
-               var fileUrl = sizes[parsedImage.size] + parsedImage.src,
-                   src;
 
+           for (imageId in config.media.covers) {
+               image = config.media.covers[imageId];
+               image.id = 'cover-' + imageId;
+
+               for (key in sizes) {
+                    url = sizes[key].replace('<type>', 'covers');
+
+                    image[key + 'Url'] = url + image.src;
+              }
+
+              sizeNames.forEach(newImage);
+           }
+
+
+           each(images, function(parsedImage, next) {
+               var fileUrl = parsedImage[parsedImage.size + 'Url'],
+                   src;
                parsedImage.revSrc = '';
 
                if (fileUrl.substring(1) in manifest) {
                   parsedImage.revSrc = manifest[fileUrl.substring(1)].replace(sizes.original.substring(1), '');
 
                }
-
                src = path.resolve(__dirname + '/..' + fileUrl.replace(
                    'assets',
                    'processed'
@@ -72,6 +91,7 @@ function plugin() {
        });
    };
 }
+
 
 /**
  * Expose `plugin`.

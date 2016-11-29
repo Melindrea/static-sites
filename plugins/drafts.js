@@ -3,6 +3,7 @@
  *
  * @return {Function}
  */
+'use strict';
 
 function plugin(name) {
     return function(app) {

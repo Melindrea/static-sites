@@ -1,8 +1,7 @@
 /**
  * Expose `plugin`.
  */
-
-module.exports = plugin;
+'use strict';
 
 /**
  * Assemble plugin to create an RSS feed from a collection.
@@ -14,7 +13,6 @@ function plugin(name) {
     return function(app) {
         var files = app.getViews(name),
             RSS = require('rss'),
-            path = require('path'),
             fs = require('fs'),
             entries = [],
             pkg = app.pkg.data,
@@ -28,9 +26,6 @@ function plugin(name) {
 
         for (var fileName in files) {
             var file = files[fileName],
-                fp = file.path,
-                extname = path.extname(fp),
-                filename = path.basename(fp, extname),
                 link = file.data.permalink
                     .replace(buildDir, site)
                     .replace('index.html', ''),
@@ -58,7 +53,7 @@ function plugin(name) {
                     stats;
                 try {
                     stats = fs.statSync(imagePath);
-                    size = stats['size'];
+                    size = stats.size;
                 } catch (e) {}
 
                 parsedFile.featuredImage = {
@@ -76,6 +71,7 @@ function plugin(name) {
 
         rssEntries = entries.slice(0, 20);
 
+        /*jshint camelcase: false */
         feed = new RSS({
             title: siteData.title,
             description: pkg.description,
@@ -116,3 +112,4 @@ function plugin(name) {
     };
 }
 
+module.exports = plugin;

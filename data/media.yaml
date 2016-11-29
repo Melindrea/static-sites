@@ -194,7 +194,7 @@ covers:
         copyright:
             designer: Kristine Wyllys
             url: https://kristinewyllys.com/
-    well002:
+    well:
         src: well002.jpeg
         alt: A desert valley with a well that's spraying colours
         copyright:
@@ -202,8 +202,8 @@ covers:
             url: https://twitter.com/GreyDevil13
 
 sizes:
-    original: /assets/images/gallery/
-    1024: /assets/images/gallery/1024w/
-    640: /assets/images/gallery/640w/
-    320: /assets/images/gallery/320w/
-    thumbnail: /assets/images/gallery/thumbnails/
+    original: /assets/images/<type>/
+    1024: /assets/images/<type>/1024w/
+    640: /assets/images/<type>/640w/
+    320: /assets/images/<type>/320w/
+    thumbnail: /assets/images/<type>/thumbnails/
