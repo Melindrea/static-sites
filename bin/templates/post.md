@@ -10,9 +10,4 @@ excerpt:
 category:
 tags:
 featuredImage:
-    revSrc:
-    src:
-    alt:
-    copyright:
-        photographer:
 ---

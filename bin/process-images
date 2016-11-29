@@ -7,13 +7,13 @@ echo 'Creating thumbnails'
 mogrify -path thumbnails -thumbnail 200x200^ -gravity center -extent 200x200 -auto-orient *.jpeg
 
 echo 'Scaling to 1024 width'
-mogrify -path 1024w -resize 1024x\> -auto-orient *.jpeg
+mogrify -path 1024w -thumbnail 1024x\> -auto-orient *.jpeg
 
 echo 'Scaling to 640 width'
-mogrify -path 640w -resize 640x\> -auto-orient *.jpeg
+mogrify -path 640w -thumbnail 640x\> -auto-orient *.jpeg
 
 echo 'Scaling to 320 width'
-mogrify -path 320w -resize 320x\> -auto-orient *.jpeg
+mogrify -path 320w -thumbnail 320x\> -auto-orient *.jpeg
 
 echo -e '\nFiles:'
 ls -R

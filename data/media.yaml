@@ -19,6 +19,12 @@ galleries:
             - midnatt-yoga
 
 images:
+    martin-sattler-original:
+        alt: Mountains reflected in a crystal lake
+        caption: Mountains reflected in a crystal lake
+        src: ufih95iofj4-martin-sattler.jpeg
+        copyright:
+            photographer: Martin Sattler
     mommy:
         alt: A black and white cat
         caption: Midnatt and her sister Mitzi's mother

@@ -20,6 +20,7 @@ function processTag(tag) {
 }
 function blog(name) {
     return function(app) {
+        // console.log(app.cache.data.images);
         var path = require('path'),
             config = require('./../config'),
             blog = config.blog,

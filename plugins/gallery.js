@@ -3,116 +3,74 @@
  *
  * @return {Function}
  */
-var Fiber = require('fibers');
 
 function plugin(name) {
     return function(app) {
         var files = app.getViews(name),
             config = require('./../config'),
-            gallery, size, items = [], image;
+            gallery, size, items = [], image, imageId,
+            dataImages = app.cache.data.images;
 
-        for (var file in files) {
-            // Fiber(function () {
+       for (var file in files) {
             if (files[file].data.gallery) {
                 gallery = config.media.galleries[files[file].data.gallery].items;
-                files[file].data.gallery = {};
 
-                loadImageList(gallery, files[file].data.gallery, 'thumbnail');
+                files[file].data.gallery = getImageList(gallery, 'thumbnail', app.cache.data.images);
             }
 
             if (files[file].data.images) {
                 gallery = files[file].data.images;
                 files[file].data.images = {};
 
-                loadImageList(gallery, files[file].data.images, 'prop');
+                files[file].data.images = getImageList(gallery, 'prop', app.cache.data.images);
             }
 
             if (files[file].data.featuredImage) {
                 if (typeof files[file].data.featuredImage === 'string') {
-                    // Fiber(function () {
-                        files[file].data.featuredImage = parseImage(files[file].data.featuredImage, 'original');
-                    // }).run();
+                        imageId = files[file].data.featuredImage;
+                        if (imageId in dataImages) {
+                            files[file].data.featuredImage = parseImageNew(dataImages[imageId], 'original');
+                        }
                 } else {
                     console.log(files[file].data.featuredImage);
                 }
             }
-        // }).run();
         }
     };
 }
 
-function loadImageList(gallery, images, size)
+function parseImageNew(image, size)
 {
-        var imageSize = size,
-            imageId;
-        for (var imageKey in gallery) {
-    // Fiber(function () {
-            if (gallery instanceof Array) {
-                imageId = gallery[imageKey];
-            } else {
-                imageId = gallery[imageKey].id;
-                if (size === 'prop') {
-                    imageSize = gallery[imageKey].size;
-                }
-            }
+    image.url = image[size + 'Url'];
+    image.size = {};
+    image.size.height = image.sizes[size].height;
+    image.size.width = image.sizes[size].width;
 
-            images[imageId] = parseImage(imageId, imageSize);
-            // console.log(images);
-    // }).run();
-        }
+    return image;
 }
 
-function parseImage(imageId, size)
+function getImageList(gallery, size, imagesSource)
 {
-    var config = require('./../config'),
-        path = require('path'),
-        gm = require('gm').subClass({imageMagick: true}),
-        sizes = config.media.sizes,
-        manifest = require('./../data/rev-manifest.json'),
-        parsedImage = {},
-        fileUrl;
+    var imageSize = size,
+        imageId,
+        images = {};
 
-    if (imageId in config.media.images) {
-        image = config.media.images[imageId];
-        parsedImage.revSrc = '';
-        fileUrl = sizes[size] + image.src;
-        parsedImage.url = sizes[size] + image.src;
-        parsedImage.size = {
-            width: 0,
-            height: 0
-        };
-
-        var src = path.resolve(__dirname + '/..' + parsedImage.url.replace('assets', 'processed'));
-        // var fiber = Fiber.current;
-        gm(src).size(function (err, value) {
-                // console.log(src);
-            if (err) {
-                console.log(err);
-            } else {
-                // console.log(value);
-                // fiber.run(value);
+    for (var imageKey in gallery) {
+        if (gallery instanceof Array) {
+            imageId = gallery[imageKey];
+        } else {
+            imageId = gallery[imageKey].id;
+            if (size === 'prop') {
+                imageSize = gallery[imageKey].size;
             }
-        });
-        // parsedImage.size = Fiber.yield();
-
-        if (fileUrl.substring(1) in manifest) {
-            parsedImage.revSrc = manifest[fileUrl.substring(1)].replace(sizes.original.substring(1), '');
-
-        }
-        parsedImage.id = imageId;
-        parsedImage.alt = image.alt;
-
-        if (image.caption) {
-            parsedImage.caption = image.caption;
         }
 
-        for (var key in sizes) {
-            parsedImage[key + 'Url'] = sizes[key] + image.src;
-        }
+        images[imageId] = parseImageNew(imagesSource[imageId], imageSize);
     }
 
-    return parsedImage;
+    return images;
 }
+
 
 /**
  * Expose `plugin`.

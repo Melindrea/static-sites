@@ -52,6 +52,14 @@ taxonomies:
                 metaType: website
                 layout: master
 
+        tangential-tutorials:
+                name: Tangential Tutorials
+                title: Tutorials not directly writing-related
+                excerpt: Tutorials showing how to do things that are not directly linked to writing, but are connected to it, such as binding books or creating headers.
+                blurb: Tutorials showing how to do things that are not directly linked to writing, but are connected to it, such as binding books or creating headers.
+                metaType: website
+                layout: master
+
 
     tags:
         superheroes:
@@ -59,6 +67,15 @@ taxonomies:
                 title: Superheroes
                 excerpt: Posts relating to superheroes, whether my own or others.
                 blurb: Posts relating to superheroes, whether my own or others.
+                metaType: website
+                layout: master
+
+
+        digital-art:
+                name: digital art
+                title: Digital Art
+                excerpt: Posts relating to digital art, such as sizes of images or Gimp tutorials.
+                blurb: Posts relating to digital art, such as sizes of images or Gimp tutorials.
                 metaType: website
                 layout: master
 
@@ -89,112 +106,128 @@ taxonomies:
         historical:
                 name: historical
                 title: Stories set in the past
-                excerpt: Some stuff for the head
+                excerpt: Stories set in the past, generally at least 30 years back, though might be as much as 1500 years.
+                blurb: Stories set in the past, generally at least 30 years back, though might be as much as 1500 years.
                 metaType: website
                 layout: master
 
         magical-realism:
                 name: magical realism
                 title: Magic is around us
-                excerpt: Some stuff for the head
+                excerpt: Stories about the magic that exists around us, whether we acknowledge it or not.
+                blurb: Stories about the magic that exists around us, whether we acknowledge it or not.
                 metaType: website
                 layout: master
 
         literary-horror:
                 name: literary horror
                 title: Horror written in a careful style
-                excerpt: Some stuff for the head
+                excerpt: Horror leaning towards literary due to its use of the language itself to build suspension and fear.
+                blurb: Horror leaning towards literary due to its use of the language itself to build suspension and fear.
                 metaType: website
                 layout: master
 
         ghosts:
                 name: ghosts
                 title: All about the undead
-                excerpt: Some stuff for the head
+                excerpt: Ghosts, ghouls and other icky things from beyond the grave.
+                blurb: Ghosts, ghouls and other icky things from beyond the grave.
                 metaType: website
                 layout: master
 
         five-stars:
                 name: five stars
                 title: 5 stars
-                excerpt: Some stuff for the head
+                excerpt: Reviews of books that were given 5 stars.
+                blurb: Reviews of books that were given 5 stars.
                 metaType: website
                 layout: master
 
         mental-health:
                 name: mental health
                 title: About mental health issues
-                excerpt: Some stuff for the head
+                excerpt: Posts to bring attention to mental health and how it affects people.
+                blurb: Posts to bring attention to mental health and how it affects people.
                 metaType: website
                 layout: master
 
         revision:
                 name: revision
                 title: About revising
-                excerpt: Some stuff for the head
+                excerpt: Posts going into the nitty-gritty on revision and how to think about it.
+                blurb: Posts going into the nitty-gritty on revision and how to think about it.
                 metaType: website
                 layout: master
 
         cover-reveal:
                 name: cover reveal
                 title: Covers; my own or others
-                excerpt: Some stuff for the head
+                excerpt: Digital covers for new publications, see them here among the first places.
+                blurb: Digital covers for new publications, see them here among the first places.
                 metaType: website
                 layout: master
 
         landscape:
                 name: landscape
                 title: Written landscapes
-                excerpt: Some stuff for the head
+                excerpt: Writing is an art where words and metaphors are the paints.
+                blurb: Writing is an art where words and metaphors are the paints.
                 metaType: website
                 layout: master
 
         ocean:
                 name: ocean
                 title: The vast ocean
-                excerpt: Some stuff for the head
+                excerpt: Posts about the ocean and all that is in it, mainly the waters off the west coast of Sweden.
+                blurb: Posts about the ocean and all that is in it, mainly the waters off the west coast of Sweden.
                 metaType: website
                 layout: master
 
         writing-advice:
                 name: writing advice
                 title: Writing advice
-                excerpt: Some stuff for the head
+                excerpt: Advice about writing, a catch-all tag.
+                blurb: Advice about writing, a catch-all tag.
                 metaType: website
                 layout: master
 
         gender:
                 name: gender
                 title: Gender theories
-                excerpt: Some stuff for the head
+                excerpt: Gender musings, theories, and overall waffling about that strange thing that so many take for granted.
+                blurb: Gender musings, theories, and overall waffling about that strange thing that so many take for granted.
                 metaType: website
                 layout: master
 
         katherine-lampe:
                 name: Katherine Lampe
                 title: The author Katherine Lampe
-                excerpt: Some stuff for the head
+                excerpt: Post regarding the lovely Katherine Lampe, one of my favourite authors.
+                blurb: Post regarding the lovely Katherine Lampe, one of my favourite authors.
                 metaType: website
                 layout: master
 
         teaser:
                 name: teaser
                 title: Teasers from stories
-                excerpt: Some stuff for the head
+                excerpt: Tidbits and teasers to wet the appetite for the full stories.
+                blurb: Tidbits and teasers to wet the appetite for the full stories.
                 metaType: website
                 layout: master
 
         writing-game:
                 name: writing game
                 title: Writing games
-                excerpt: Some stuff for the head
+                excerpt: Writing games in various forms, to spread awareness of ones stories.
+                blurb: Writing games in various forms, to spread awareness of ones stories.
                 metaType: website
                 layout: master
 
         contemporary:
                 name: contemporary
                 title: Stories set in modern times
-                excerpt: Some stuff for the head
+                excerpt: Stories set in a modern time, which is no more than five or ten years in either direction from now.
+                blurb: Stories set in a modern time, which is no more than five or ten years in either direction from now.
                 metaType: website
                 layout: master
 

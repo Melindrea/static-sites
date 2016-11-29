@@ -19,6 +19,7 @@ var path = require('path'),
     typogr = require('./plugins/typogr'),
     assets = require('./assets'),
     gallery = require('./plugins/gallery'),
+    loadImages = require('./plugins/load-images'),
     app = assemble();
 
 /**
@@ -28,6 +29,7 @@ var path = require('path'),
 app.use(viewEvents('permalink'));
 app.use(permalinks());
 app.use(getDest());
+app.use(loadImages());
 
 app.onPermalink(/./, function (file, next) {
   file.data = merge({}, app.cache.data, file.data);
@@ -143,29 +145,36 @@ app.task('release', function () { return bumpAndTag('major'); });
  * Build task
  */
 
-app.task('build', ['load'], function () {
-  return app.use(drafts('posts'))
-    .use(rss('posts'))
-    .use(blog('posts'))
-    .use(gallery('posts'))
-    .use(gallery('pages'))
-    .toStream('pages')
-    .pipe(app.toStream('archives'))
-    .pipe(app.toStream('posts'))
-    .on('error', console.log)
-    .pipe(app.renderFile('md'))
-    .on('error', console.log)
-    .pipe(typogr())
-    .pipe(smoosher({ // [todo] - can this be moved to assemble?
-        base: '.'
-    }))
-    .pipe(app.dest(function (file) {
-        file.path = file.data.permalink;
-        file.base = path.dirname(file.path);
-        file.extname = '.html';
+app.task('build', ['load'], function (cb) {
+    app.processImages(function(err) {
+    if (err) {
+        return cb(err);
+    }
 
-        return file.base;
-    }));
+    app.use(drafts('posts'))
+        .use(rss('posts'))
+        .use(blog('posts'))
+        .use(gallery('posts'))
+        .use(gallery('pages'))
+        .toStream('pages')
+        .pipe(app.toStream('archives'))
+        .pipe(app.toStream('posts'))
+        .on('error', console.log)
+        .pipe(app.renderFile('md'))
+        .on('error', console.log)
+        .pipe(typogr())
+        .pipe(smoosher({ // [todo] - can this be moved to assemble?
+            base: '.'
+        }))
+        .pipe(app.dest(function (file) {
+            file.path = file.data.permalink;
+            file.base = path.dirname(file.path);
+            file.extname = '.html';
+
+            return file.base;
+        }))
+        .on('end', cb);
+    });
 });
 
 app.task('sitemap', function () {
