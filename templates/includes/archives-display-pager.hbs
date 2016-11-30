@@ -1,0 +1,6 @@
+<nav class="clearfix">
+    <ul class="pager">
+        {{#if pager.prev}}{{#with pager.prev}}<li class="previous"><a href="{{linkTo key 'archives'}}"><span aria-hidden="true">&larr;</span> {{title}}</a></li>{{/with}}{{/if}}
+        {{#if pager.next}}{{#with pager.next}}<li class="next"><a href="{{linkTo key 'archives'}}">{{title}} <span aria-hidden="true">&rarr;</span></a></li>{{/with}}{{/if}}
+  </ul>
+</nav>

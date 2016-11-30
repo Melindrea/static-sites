@@ -10,6 +10,8 @@
   "homepage": "https://antoniusm.se",
   "private": true,
   "devDependencies": {
+    "assemble-collections": "^0.2.1",
+    "assemble-indexer": "^0.1.2",
     "assemble-permalinks": "^0.3.1",
     "async-each": "^1.0.1",
     "bluebird": "^3.4.6",
@@ -64,6 +66,7 @@
     "moment": "^2.11.2",
     "normalize-opentype.css": "^0.2.4",
     "normalize.css": "^3.0.3",
+    "paginationator": "^0.1.4",
     "picturefill": "^3.0.2",
     "relative-dest": "^0.1.0",
     "rss": "^1.2.1",

@@ -20,6 +20,8 @@ var path = require('path'),
     assets = require('./assets'),
     gallery = require('./plugins/gallery'),
     loadImages = require('./plugins/load-images'),
+    collections = require('assemble-collections'),
+    indexer = require('assemble-indexer'),
     app = assemble();
 
 /**
@@ -30,6 +32,7 @@ app.use(viewEvents('permalink'));
 app.use(permalinks());
 app.use(getDest());
 app.use(loadImages());
+app.use(collections());
 
 app.onPermalink(/./, function (file, next) {
   file.data = merge({}, app.cache.data, file.data);
@@ -113,6 +116,7 @@ app.task('load', function (cb) {
     app.layouts('templates/layouts/*.hbs');
     app.pages('content/pages/**.hbs');
     app.posts('content/posts/*.md');
+    app.use(drafts('posts'));
 
     cb();
 });
@@ -141,7 +145,7 @@ app.task('release', function () { return bumpAndTag('major'); });
 
 
 
-/**
+ /**
  * Build task
  */
 
@@ -151,8 +155,7 @@ app.task('build', ['load'], function (cb) {
         return cb(err);
     }
 
-    app.use(drafts('posts'))
-        .use(rss('posts'))
+    app.use(rss('posts'))
         .use(blog('posts'))
         .use(gallery('posts'))
         .use(gallery('pages'))
@@ -170,7 +173,7 @@ app.task('build', ['load'], function (cb) {
             file.path = file.data.permalink;
             file.base = path.dirname(file.path);
             file.extname = '.html';
-
+            // console.log(file.base);
             return file.base;
         }))
         .on('end', cb);

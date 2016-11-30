@@ -20,17 +20,18 @@ function processTag(tag) {
 }
 function blog(name) {
     return function(app) {
-        // console.log(app.cache.data.images);
         var path = require('path'),
             config = require('./../config'),
-            blog = config.blog,
             permalinks = require('assemble-permalinks'),
+            paginationator = require('paginationator'),
+            blog = config.blog,
             files = app.getViews(name),
             tagsArray = [],
             tagUrls = [],
             collection,
             data,
-            content;
+            content, list, pages, groups,
+            List = app.List;
 
         app.create('archives');
 
@@ -39,52 +40,119 @@ function blog(name) {
                 blog.permalink,
                 {
                     permalink: function (filename) {
-                        var name = filename.substr(5),
-                            folder;
-
+                        var bits = filename.substr(5).split('&&'),
+                            folder,
+                            name = bits[0];
                         if (name === 'index') {
+                            if (bits.length > 1 && bits[1] > 1) {
+                                return bits[1] + '/index.html';
+                            }
                             return 'index.html';
                         }
 
                         folder = name.replace('::', '/');
 
+                        if (bits.length > 1 && bits[1] > 1) {
+                            return folder + '/' + bits[1] + '/index.html';
+                        }
                         return folder + '/index.html';
                     }
                 }
             ));
 
-        for (var key in blog.indices) {
-            data = blog.indices[key];
-            content = blog.templates.header + '{{> ' + data.list + ' }}';
+        function createPageKey(key, index)
+        {
+            return 'blog-' + key + '&&' + index + '.hbs'
+        }
 
-           app.archive('blog-' + key + '.hbs', {
+        function createPage(page)
+        {
+            var pageData = JSON.parse(JSON.stringify(data));
+                pageData['posts'] = page.items;
+                pageData.index = page.idx;
+
+            var pager = {};
+
+            if (page.current !== page.last) {
+                pager.next = {
+                    key: createPageKey(slug, page.next),
+                    data: {
+                        title: 'Older posts'
+                    }
+                };
+            }
+
+            if (page.current !== page.first) {
+                var pageNumber = 'Page ' + page.current;
+                pageData.pageTitle += ' (' + pageNumber + ')';
+                pageData.title += ' / ' + pageNumber;
+                pager.prev = {
+                    key: createPageKey(slug, (page.prev)),
+                    data: {
+                        title: 'Newer posts'
+                    }
+                };
+            }
+
+            pageData.pager = pager;
+
+            app.archive(createPageKey(slug, page.current), {
                 content: content,
-                data: data
+                data: pageData
             });
         }
+
+        for (var key in blog.indices) {
+            data = blog.indices[key];
+            content = blog.templates.header + '{{> ' + data.list + ' }}' + blog.templates.footer;
+
+            if (data.list === 'posts') {
+                list = List(app.posts);
+                list = list.sortBy('data.posted', {reverse: true});
+            }
+
+            pages = list.paginate({limit: blog['list-limit']});
+            var slug = key;
+            pages.forEach(createPage);
+        }
+
+        list = List(app.posts);
+        list = list.sortBy('data.posted', {reverse: true});
 
         for (key in blog.taxonomies) {
             var taxonomyType = blog.taxonomies[key];
 
             for (var taxonomyKey in taxonomyType) {
+                pages = false;
                 data = taxonomyType[taxonomyKey];
-                content = blog.templates.header + '{{> posts-by-' + key + ' }}';
+                content = blog.templates.header + '{{> posts }}' + blog.templates.footer;
 
                 data.pageTitle = data.name;
                 if (key === 'categories') {
+                    groups = list.groupBy('data.category');
                     data.subTitle = 'Category';
                     data.title = data.title + ' / Category';
                     data.type = 'category';
                 } else if (key === 'tags') {
+                    groups = list.groupBy('data.tags');
                     data.subTitle = 'Tag';
                     data.title = data.title + ' / Tag';
                     data.type = 'tag';
                 }
 
-                app.archive('blog-' + key + '::' + taxonomyKey + '.hbs', {
-                    content: content,
-                    data: data
-                });
+                for (var groupKey in groups) {
+                    if (groupKey == data.name) {
+                        pages = paginationator(groups[groupKey], {limit: blog['list-limit']});
+                        break;
+                    }
+                }
+                slug = key + '::' + taxonomyKey;
+                if (pages) {
+                    pages.pages.forEach(createPage);
+                } else {
+                    console.log(key, ':', taxonomyKey);
+                }
+
             }
         }
 
