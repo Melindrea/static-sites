@@ -1,6 +1,6 @@
 <ul class="entry-list">
 {{#each posts}}
-    <li class="{{striped index}}"><article class="clearfix post hentry {{ taxonomies }}"><a href="{{linkTo key "posts"}}">
+    <li class="{{ striped @index }}"><article class="clearfix post hentry {{ taxonomies }}"><a href="{{linkTo key "posts"}}">
     <header>
         {{#if data.featuredImage}}<img src="{{ data.featuredImage.320Url }}" class="featured-image" alt="{{ data.featuredImage.alt }} by {{ data.featuredImage.copyright.photographer }}">{{/if}}
         <h2 class="entry-title">{{data.title}}</h2>

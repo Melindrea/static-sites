@@ -21,7 +21,6 @@ var path = require('path'),
     gallery = require('./plugins/gallery'),
     loadImages = require('./plugins/load-images'),
     collections = require('assemble-collections'),
-    indexer = require('assemble-indexer'),
     app = assemble();
 
 /**

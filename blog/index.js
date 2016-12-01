@@ -30,7 +30,7 @@ function blog(name) {
             tagUrls = [],
             collection,
             data,
-            content, list, pages, groups,
+            content, list, pages, groups, slug,
             List = app.List;
 
         app.create('archives');
@@ -62,13 +62,13 @@ function blog(name) {
 
         function createPageKey(key, index)
         {
-            return 'blog-' + key + '&&' + index + '.hbs'
+            return 'blog-' + key + '&&' + index + '.hbs';
         }
 
         function createPage(page)
         {
             var pageData = JSON.parse(JSON.stringify(data));
-                pageData['posts'] = page.items;
+                pageData.posts = page.items;
                 pageData.index = page.idx;
 
             var pager = {};
@@ -107,16 +107,16 @@ function blog(name) {
             content = blog.templates.header + '{{> ' + data.list + ' }}' + blog.templates.footer;
 
             if (data.list === 'posts') {
-                list = List(app.posts);
+                list = new List(app.posts);
                 list = list.sortBy('data.posted', {reverse: true});
             }
 
             pages = list.paginate({limit: blog['list-limit']});
-            var slug = key;
+            slug = key;
             pages.forEach(createPage);
         }
 
-        list = List(app.posts);
+        list = new List(app.posts);
         list = list.sortBy('data.posted', {reverse: true});
 
         for (key in blog.taxonomies) {
@@ -141,7 +141,7 @@ function blog(name) {
                 }
 
                 for (var groupKey in groups) {
-                    if (groupKey == data.name) {
+                    if (groupKey === data.name) {
                         pages = paginationator(groups[groupKey], {limit: blog['list-limit']});
                         break;
                     }
