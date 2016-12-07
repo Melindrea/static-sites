@@ -60,6 +60,8 @@ function blog(name) {
                 }
             ));
 
+        app.helpers(blog.helpers);
+
         function createPageKey(key, index)
         {
             return 'blog-' + key + '&&' + index + '.hbs';
@@ -156,6 +158,7 @@ function blog(name) {
             }
         }
 
+        // Widget-creating
         collection = app.archives;
         for (key in collection.views) {
             var view = collection.getView(key),
@@ -178,7 +181,6 @@ function blog(name) {
             }
         }
         app.data({tags: tagsArray});
-        app.helpers(blog.helpers);
     };
 }
 

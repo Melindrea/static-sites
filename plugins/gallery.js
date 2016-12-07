@@ -35,6 +35,7 @@ function getImageList(gallery, size, imagesSource)
 
     return images;
 }
+
 function plugin(name) {
     return function(app) {
         var files = app.getViews(name),

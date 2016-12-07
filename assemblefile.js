@@ -7,6 +7,7 @@ var path = require('path'),
     viewEvents = require('./plugins/view-events'),
     drafts = require('./plugins/drafts'),
     blog = require('./blog'),
+    // blog2 = require('./blog/index2'),
     rss = require('./plugins/rss'),
     git = require('gulp-git'),
     bump = require('gulp-bump'),
@@ -20,18 +21,26 @@ var path = require('path'),
     assets = require('./assets'),
     gallery = require('./plugins/gallery'),
     loadImages = require('./plugins/load-images'),
-    collections = require('assemble-collections'),
+    Navigation = require('assemble-navigation'),
     app = assemble();
 
 /**
  * Plugins
  */
+var navigation = new Navigation({
+  'menus': ['main', 'footer'],
+  'default': 'main'
+});
+
+app.pages.onLoad(/\.hbs$|\.md$/, navigation.onLoad());
+app.pages.preRender(/\.hbs$|\.md$/, navigation.preRender());
 
 app.use(viewEvents('permalink'));
 app.use(permalinks());
 app.use(getDest());
 app.use(loadImages());
-app.use(collections());
+// app.use(blog2());
+
 
 app.onPermalink(/./, function (file, next) {
   file.data = merge({}, app.cache.data, file.data);
@@ -89,6 +98,18 @@ app.pages.use(
     )
 );
 
+// app.pages.preRender(/\.hbs$|\.md$/, function () {
+//     console.log('pages');
+//     return function (view, next) {
+//         if (typeof next !== 'function') {
+//             throw new TypeError('expected a callback function');
+//         }
+//         // var navLocal = self.getLocalMenu(view);
+//         // view.data = merge({}, {'navigation': navLocal}, view.data);
+//         console.log('view', view);
+//         next(null, view);
+//     }
+// });
 
 /**
  * Register a handlebars helper for processing markdown.
@@ -149,7 +170,9 @@ app.task('release', function () { return bumpAndTag('major'); });
  */
 
 app.task('build', ['load'], function (cb) {
-    app.processImages(function(err) {
+    navigation.clearMenus();
+
+    app.processImages(function (err) {
     if (err) {
         return cb(err);
     }
@@ -162,6 +185,9 @@ app.task('build', ['load'], function (cb) {
         .pipe(app.toStream('archives'))
         .pipe(app.toStream('posts'))
         .on('error', console.log)
+        // .pipe(app.loadGallery('posts'))
+        // .pipe(app.loadGallery('pages'))
+        // .pipe(app.loadWidgets(app.posts))
         .pipe(app.renderFile('md'))
         .on('error', console.log)
         .pipe(typogr())
@@ -178,6 +204,37 @@ app.task('build', ['load'], function (cb) {
         .on('end', cb);
     });
 });
+
+// app.task('build2', ['load'], function (cb) {
+//     app.processImages(function(err) {
+//     if (err) {
+//         return cb(err);
+//     }
+
+//     app.use(rss('posts'))
+//         .use(blog('posts'))
+//         .use(gallery('posts'))
+//         .use(gallery('pages'))
+//         .toStream('pages')
+//         .pipe(app.toStream('archives'))
+//         .pipe(app.toStream('posts'))
+//         .on('error', console.log)
+//         .pipe(app.renderFile('md'))
+//         .on('error', console.log)
+//         .pipe(typogr())
+//         .pipe(smoosher({ // [todo] - can this be moved to assemble?
+//             base: '.'
+//         }))
+//         .pipe(app.dest(function (file) {
+//             file.path = file.data.permalink;
+//             file.base = path.dirname(file.path);
+//             file.extname = '.html';
+//             // console.log(file.base);
+//             return file.base;
+//         }))
+//         .on('end', cb);
+//     });
+// });
 
 app.task('sitemap', function () {
     return app.src('build/**/*.html')
