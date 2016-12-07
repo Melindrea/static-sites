@@ -8,7 +8,7 @@ main-build: clean
 	@assemble
 
 test:
-	@node lib/html-validator.js && node lib/html-validator.js
+	@node lib/html-validator.js
 
 clean: ## Cleans the build folder
 	@assemble clean

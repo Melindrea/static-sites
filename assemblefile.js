@@ -18,6 +18,8 @@ var path = require('path'),
     config = require('./config'),
     assemble = require('assemble'),
     typogr = require('./plugins/typogr'),
+    inlineCss = require('gulp-inline-css'),
+    extname = require('gulp-extname'),
     assets = require('./assets'),
     gallery = require('./plugins/gallery'),
     loadImages = require('./plugins/load-images'),
@@ -131,14 +133,39 @@ assets(app);
  * Tasks for loading and rendering our templates
  */
 
+var minimist = require('minimist');
+
+var knownOptions = {
+    string: ['env', 'site'],
+    default: {
+        env: process.env.NODE_ENV || 'local',
+        site: 'antoniusm.se'
+    }
+};
+
+var options = minimist(process.argv.slice(2), knownOptions);
+
 app.task('load', function (cb) {
     app.partials('templates/includes/*.hbs');
+    app.partials('templates/includes/' + options.site + '/*.hbs');
     app.layouts('templates/layouts/*.hbs');
-    app.pages('content/pages/**.hbs');
-    app.posts('content/posts/*.md');
+    app.layouts('templates/layouts/' + options.site + '/*.hbs');
+    app.pages('content/' + options.site + '/pages/**.hbs');
+    app.posts('content/' + options.site + '/posts/*.md');
     app.use(drafts('posts'));
 
     cb();
+});
+
+app.task('newsletters', ['load'], function () {
+    app.src('content/newsletters/**/*.md', {layout: 'email'})
+        .pipe(typogr())
+        .pipe(inlineCss())
+        .pipe(app.renderFile('md'))
+        .pipe(app.dest(function (file) {
+            file.extname = '.html';
+            return 'newsletters';
+        }));
 });
 
 app.task('clean', require('del').bind(null, [tempDir, buildDir]));
@@ -177,17 +204,15 @@ app.task('build', ['load'], function (cb) {
         return cb(err);
     }
 
-    app.use(rss('posts'))
+    app
         .use(blog('posts'))
+        .use(rss('posts'))
         .use(gallery('posts'))
         .use(gallery('pages'))
         .toStream('pages')
         .pipe(app.toStream('archives'))
         .pipe(app.toStream('posts'))
         .on('error', console.log)
-        // .pipe(app.loadGallery('posts'))
-        // .pipe(app.loadGallery('pages'))
-        // .pipe(app.loadWidgets(app.posts))
         .pipe(app.renderFile('md'))
         .on('error', console.log)
         .pipe(typogr())
@@ -198,43 +223,12 @@ app.task('build', ['load'], function (cb) {
             file.path = file.data.permalink;
             file.base = path.dirname(file.path);
             file.extname = '.html';
-            // console.log(file.base);
+            console.log(file.base);
             return file.base;
         }))
         .on('end', cb);
     });
 });
-
-// app.task('build2', ['load'], function (cb) {
-//     app.processImages(function(err) {
-//     if (err) {
-//         return cb(err);
-//     }
-
-//     app.use(rss('posts'))
-//         .use(blog('posts'))
-//         .use(gallery('posts'))
-//         .use(gallery('pages'))
-//         .toStream('pages')
-//         .pipe(app.toStream('archives'))
-//         .pipe(app.toStream('posts'))
-//         .on('error', console.log)
-//         .pipe(app.renderFile('md'))
-//         .on('error', console.log)
-//         .pipe(typogr())
-//         .pipe(smoosher({ // [todo] - can this be moved to assemble?
-//             base: '.'
-//         }))
-//         .pipe(app.dest(function (file) {
-//             file.path = file.data.permalink;
-//             file.base = path.dirname(file.path);
-//             file.extname = '.html';
-//             // console.log(file.base);
-//             return file.base;
-//         }))
-//         .on('end', cb);
-//     });
-// });
 
 app.task('sitemap', function () {
     return app.src('build/**/*.html')

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Antonius M. Newsletter {{ title }}</title>
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+                min-width: 100%!important;
+                font-family: Georgia, "Times New Roman", serif;
+                font-size: 16px;
+                line-height: 1.2;
+            }
+
+            #content {
+                width: 100%;
+                max-width: 600px;
+            }
+
+            .email-header {
+                text-align: right;
+            }
+
+            .email-footer {
+                font-size: 12px;
+                font-style: italic;
+                border-top: 2px solid #eee;
+            }
+        </style>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body yahoo bgcolor="#f6f8f1">
+        <table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table align="center" cellpadding="0" cellspacing="0" border="0" id="content">
+                        <tr class="email-header"><td>
+                            <p>{{ now }}<br>
+                            Katrineholm</p>
+                        </td></tr>
+                        <tr>
+                            <td>
+                                {{#markdown}}
+                                {% body %}
+                                {{/markdown}}
+                            </td>
+                        </tr>
+                        <tr class="email-footer"><td>
+                            <p>You are on this list because you signed up on <a href="https://smaty.se">the Småty site</a> or <a href="https://antoniusm.se">my author site</a>.</p>
+
+                            <p><a href="*|UNSUB|*">Unsubscribe from this list </a></p>
+
+                            <p>*|REWARDS|*</p>
+
+                        </td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
