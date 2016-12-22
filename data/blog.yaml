@@ -57,13 +57,27 @@ taxonomies:
         tangential-tutorials:
                 name: Tangential Tutorials
                 title: Tutorials not directly writing-related
-                excerpt: Tutorials showing how to do things that are not directly linked to writing, but are connected to it, such as binding books or creating headers.
-                blurb: Tutorials showing how to do things that are not directly linked to writing, but are connected to it, such as binding books or creating headers.
+                excerpt: Tutorials showing how to do things that are not directly linked to my writing, but are connected to it, such as binding books or creating headers.
+                blurb: Tutorials showing how to do things that are not directly linked to my writing, but are connected to it, such as binding books or creating headers.
                 metaType: website
                 layout: master
 
 
     tags:
+        brand:
+                name: brand
+                title: Building the Antonius M. brand
+                excerpt: Posts relating to social media and building a brand across platforms.
+                blurb: Posts relating to social media and building a brand across platforms.
+                metaType: website
+                layout: master
+        series-index:
+                name: series index
+                title: Index for series
+                excerpt: Posts that act as index for a specific series.
+                blurb: Posts that act as index for a specific series.
+                metaType: website
+                layout: master
         superheroes:
                 name: superheroes
                 title: Superheroes

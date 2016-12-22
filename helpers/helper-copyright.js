@@ -1,7 +1,11 @@
 'use strict';
-module.exports.copyright = function () {
+module.exports.copyright = function (className) {
     var site = this.context.pkg.homepage,
-        copyright = this.context.site.copyright;
+        copyright = this.context.site.copyright,
+        htmlClass = '';
 
-    return '<a href="' + site + '">' + copyright + '</a>';
+    if (typeof className !== 'object') {
+        htmlClass = 'class="' + className + '" ';
+    }
+    return '<a ' + htmlClass + 'href="' + site + '">' + copyright + '</a>';
 };

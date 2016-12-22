@@ -1,0 +1,62 @@
+//-- PAGER --//
+/*
+ *  <nav class="c-pager u-clearfix">
+ *      <ul>
+ *          <li class="c-pager__previous">
+ *              <a href="/next" rel="prev"><span aria-hidden="true">&larr;</span> Next</a>
+ *          </li>
+ *          <li class="c-pager__next">
+ *              <a href="/previous" rel="next">Previous <span aria-hidden="true">&rarr;</span></a>
+ *          </li>
+ *      </ul>
+ *  </nav>
+*/
+
+.c-pager {
+    padding-left: 0;
+    margin: 20px 0;
+    text-align: center;
+    list-style: none;
+
+    a {
+        text-shadow: none;
+    }
+}
+
+.c-pager li > a,
+.c-pager li > span {
+    display: inline-block;
+    padding: 5px 14px;
+    background-color: rgba($color-primary-0, 0.2);
+    border: 1px solid $color-primary-3;
+    border-radius: 3px;
+    color: $color-complement-3;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 0.9em;
+
+    &::before,
+    &::after {
+        position: relative;
+    }
+}
+
+.c-pager li > a:hover,
+.c-pager li > a:active,
+.c-pager li > a:focus {
+    background-color: rgba($color-primary-1, 0.9);
+    &::before,
+    &::after {
+        position: relative;
+    }
+}
+
+.c-pager__next > a,
+.c-pager__next > span {
+    float: right;
+}
+
+.c-pager__previous > a,
+.c-pager__previous > span {
+    float: left;
+}

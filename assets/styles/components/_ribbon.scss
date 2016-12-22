@@ -1,0 +1,61 @@
+//-- RIBBON --//
+.c-ribbon__non-semantic-protector {
+    position: relative;
+    z-index: 1;
+    margin: -4rem -88px 0 -88px; /* 88 = 4*18 + 16 */
+}
+
+.c-ribbon {
+    text-align: center;
+    font-size: 16px !important;
+    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+
+    width: 100%;
+
+    position: relative;
+    background: #842c64; /* #ba89b6;*/
+    padding: 1.5em 2em; /* Adjust to suit */
+    margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: -1em;
+        /*border: 1.5em solid #986794;*/
+        border: 1.5em solid #620a42;
+        z-index: -1;
+    }
+    &:before {
+        left: -2em;
+        border-right-width: 1.5em;
+        border-left-color: transparent;
+    }
+    &:after {
+        right: -2em;
+        border-left-width: 1.5em;
+        border-right-color: transparent;
+    }
+}
+
+    .c-ribbon__content {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            border-style: solid;
+            border-color: #4a002a transparent transparent transparent;
+            bottom: -1em;
+        }
+
+        &:before {
+            left: 0;
+            border-width: 1em 0 0 1em;
+        }
+        &:after {
+            right: 0;
+            border-width: 1em 1em 0 0;
+        }
+    }

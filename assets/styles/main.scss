@@ -7,6 +7,7 @@ html * {
 @import "system/mixins";
 @import "system/functions";
 @import "system/anonymous-styles";
+@import "system/utilities";
 
 @import "base/typography";
 @import "base/layout";
@@ -17,70 +18,14 @@ html * {
 @import "navigation";
 @import "magnific-popup/src/css/main";
 
-.clearfix {
-    @extend %clearfix;
-}
+// Components
+@import "components/site";
+@import "components/pager";
+@import "components/pullquote";
+@import "components/navigation";
+@import "components/ribbon";
 
-.non-semantic-protector {
-    position: relative;
-    z-index: 1;
-    margin: -4rem -88px 0 -88px; /* 88 = 4*18 + 16 */
-}
 
-.ribbon {
-    text-align: center;
-    font-size: 16px !important;
-    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
-
-    width: 100%;
-
-    position: relative;
-    background: #842c64; /* #ba89b6;*/
-    padding: 1.5em 2em; /* Adjust to suit */
-    margin: 2em auto 3em; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
-
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        display: block;
-        bottom: -1em;
-        /*border: 1.5em solid #986794;*/
-        border: 1.5em solid #620a42;
-        z-index: -1;
-    }
-    &:before {
-        left: -2em;
-        border-right-width: 1.5em;
-        border-left-color: transparent;
-    }
-    &:after {
-        right: -2em;
-        border-left-width: 1.5em;
-        border-right-color: transparent;
-    }
-
-    .ribbon-content {
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            display: block;
-            border-style: solid;
-            border-color: #4a002a transparent transparent transparent;
-            bottom: -1em;
-        }
-
-        &:before {
-            left: 0;
-            border-width: 1em 0 0 1em;
-        }
-        &:after {
-            right: 0;
-            border-width: 1em 1em 0 0;
-        }
-    }
-}
 
 html {
     text-shadow: rgba(255, 255, 255, .4) 0 1px 0;
@@ -100,66 +45,8 @@ html {
 }
 
 
-body > footer {
-      font-size: 0.7rem;
-      text-align: center;
-      padding: 0.5rem;
-
-    ul {
-      margin: 0;
-      padding-left: 0;
-      list-style: none;
-      color: $brown-medium-light;
-    }
-
-    li {
-      display: inline-block;
-    }
-
-    li:after {
-      content: '/';
-      padding-left: 2px;
-    }
-
-    li:last-child:after {
-      content: '';
-    }
-
-    a {
-      text-decoration: none;
-      display: inline-block;
-
-        &:link,
-        &:visited {
-          color: $brown-medium-light;
-        }
-
-        &:active,
-        &:focus,
-        &:hover {
-          text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
-          color: $brown-light;
-        }
-    }
-
-}
-
 body, html {
   margin: 0;
-}
-
-body > header {
-    margin-top: 1.5rem;
-    text-align: center;
-    color: $red;
-
-    .logo {
-        opacity: 0.9;
-
-        img {
-          max-width: 300px;
-        }
-    }
 }
 
 main {
@@ -243,115 +130,21 @@ mark,
     text-shadow: none;
 }
 
-.entry-footer {
+.c-article__footer {
   border-top: 2px solid $red;
 }
-.entry-meta {
+.c-article__meta {
   font-style: italic;
   font-size: 85%;
 }
 
-article header {
-    margin-right: -2rem;
-    margin-left: -2rem;
+.c-article__meta--list {
+    margin-top: -1.4rem;
 }
 
-.pullquote {
-    &::after,
-    &::before {
-        font-size: 4rem;
-        line-height: 0.1em;
-        vertical-align: -0.4em;
-        font-family: Linux Libertine, Georgia, serif;
-    }
-
-    &::after {
-        content: close-quote;
-    }
-
-    &::before {
-        content: open-quote;
-    }
-
-    text-shadow: 0 0 6px rgba(255, 255, 255, .7);
-    display: block;
-    float: right;
-    padding: 0 0 0 0.5rem;
-    margin: 0 0 0.5rem 0.5rem;
-    width: 200px;
-    font-size: 1.5rem;
-    color: #030;
-    @extend %zelda;
-}
-
-.ord {
-    @extend sup;
-}
-
-.caps {
-    font-variant: small-caps;
-    font-weight: 600;
-}
-
-p .amp {
-    font-family: Georgia, Linux Libertine, serif;
-    font-size: 1.06em;
-}
-
-// todo: move these to a "blog" section
-
-.pager {
-  padding-left: 0;
-  margin: 20px 0;
-  text-align: center;
-  list-style: none;
-  a {
-    text-shadow: none;
-  }
-}
-
-.pager li > a,
-.pager li > span {
-  display: inline-block;
-  padding: 5px 14px;
-  background-color: rgba($color-primary-0, 0.2);
-  border: 1px solid $color-primary-3;
-  border-radius: 3px;
-  color: $color-complement-3;
-  font-weight: normal;
-  font-style: italic;
-  font-size: 0.9em;
-
-    &::before,
-    &::after {
-        position: relative;
-    }
-}
-.pager li > a:hover,
-.pager li > a:active,
-.pager li > a:focus {
-    background-color: rgba($color-primary-1, 0.9);
-    &::before,
-    &::after {
-        position: relative;
-    }
-}
-
-.pager .next > a,
-.pager .next > span {
-  float: right;
-}
-.pager .previous > a,
-.pager .previous > span {
-  float: left;
-}
-
-.entry-list {
+.c-article__list {
     list-style: none;
 
-    .entry-meta {
-        margin-top: -1.4rem;
-    }
 
     .even .featured-image {
         float: left;
@@ -377,6 +170,26 @@ p .amp {
         }
     }
 }
+
+.o-header {
+    margin-right: -2rem;
+    margin-left: -2rem;
+}
+
+.ord {
+    @extend sup;
+}
+
+p .caps {
+    font-variant: small-caps;
+    font-weight: 600;
+}
+
+p .amp {
+    font-family: Georgia, Linux Libertine, serif;
+    font-size: 1.06em;
+}
+
 
 main #mc_embed_signup_scroll {
     padding-bottom: 2rem;

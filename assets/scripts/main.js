@@ -46,7 +46,7 @@ $(function () {
         $parentParagraph.css('position', 'relative');
 
         $(this).clone()
-            .addClass('pullquote')
+            .addClass('c-pullquote')
             .prependTo($parentParagraph);
     });
 });

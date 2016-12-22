@@ -1,17 +1,22 @@
 ---
 layout: master
 ---
-<article class="hentry {{ taxonomies }}">
-    {{> header}}
-    <div class="entry-content">
+<article class="c-article {{ taxonomies }}">
+    <header class="o-header">
+        <h1 itemprop="name headline">{{ pageTitle }}{{#if subTitle}} <small>{{ subTitle }}</small>{{/if}}</h1>
+        {{#if featuredImage}}{{#with featuredImage}}
+            {{> image }}
+        {{/with}}{{/if}}
+    </header>
+    <div itemprop="articleBody">
 {{#markdown}}
 {% body %}
 {{/markdown}}
     </div>
-    <footer class="entry-footer">
+    <footer class="c-article__footer">
         {{> display-pager }}
 
-        <dl class="entry-meta typl8-lining">
+        <dl class="c-article__meta typl8-lining">
             <dt>Posted</dt>
             <dd><time itemprop="datePublished" datetime="{{ moment posted format="YYYY-MM-DDTHH:mm:ssZ" }}">{{ moment posted 'YYYY-MM-DD' }}</time></dd>
             <dt>Category</dt>

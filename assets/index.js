@@ -44,6 +44,10 @@ function assets(app) {
         return app.copy('assets/well-known/**', 'build/.well-known');
     });
 
+    app.task('resources', function () {
+        return app.copy('assets/resources/**', 'build/assets/resources');
+    });
+
     app.task('images-copy', function () {
         return app.copy('processed/images/**/**.{jpg,jpeg,png}', 'build/assets/images');
     });

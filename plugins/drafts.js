@@ -14,6 +14,7 @@ function plugin(name) {
                 delete files[file];
             }
         }
+
     };
 }
 

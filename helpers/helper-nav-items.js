@@ -25,8 +25,8 @@ module.exports.navItems = function (level) {
         var isCurrentPage = (key === pageSlug),
             isActiveParent = (key === parentSlug),
             url = (isCurrentPage) ? nav[key].path + '#content' : nav[key].path,
-            aria = (isCurrentPage) ? ' aria-describedby="current"' : '',
-            linkClass = (isActiveParent) ? ' class="active-parent"' : '';
+            aria = (isCurrentPage) ? ' aria-describedby="c-navigation--main__item--current"' : '',
+            linkClass = (isActiveParent) ? ' class="c-navigation--main__item--active"' : '';
 
         navItems.push(sprintf('<li><a href="%s"%s%s>%s</a></li>', url, aria, linkClass, nav[key].item));
     });

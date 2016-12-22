@@ -6,8 +6,8 @@ var path = require('path'),
     getDest = require('./plugins/get-dest'),
     viewEvents = require('./plugins/view-events'),
     drafts = require('./plugins/drafts'),
+    wordCount = require('./plugins/word-count'),
     blog = require('./blog'),
-    // blog2 = require('./blog/index2'),
     rss = require('./plugins/rss'),
     git = require('gulp-git'),
     bump = require('gulp-bump'),
@@ -19,10 +19,8 @@ var path = require('path'),
     assemble = require('assemble'),
     typogr = require('./plugins/typogr'),
     inlineCss = require('gulp-inline-css'),
-    extname = require('gulp-extname'),
     assets = require('./assets'),
-    gallery = require('./plugins/gallery'),
-    loadImages = require('./plugins/load-images'),
+    media = require('./plugins/media'),
     Navigation = require('assemble-navigation'),
     app = assemble();
 
@@ -40,8 +38,9 @@ app.pages.preRender(/\.hbs$|\.md$/, navigation.preRender());
 app.use(viewEvents('permalink'));
 app.use(permalinks());
 app.use(getDest());
-app.use(loadImages());
-// app.use(blog2());
+app.use(media());
+app.use(blog());
+app.use(rss());
 
 
 app.onPermalink(/./, function (file, next) {
@@ -153,6 +152,9 @@ app.task('load', function (cb) {
     app.pages('content/' + options.site + '/pages/**.hbs');
     app.posts('content/' + options.site + '/posts/*.md');
     app.use(drafts('posts'));
+    app.use(wordCount('posts'));
+
+    app.createArchives();
 
     cb();
 });
@@ -203,12 +205,11 @@ app.task('build', ['load'], function (cb) {
     if (err) {
         return cb(err);
     }
+    app.loadWidgets('posts');
+    app.createRSSFile('posts');
+    app.loadImages();
 
     app
-        .use(blog('posts'))
-        .use(rss('posts'))
-        .use(gallery('posts'))
-        .use(gallery('pages'))
         .toStream('pages')
         .pipe(app.toStream('archives'))
         .pipe(app.toStream('posts'))
@@ -223,7 +224,7 @@ app.task('build', ['load'], function (cb) {
             file.path = file.data.permalink;
             file.base = path.dirname(file.path);
             file.extname = '.html';
-            console.log(file.base);
+            // console.log(file.base);
             return file.base;
         }))
         .on('end', cb);
@@ -238,7 +239,7 @@ app.task('sitemap', function () {
         .pipe(app.dest(buildDir));
 });
 
-app.task('default', ['jshint', 'assets', 'images-copy', 'build', 'modernizr', 'useref', 'sitemap'], function () {
+app.task('default', ['jshint', 'assets', 'images-copy', 'resources', 'build', 'modernizr', 'useref', 'sitemap'], function () {
   return app.src(buildDir + '/**/*').pipe(gp.size({title: 'build', gzip: true}));
 });
 

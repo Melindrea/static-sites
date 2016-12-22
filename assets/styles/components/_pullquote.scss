@@ -1,0 +1,34 @@
+//-- PULLQUOTE --//
+/*
+ *  <span class="c-pullquote">
+ *      text
+ *  </span>
+*/
+
+.c-pullquote {
+    &::after,
+    &::before {
+        font-size: 4rem;
+        line-height: 0.1em;
+        vertical-align: -0.4em;
+        font-family: Linux Libertine, Georgia, serif;
+    }
+
+    &::after {
+        content: close-quote;
+    }
+
+    &::before {
+        content: open-quote;
+    }
+
+    text-shadow: 0 0 6px rgba(255, 255, 255, .7);
+    display: block;
+    float: right;
+    padding: 0 0 0 0.5rem;
+    margin: 0 0 0.5rem 0.5rem;
+    width: 200px;
+    font-size: 1.5rem;
+    color: #030;
+    @extend %zelda;
+}

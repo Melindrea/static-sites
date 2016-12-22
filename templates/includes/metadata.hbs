@@ -13,7 +13,7 @@
 {{/if}}
 
 {{#if featuredImage }}
-    <meta itemprop="image" content="{{ pkg.homepage }}/assets/images/gallery/{{ featuredImage.revSrc }}">
+    <meta itemprop="image" content="{{ pkg.homepage }}/{{ featuredImage.revSrc }}">
 {{/if}}
 
 <!-- Twitter Card data -->
@@ -25,14 +25,16 @@
 <meta name="twitter:creator" content="@melindrea">
 {{#if featuredImage }}
     <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="{{ pkg.homepage }}/assets/images/gallery/{{ featuredImage.revSrc }}">
+    <meta name="twitter:image:src" content="{{ pkg.homepage }}/{{ featuredImage.revSrc }}">
 {{/if}}
 <!-- Open Graph data -->
 <meta property="og:title" content="{{ title }}">
 <meta property="og:type" content="{{ metaType }}">
 <meta property="og:url" content="{{ canonical }}">
 {{#if featuredImage}}
-    <meta property="og:image" content="{{ pkg.homepage }}/assets/images/gallery/{{ featuredImage.revSrc }}">
+    <meta property="og:image" content="{{ pkg.homepage }}/{{ featuredImage.revSrc }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 {{/if}}
 
 {{#if excerpt}}
@@ -42,8 +44,11 @@
 
 {{#if article}}
     <meta property="article:published_time" content="{{ moment posted format="YYYY-MM-DDTHH:mm:ssZ" }}">
-    <meta property="article:modified_time" content="{{ moment lastUpdated format="YYYY-MM-DDTHH:mm:ssZ" }}">
+    <meta property="article:modified_time" content="{{ lastUpdated "YYYY-MM-DDTHH:mm:ssZ" }}">
     <meta property="article:section" content="{{ category }}">
     <meta property="article:tag" content="{{ tags }}">
-    <meta property="article:author" content="Antonius M. Hogebrandt">
+    <meta property="article:author:name" content="Antonius M. Hogebrandt">
 {{/if}}
+
+<!-- pinterest -->
+<meta name="p:domain_verify" content="e10a3e240439c6f94cc6e98951fa02dc"/>
