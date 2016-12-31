@@ -10,7 +10,8 @@ category: Characters
 tags:
     - contemporary
     - superheroes
-featuredImage: superheros
+featuredImage: superheroes
+menu: false
 ---
 
 I am working on a serial, [Stockholm Sentinels](https://tablo.io/melindrea/stockholm-sentinels) which will be updated as I have the time. Currently only the first chapter is out, and only the two first have been introduced, but I decided to post this anyway.

@@ -12,6 +12,7 @@ tags:
     - ghosts
     - five stars
 featuredImage: haunting
+menu: false
 ---
 
 *This five-star story is written by Shirley Jackson.*

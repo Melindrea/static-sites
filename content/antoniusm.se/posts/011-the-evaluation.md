@@ -12,6 +12,7 @@ tags:
     - magical realism
     - ghosts
 featuredImage: evaluation
+menu: false
 ---
 
 She scanned the case book a final time before acknowledging the patient slouched in a chair across the table. Shackles held his arms behind him, and his legs fastened to the chair. Under the glower his face was ashen, and blonde tests of hair veiled his serene eyes.

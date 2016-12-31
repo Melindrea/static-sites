@@ -32,8 +32,8 @@ var navigation = new Navigation({
   'default': 'main'
 });
 
-app.pages.onLoad(/\.hbs$|\.md$/, navigation.onLoad());
-app.pages.preRender(/\.hbs$|\.md$/, navigation.preRender());
+// app.onLoad(/./, navigation.onLoad());
+// app.preRender(/./, navigation.preRender());
 
 app.use(viewEvents('permalink'));
 app.use(permalinks());
@@ -99,17 +99,14 @@ app.pages.use(
     )
 );
 
-// app.pages.preRender(/\.hbs$|\.md$/, function () {
-//     console.log('pages');
-//     return function (view, next) {
-//         if (typeof next !== 'function') {
-//             throw new TypeError('expected a callback function');
-//         }
-//         // var navLocal = self.getLocalMenu(view);
-//         // view.data = merge({}, {'navigation': navLocal}, view.data);
-//         console.log('view', view);
-//         next(null, view);
+// app.preRender(/\.hbs$/, function (view, next) {
+//     if (typeof next !== 'function') {
+//         throw new TypeError('expected a callback function');
 //     }
+//     // var navLocal = self.getLocalMenu(view);
+//     // view.data = merge({}, {'navigation': navLocal}, view.data);
+//     console.log('view', view);
+//     next();
 // });
 
 /**
@@ -145,6 +142,8 @@ var knownOptions = {
 var options = minimist(process.argv.slice(2), knownOptions);
 
 app.task('load', function (cb) {
+    navigation.clearMenus();
+
     app.partials('templates/includes/*.hbs');
     app.partials('templates/includes/' + options.site + '/*.hbs');
     app.layouts('templates/layouts/*.hbs');
@@ -199,8 +198,6 @@ app.task('release', function () { return bumpAndTag('major'); });
  */
 
 app.task('build', ['load'], function (cb) {
-    navigation.clearMenus();
-
     app.processImages(function (err) {
     if (err) {
         return cb(err);

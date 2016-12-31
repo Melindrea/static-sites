@@ -12,6 +12,7 @@ tags:
     - cover reveal
     - writing process
 featuredImage: revision-angelmaker
+menu: false
 images:
     cover-anglamakerskan:
         size: 320

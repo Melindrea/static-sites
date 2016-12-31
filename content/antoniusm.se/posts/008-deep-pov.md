@@ -11,6 +11,7 @@ tags:
     - revision
     - writing advice
 featuredImage: deep-pov
+menu: false
 ---
 
 One of the big buzzwords of today's writing advice is *deep point of view*. For the uninitated, it's the idea of making everything about your point of view's view. Write only what they notice and how they notice it. This can be done in either first person or third person. Either way it's about immersing the reader in the narrative.

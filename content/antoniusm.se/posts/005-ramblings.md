@@ -10,6 +10,7 @@ category: Personal Life
 tags:
     - mental health
 featuredImage: ramblings
+menu: false
 ---
 
 “Mom, I never smile.”

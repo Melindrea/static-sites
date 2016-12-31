@@ -11,6 +11,7 @@ tags:
     - brand
     - series index
 featuredImage: consolidating-brands
+menu: false
 ---
 
 Since I am part of [Raimey Gallant's Blog Hop](https://raimeygallant.wordpress.com/2016/12/05/nano-blog-social-media-hop-time-to-start-hopping/) I decided to look over my "brand" on social media and my sites. Now, I am *not* a marketing specialist, nor a designer, so this will be a WIP and a learning curve.

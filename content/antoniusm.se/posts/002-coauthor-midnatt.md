@@ -11,6 +11,7 @@ tags:
     - midnatt
 featuredImage: midnatt
 gallery: midnatt
+menu: false
 ---
 
 When me and my partner moved together, we both knew we wanted at least one cat. His family had two siamese cats, and my parents had a grey house cat, so we were used to pets. Fun fact, we'd bought a litter box and a travel bag about two moves and four years before we actually got the cat itself.

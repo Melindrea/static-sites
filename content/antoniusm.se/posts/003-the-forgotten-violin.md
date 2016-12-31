@@ -11,6 +11,7 @@ tags:
     - historical
     - magical realism
 featuredImage: forgotten-violin
+menu: false
 ---
 
 It was time. Her younger brother was dead. Nothing tied her to the farmstead, not anymore. Kari paused at the top of the hill and glanced back at what had been her home her entire life.

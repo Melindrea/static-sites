@@ -19,6 +19,12 @@ galleries:
             - midnatt-yoga
 
 images:
+    new-year-2017:
+        alt: 2017 written in fireworks
+        caption: 2017 written in fireworks
+        src: new-year-2017.jpeg
+        copyright:
+            photographer: Brigitte Tohm
     martin-sattler-original:
         alt: Mountains reflected in a crystal lake
         caption: Mountains reflected in a crystal lake
@@ -132,7 +138,7 @@ images:
         alt: A house as seen through a fence
         copyright:
             photographer: Matt Jones
-    superheros:
+    superheroes:
         src: superheros.jpeg
         alt: Aurora Boreali in sepia
         copyright:
