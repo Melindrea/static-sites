@@ -2,6 +2,7 @@
   "name": "antoniusm.se",
   "description": "Author site for Antonius M. Hogebrandt",
   "main": "",
+  "version": "1.0.1",
   "authors": [
     "Antonius Marie Hogebrandt <iam@mariehogebrandt.se>"
   ],
@@ -25,6 +26,7 @@
     "fontfaceobserver": "^1.6.3",
     "get-first": "^0.1.2",
     "gm": "^1.23.0",
+    "growl": "^1.9.2",
     "gulp": "^2.7.0",
     "gulp-bump": "^1.0.0",
     "gulp-cache": "^0.4.2",
