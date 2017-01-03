@@ -3,6 +3,9 @@ titleSeparator: "/"
 copyright: "2016-2017 © Antonius M. Hogebrandt"
 language: en
 
+gtm:
+    local: GTM-N2JHDQ
+    production: GTM-PFTL8C
 navigation:
     index:
         path: /

@@ -1,35 +1,40 @@
 'use strict';
 
-var path = require('path'),
+var assemble = require('assemble'),
+    path = require('path'),
     merge = require('mixin-deep'),
     permalinks = require('assemble-permalinks'),
+    gp = require('gulp-load-plugins')(),
+    smoosher = require('gulp-smoosher'),
+    inlineCss = require('gulp-inline-css'),
+    Navigation = require('assemble-navigation'),
+
+    // Configurations
+    config = require('./config'),
+    customPermalinks = require('./plugins/custom-permalinks'),
+
     getDest = require('./plugins/get-dest'),
     viewEvents = require('./plugins/view-events'),
     drafts = require('./plugins/drafts'),
     wordCount = require('./plugins/word-count'),
     blog = require('./blog'),
     rss = require('./plugins/rss'),
-    gp = require('gulp-load-plugins')(),
-    smoosher = require('gulp-smoosher'),
-    config = require('./config'),
-    assemble = require('assemble'),
     typogr = require('./plugins/typogr'),
-    inlineCss = require('gulp-inline-css'),
     assets = require('./assets'),
     media = require('./plugins/media'),
     revision = require('./plugins/revision'),
-    customPermalinks = require('./plugins/custom-permalinks'),
-    doctoc = require('gulp-doctoc'),
-    Navigation = require('assemble-navigation'),
+    logger = require('./lib/logger'),
+
     app = assemble();
 
 /**
  * Plugins
  */
-var navigation = new Navigation(config.site.nav);
+var navigation = new Navigation(config.data.site.nav);
 // app.onLoad(/./, navigation.onLoad());
 // app.preRender(/./, navigation.preRender());
 
+app.use(logger());
 app.use(viewEvents('permalink'));
 app.use(permalinks());
 app.use(customPermalinks());
@@ -40,7 +45,6 @@ app.use(rss());
 app.use(assets());
 app.use(revision());
 
-
 app.onPermalink(/./, function (file, next) {
   file.data = merge({}, app.cache.data, file.data);
   next();
@@ -48,8 +52,7 @@ app.onPermalink(/./, function (file, next) {
 
 var buildDir = config.pkg.config.buildDir,
     tempDir = '.tmp',
-    siteData = config.site;
-
+    siteData = config.data.site;
 siteData.base = buildDir;
 
 app.data({
@@ -83,23 +86,7 @@ app.pages.use(
 app.helper('markdown', require('helper-markdown'));
 app.helper('moment', require('helper-moment'));
 app.helpers('helpers/*.js');
-app.helper('log', function (val) {
-    console.log(val);
-});
 app.helpers(require('handlebars-helpers')());
-
-
-var minimist = require('minimist');
-
-var knownOptions = {
-    string: ['env', 'site'],
-    default: {
-        env: process.env.NODE_ENV || 'local',
-        site: 'antoniusm.se'
-    }
-};
-
-var options = minimist(process.argv.slice(2), knownOptions);
 
 /**
  * Tasks for loading and rendering our templates
@@ -108,11 +95,11 @@ app.task('load', function (cb) {
     navigation.clearMenus();
 
     app.partials('templates/includes/*.hbs');
-    app.partials('templates/includes/' + options.site + '/*.hbs');
+    app.partials('templates/includes/' + config.site + '/*.hbs');
     app.layouts('templates/layouts/*.hbs');
-    app.layouts('templates/layouts/' + options.site + '/*.hbs');
-    app.pages('content/' + options.site + '/pages/**.hbs');
-    app.posts('content/' + options.site + '/posts/**/*.md');
+    app.layouts('templates/layouts/' + config.site + '/*.hbs');
+    app.pages('content/' + config.site + '/pages/**.hbs');
+    app.posts('content/' + config.site + '/posts/**/*.md');
     app.use(drafts('posts'));
     app.use(wordCount('posts'));
 
@@ -151,9 +138,9 @@ app.task('build', ['load'], function (cb) {
         app.toStream('pages')
             .pipe(app.toStream('archives'))
             .pipe(app.toStream('posts'))
-            .on('error', console.log)
+            .on('error', app.logError)
             .pipe(app.renderFile('md'))
-            .on('error', console.log)
+            .on('error', app.logError)
             .pipe(typogr())
             .pipe(smoosher({
                 base: '.'
@@ -162,8 +149,7 @@ app.task('build', ['load'], function (cb) {
                 file.path = file.data.permalink;
                 file.base = path.dirname(file.path);
                 file.extname = '.html';
-                // console.log(file.base);
-                console.log(file.path);
+                // app.logDebug(file.path);
                 return file.base;
             }))
             .on('end', cb);

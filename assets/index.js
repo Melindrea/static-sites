@@ -14,7 +14,7 @@ module.exports = function () {
         app.task('jshint', function () {
             return app.src(
                     [
-                        'assets/scripts/**/*.js',
+                        'assets/scripts/*.js',
                         '*.js',
                         'helpers/**/*.js',
                         'plugins/**/*.js',
@@ -74,7 +74,7 @@ module.exports = function () {
                     svgoPlugins: [{cleanupIDs: false}]
                 })))
                 .pipe(app.dest(function (file) {
-                    console.log(file.path);
+                    app.logDebug(file.path);
                     file.path = file.path.replace('.jpg', '.jpeg');
                     return 'processed/images';
                 }));
@@ -104,10 +104,9 @@ module.exports = function () {
                 .pipe(app.dest('build'));
         });
 
-
         app.task('modernizr', function () {
             return app.src(['assets/**/**.{js,scss}', 'build/**/**.html'])
-                .pipe(gp.modernizr())
+                .pipe(gp.modernizr(config.data.modernizr))
                 .pipe(app.dest('.tmp/assets/scripts'));
         });
 

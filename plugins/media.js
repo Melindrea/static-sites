@@ -42,8 +42,8 @@ function plugin()
             gm = require('gm').subClass({
                 imageMagick: true
             }),
-            sizes = config.media.sizes,
-            manifest = require('./../data/rev-manifest.json'),
+            sizes = config.data.media.sizes,
+            manifest = config.data['rev-manifest'],
             types = ['posts', 'pages'];
 
         app.define(
@@ -58,7 +58,7 @@ function plugin()
 
                     for (var file in files) {
                         if (files[file].data.gallery) {
-                            gallery = config.media.galleries[files[file].data.gallery].items;
+                            gallery = config.data.media.galleries[files[file].data.gallery].items;
 
                             files[file].data.gallery = getImageList(gallery, 'thumbnail', app.cache.data.images);
                         }
@@ -77,7 +77,7 @@ function plugin()
                                         files[file].data.featuredImage = parseImage(dataImages[imageId], 'original');
                                     }
                             } else {
-                                console.log(files[file].data.featuredImage);
+                                app.logError(files[file].data.featuredImage, file);
                             }
                         }
                     }
@@ -102,9 +102,9 @@ function plugin()
                     sizeNames.push(key);
                 }
 
-                for (var imageId in config.media.images) {
+                for (var imageId in config.data.media.images) {
 
-                    image = config.media.images[imageId];
+                    image = config.data.media.images[imageId];
                     image.id = imageId;
 
                     for (key in sizes) {
@@ -116,8 +116,8 @@ function plugin()
                     sizeNames.forEach(newImage);
                 }
 
-                for (imageId in config.media.covers) {
-                    image = config.media.covers[imageId];
+                for (imageId in config.data.media.covers) {
+                    image = config.data.media.covers[imageId];
                     image.id = 'cover-' + imageId;
 
                     for (key in sizes) {
@@ -129,7 +129,6 @@ function plugin()
                     sizeNames.forEach(newImage);
                 }
 
-                var growl = require('growl');
                 each(images, function(parsedImage, next) {
                         var fileUrl = parsedImage[parsedImage.size +
                                 'Url'],
@@ -143,8 +142,7 @@ function plugin()
                                 ''
                             );
                         } else {
-                            console.log('Revised source missing for ', fileUrl);
-                            growl('Revised source missing for ' + fileUrl);
+                            app.logError('Revised source missing for ' + fileUrl);
                         }
                         src = path.resolve(__dirname + '/..' +
                             fileUrl.replace(

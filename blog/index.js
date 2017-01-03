@@ -15,7 +15,7 @@ module.exports = function () {
         var permalinks = require('assemble-permalinks'),
             path = require('path'),
             config = require('./../config'),
-            blog = config.blog;
+            blog = config.data.blog;
 
 
         app.create('posts', {
@@ -145,7 +145,7 @@ module.exports = function () {
                         if (pages) {
                             pages.pages.forEach(createPage);
                         } else {
-                            console.log(key, ':', taxonomyKey);
+                            app.logWarning(key + ':' + taxonomyKey);
                         }
 
                     }

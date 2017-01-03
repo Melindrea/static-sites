@@ -111,7 +111,7 @@ function plugin() {
                         throw err;
                     }
 
-                    console.log(rssPath + ' created successfully');
+                    app.logSuccess(rssPath + ' created successfully');
                 });
             }
         );

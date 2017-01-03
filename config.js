@@ -1,55 +1,46 @@
 'use strict';
 
-var chalk = require('chalk');
-
 // Based on http://blog.codehatcher.com/node-js-alternate-config-file
 module.exports = (function () {
-    var pkg = require('./package.json'),
+    var fs = require('fs'),
+        path = require('path'),
+        pkg = require('./package.json'),
         YAML = require('yamljs'),
-        argv = require('yargs').argv,
-        dataDir = argv.dataDir || 'data',
-        siteConfig =  YAML.load(dataDir + '/site.yaml'),
-        blogConfig = YAML.load(dataDir + '/blog.yaml'),
-        mediaConfig = YAML.load(dataDir + '/media.yaml'),
-        error = chalk.bold.red,
-        warning = chalk.yellow,
-        info = chalk.cyan,
-        debug = chalk.blue,
-        success = chalk.bold;
+        argv = require('yargs')
+            .default({
+                env: process.env.NODE_ENV || 'local',
+                site: pkg.name || 'antoniusm.se',
+                dataDir: 'data'
+            })
+            .argv;
 
-    switch (process.env.NODE_ENV) {
-        case null:
-        case undefined:
+        var data = {},
+            dir = __dirname + '/' + argv.dataDir + '/';
+        fs.readdirSync(dir).forEach(function (file) {
+            if (path.extname(file) === '.yaml') {
+                data[file.replace(/\.yaml$/, '')] = YAML.load(dir + file);
+            } else if (path.extname(file) === '.json') {
+                data[file.replace(/\.json$/, '')] = require(dir + file);
+            }
+        });
+
+    switch (argv.env) {
         case 'local':
             return {
                 env: 'local',
-                site: siteConfig,
-                dataDir: dataDir,
+                site: argv.site,
                 pkg: pkg,
-                error: error,
-                warning: warning,
-                info: info,
-                debug: debug,
-                success: success,
-                gtm: 'GTM-N2JHDQ',
-                blog: blogConfig,
-                media: mediaConfig
+                gtm: data.site.gtm.local,
+                data: data
             };
         case 'prod':
         case 'production':
             return {
                 env: 'prod',
-                site: siteConfig,
-                dataDir: dataDir,
+                site: argv.site,
                 pkg: pkg,
-                error: error,
-                warning: warning,
-                info: info,
-                debug: debug,
-                success: success,
-                gtm: 'GTM-PFTL8C',
-                blog: blogConfig,
-                media: mediaConfig
+                gtm: data.site.gtm.production,
+                data: data
             };
         default:
             throw new Error('Environment Not Recognized');

@@ -4,8 +4,8 @@ module.exports.image = function () {
     //     bits = slug.split('/'),
     //     slug = bits[1],
     //     type = bits[0],
-    //     sizes = config.media.sizes,
-    //     images = config.media.images;
+    //     sizes = config.data.media.sizes,
+    //     images = config.data.media.images;
 
 
     // ;
