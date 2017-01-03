@@ -2,6 +2,7 @@
   "name": "antoniusm.se",
   "description": "Author site for Antonius M. Hogebrandt",
   "main": "",
+  "version": "1.0.0",
   "authors": [
     "Marie Hogebrandt <iam@mariehogebrandt.se>"
   ],

@@ -129,7 +129,7 @@ function plugin()
                     sizeNames.forEach(newImage);
                 }
 
-
+                var growl = require('growl');
                 each(images, function(parsedImage, next) {
                         var fileUrl = parsedImage[parsedImage.size +
                                 'Url'],
@@ -142,6 +142,9 @@ function plugin()
                                 sizes.original.substring(1),
                                 ''
                             );
+                        } else {
+                            console.log('Revised source missing for ', fileUrl);
+                            growl('Revised source missing for ' + fileUrl);
                         }
                         src = path.resolve(__dirname + '/..' +
                             fileUrl.replace(

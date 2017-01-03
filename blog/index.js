@@ -12,14 +12,33 @@
  */
 module.exports = function () {
     return function(app) {
+        var permalinks = require('assemble-permalinks'),
+            path = require('path'),
+            config = require('./../config'),
+            blog = config.blog;
+
+
+        app.create('posts', {
+          pager: true,
+          renameKey: function (key, view) {
+            return view ? view.basename : path.basename(key);
+          }
+        });
+
+        app.posts.use(
+            permalinks(
+                blog.permalink.post,
+                {
+                    permalink: app.postPermalink
+                }
+            )
+        );
+
         app.define(
             'createArchives',
             function ()
             {
-                var config = require('./../config'),
-                    permalinks = require('assemble-permalinks'),
-                    paginationator = require('paginationator'),
-                    blog = config.blog,
+                var paginationator = require('paginationator'),
                     data,
                     content, list, pages, groups, slug,
                     List = app.List;
@@ -28,26 +47,9 @@ module.exports = function () {
 
                 app.archives
                     .use(permalinks(
-                        blog.permalink,
+                        blog.permalink.archive,
                         {
-                            permalink: function (filename) {
-                                var bits = filename.substr(5).split('&&'),
-                                    folder,
-                                    name = bits[0];
-                                if (name === 'index') {
-                                    if (bits.length > 1 && bits[1] > 1) {
-                                        return bits[1] + '/index.html';
-                                    }
-                                    return 'index.html';
-                                }
-
-                                folder = name.replace('::', '/');
-
-                                if (bits.length > 1 && bits[1] > 1) {
-                                    return folder + '/' + bits[1] + '/index.html';
-                                }
-                                return folder + '/index.html';
-                            }
+                            permalink: app.archivePermalink
                         }
                     ));
 

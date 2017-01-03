@@ -1,13 +1,18 @@
 ---
 draft: true
-title:
-pageTitle:
+title: Saint Dymphna's Asylum for the Mentally Unwell
+pageTitle: Saint Dymphna's
+subTitle: Fictional mental hospital
 layout: post
 posted:
 article: true
 metaType: article
 excerpt:
-category:
+category: Flash Fiction
 tags:
-featuredImage:
+    - historical
+    - landscape
+    - teaser
+featuredImage: evaluation
 ---
+

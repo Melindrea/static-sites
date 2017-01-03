@@ -1,6 +1,6 @@
 title: AntoniusM.se
 titleSeparator: "/"
-copyright: "2016 © Antonius M. Hogebrandt"
+copyright: "2016-2017 © Antonius M. Hogebrandt"
 language: en
 
 navigation:
@@ -22,3 +22,9 @@ navigation:
     blog-index:
         path: /blog
         item: Blog
+
+nav:
+    menus:
+        - main
+        - footer
+    default: main

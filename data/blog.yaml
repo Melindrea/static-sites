@@ -3,7 +3,9 @@ helpers: 'blog/helpers/*.js'
 templates:
     header: '{{> header }}{{#if blurb}}{{> blurb }}{{/if}}'
     footer: '{{> archives-display-pager }}'
-permalink: ':site.base/blog/:permalink(filename)'
+permalink:
+    archive: :site.base/blog/:permalink(filename)
+    post: :site.base/blog/:permalink(filename, dirname)
 taxonomies:
     categories:
         writing:
