@@ -1,9 +1,0 @@
-#!/bin/bash
-
-NAME=$1
-PWD=`pwd`;
-# echo $NAME
-TEMPLATE=`cat $PWD/bin/templates/post.md`
-
-echo "$TEMPLATE" > "$PWD/content/antoniusm.se/posts/$NAME.md"
-

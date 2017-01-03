@@ -24,6 +24,7 @@ var assemble = require('assemble'),
     media = require('./plugins/media'),
     revision = require('./plugins/revision'),
     logger = require('./lib/logger'),
+    sprintf = require('sprintf-js').sprintf,
 
     app = assemble();
 
@@ -94,12 +95,22 @@ app.helpers(require('handlebars-helpers')());
 app.task('load', function (cb) {
     navigation.clearMenus();
 
-    app.partials('templates/includes/*.hbs');
-    app.partials('templates/includes/' + config.site + '/*.hbs');
-    app.layouts('templates/layouts/*.hbs');
-    app.layouts('templates/layouts/' + config.site + '/*.hbs');
-    app.pages('content/' + config.site + '/pages/**.hbs');
-    app.posts('content/' + config.site + '/posts/**/*.md');
+    app.partials(config.data.site.paths.includes + '/*.hbs');
+    app.partials(config.data.site.paths.includes + '/' + config.site + '/*.hbs');
+    app.layouts(config.data.site.paths.layouts + '/*.hbs');
+    app.layouts(config.data.site.paths.layouts + '/' + config.site + '/*.hbs');
+    app.pages(sprintf(
+        config.data.site.paths.content.pages,
+        config.data.site.paths.content.base,
+        config.site
+    ) + '/**/*.hbs');
+
+    app.posts(sprintf(
+        config.data.site.paths.content.posts,
+        config.data.site.paths.content.base,
+        config.site
+    ) + '/**/*.md');
+
     app.use(drafts('posts'));
     app.use(wordCount('posts'));
 

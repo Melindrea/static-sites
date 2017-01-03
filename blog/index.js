@@ -15,9 +15,97 @@ module.exports = function () {
         var permalinks = require('assemble-permalinks'),
             path = require('path'),
             config = require('./../config'),
-            blog = config.data.blog;
+            blog = config.data.blog,
+            sprintf = require('sprintf-js').sprintf,
+            argv = require('yargs')
+                .argv;
 
+        app.task('createPost', function () {
+            var prompt = require('prompt');
 
+            prompt.start();
+
+            prompt.get(
+                [
+                    {
+                        name: 'permalink',
+                        description: 'The permalink for the post',
+                        required: true
+                    }, {
+                        name: 'parent',
+                        description: 'Permalink for a parent-post'
+                    }, {
+                        name: 'title',
+                        description: 'Title'
+                    }, {
+                        name: 'pageTitle',
+                        description: 'Page title'
+                    }, {
+                        name: 'category',
+                        description:'Category'
+                    }, {
+                        name: 'tags',
+                        description: 'Tags (comma-separated)'
+                    }, {
+                        name: 'featuredImage',
+                        description: 'Featured Image'
+                    }
+                ],
+                function (err, result) {
+                    var path = require('path'),
+                        fs = require('fs'),
+                        YAML = require('json2yaml'),
+                        slugify = require('underscore.string/slugify'),
+                        metadata, dir = process.cwd() + '/' + sprintf(
+                            config.data.site.paths.content.posts,
+                            config.data.site.paths.content.base,
+                            config.site
+                        ),
+                        filename, text;
+                    if (err) {
+                        return app.logError(err);
+                    }
+
+                    result.tags = result.tags.split(',').map(function (tag) {
+                        return tag.trim();
+                    });
+
+                    metadata = {
+                        draft: true,
+                        title: result.title,
+                        pageTitle: result.pageTitle,
+                        layout: 'post',
+                        posted: '',
+                        article: true,
+                        metaType: 'article',
+                        excerpt: '',
+                        category: result.category,
+                        tags: result.tags,
+                        featuredImage: result.featuredImage
+                    };
+
+                    if (result.parent) {
+                        dir += '/' + slugify(result.parent);
+                        if (! fs.existsSync(dir)) {
+                            fs.mkdirSync(dir);
+                        }
+                    }
+                    filename = dir + '/' + slugify(result.permalink) + '.md';
+                    text = YAML.stringify(metadata);
+                    text += '---\n';
+                    if (fs.existsSync(filename)) {
+                        app.logError('The file with name ' + filename + ' already exists');
+                    } else {
+                        fs.writeFile(filename, text, function (err) {
+                            if (err) {
+                                return app.logError(err);
+                            }
+                            app.logSuccess('Created new post at ' + filename);
+                        });
+                    }
+                }
+            );
+        });
         app.create('posts', {
           pager: true,
           renameKey: function (key, view) {

@@ -3,6 +3,15 @@ titleSeparator: "/"
 copyright: "2016-2017 © Antonius M. Hogebrandt"
 language: en
 
+paths:
+    content:
+        base: content
+        posts: '%s/%s/posts'
+        pages: '%s/%s/pages'
+    includes: templates/includes
+    layouts: templates/layouts
+
+
 gtm:
     local: GTM-N2JHDQ
     production: GTM-PFTL8C
