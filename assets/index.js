@@ -53,6 +53,10 @@ module.exports = function () {
             return app.copy('processed/images/**/**.{jpg,jpeg,png}', 'build/assets/images');
         });
 
+        app.task('ornaments', function () {
+            return app.copy('assets/styles/ornaments/**.svg', 'build/assets/styles/ornaments');
+        });
+
         app.task('robots', function () {
             return app.src('build/index.html')
                 .pipe(robots({
@@ -62,7 +66,7 @@ module.exports = function () {
                 .pipe(app.dest('build'));
         });
 
-        app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'styles', 'well-known']);
+        app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'styles', 'well-known', 'ornaments']);
 
         app.task('images', function () {
             return app.src('assets/images/**/**.{jpg,jpeg,png}')
@@ -100,7 +104,9 @@ module.exports = function () {
                 .pipe(gp.useref({searchPath: ['.tmp', 'assets', '.']}))
                 .pipe(gp.if('*.js', gp.jsvalidate()))
                 .pipe(gp.if('*.js', gp.uglify()))
-                .pipe(gp.if('*.css', gp.csso()))
+                .pipe(gp.if('*.css', gp.csso({
+                    restructure: false
+                })))
                 .pipe(app.dest('build'));
         });
 
@@ -118,7 +124,8 @@ module.exports = function () {
                 .pipe(revAll.revision())
                 .pipe(app.dest(deployDir))
                 .pipe(revAll.manifestFile())
-                .pipe(app.dest('data'));
+                .pipe(app.dest('data'))
+                .pipe(gp.notify('Finished cache-busting'));
         });
     };
 };

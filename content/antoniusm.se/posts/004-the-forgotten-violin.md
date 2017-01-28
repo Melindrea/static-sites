@@ -14,7 +14,7 @@ featuredImage: forgotten-violin
 menu: false
 ---
 
-It was time. Her younger brother was dead. Nothing tied her to the farmstead, not anymore. Kari paused at the top of the hill and glanced back at what had been her home her entire life.
+<p class="c-lead c-lead--dropcap"><span class="c-lead__opening">It was time. Her younger brother</span> was dead. Nothing tied her to the farmstead, not anymore. Kari paused at the top of the hill and glanced back at what had been her home her entire life.</p>
 
 “Kari, you do not need to leave.” Her sister-in-law, a matron with greying temples, wiped her rough hands on her apron. “We still have plenty of things for you to do here.”
 

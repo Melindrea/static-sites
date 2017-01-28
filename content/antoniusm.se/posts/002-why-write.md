@@ -14,7 +14,7 @@ featuredImage: writing
 menu: false
 ---
 
-When I asked what I should write this first post on AntoniusM.se about, I had several more-or-less useful answers. I will, in fact, hold onto the "Ode to beverages" until later, and while it might be interesting to put in some thoughts on where this will be in a year, I'll leave soothsaying to those less cynical than I am.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">When I asked what I should write this first post on AntoniusM.se about</span>, I had several more-or-less useful answers. I will, in fact, hold onto the "Ode to beverages" until later, and while it might be interesting to put in some thoughts on where this will be in a year, I'll leave soothsaying to those less cynical than I am.</p>
 
 Instead, there were three questions that were suggested:
 

@@ -104,6 +104,20 @@ $typl8-headings: (
   h6: typl8-zeta
 ) !default;
 
+$ornaments: (
+    h1: (
+        height: 0.65em,
+        width: 0.65em
+    ),
+    h2: (
+        height: 0.6em,
+        width: 1.2em
+    ),
+    p: (
+        height: 1.2em,
+        width: 1.4em
+    )
+);
 
 // $Typescale Unit
 // -------------------------------------//

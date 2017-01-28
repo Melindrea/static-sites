@@ -32,8 +32,6 @@ var assemble = require('assemble'),
  * Plugins
  */
 var navigation = new Navigation(config.data.site.nav);
-// app.onLoad(/./, navigation.onLoad());
-// app.preRender(/./, navigation.preRender());
 
 app.use(logger());
 app.use(viewEvents('permalink'));
@@ -68,6 +66,13 @@ app.data({
  */
 
 app.create('pages');
+
+// After the collections are created
+app.pages.onLoad(/./, navigation.onLoad());
+app.pages.preRender(/./, navigation.preRender());
+
+app.posts.onLoad(/./, navigation.onLoad());
+app.posts.preRender(/./, navigation.preRender());
 app.pages.use(
     permalinks(
         ':site.base/:permalink(filename)',

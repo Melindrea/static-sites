@@ -14,7 +14,7 @@ featuredImage: well002
 menu: false
 ---
 
-As a special post, today I'm introducing the cover of one of my favourite authors, [Katherine Lampe](https://theshadowsanctuary.wordpress.com/), whose next book--The Well Below the Valley--will be released in print and electronic editions August 2, 2016.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">As a special post, today I'm introducing the cover</span> of one of my favourite authors, [Katherine Lampe](https://theshadowsanctuary.wordpress.com/), whose next book--The Well Below the Valley--will be released in print and electronic editions August 2, 2016.</p>
 
 ## Blurb
 

@@ -8,6 +8,7 @@ article: true
 metaType: article
 excerpt: Step-by-step on how I create my header images in Gimp and then resize it as use for thumbnails and responsive images.
 category: Tangential Tutorials
+menu: false
 tags:
     - digital art
 featuredImage: 

@@ -1,7 +1,7 @@
 html * {
     box-sizing: border-box;
 }
-
+@import "normalize-css/normalize";
 @import "colours";
 @import "variables";
 @import "system/mixins";
@@ -79,10 +79,6 @@ main {
 }
 
 
-.intro {
-    font-variant: small-caps;
-    font-weight: bold;
-}
 code,
 kbd,
 pre,
@@ -175,21 +171,6 @@ mark,
     margin-right: -2rem;
     margin-left: -2rem;
 }
-
-.ord {
-    @extend sup;
-}
-
-p .caps {
-    font-variant: small-caps;
-    font-weight: 600;
-}
-
-p .amp {
-    font-family: Georgia, Linux Libertine, serif;
-    font-size: 1.06em;
-}
-
 
 main #mc_embed_signup_scroll {
     padding-bottom: 2rem;

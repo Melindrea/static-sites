@@ -13,12 +13,9 @@
 module.exports = function () {
     return function(app) {
         var permalinks = require('assemble-permalinks'),
-            path = require('path'),
             config = require('./../config'),
             blog = config.data.blog,
-            sprintf = require('sprintf-js').sprintf,
-            argv = require('yargs')
-                .argv;
+            sprintf = require('sprintf-js').sprintf;
 
         app.task('createPost', function () {
             var prompt = require('prompt');
@@ -52,8 +49,7 @@ module.exports = function () {
                     }
                 ],
                 function (err, result) {
-                    var path = require('path'),
-                        fs = require('fs'),
+                    var fs = require('fs'),
                         YAML = require('json2yaml'),
                         slugify = require('underscore.string/slugify'),
                         metadata, dir = process.cwd() + '/' + sprintf(
@@ -107,10 +103,11 @@ module.exports = function () {
             );
         });
         app.create('posts', {
-          pager: true,
-          renameKey: function (key, view) {
-            return view ? view.basename : path.basename(key);
-          }
+            pager: true,
+            renameKey: function (key, view) {
+                var path = require('path');
+                return view ? view.basename : path.basename(key);
+            }
         });
 
         app.posts.use(

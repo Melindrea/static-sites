@@ -14,5 +14,6 @@ tags:
     - landscape
     - teaser
 featuredImage: evaluation
+menu: false
 ---
 

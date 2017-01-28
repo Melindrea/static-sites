@@ -57,4 +57,20 @@
         font-family: Zelda, Linux Libertine;
         font-weight: normal;
     }
+
+    line-height: 1.2;
+}
+
+%accent-typeface {
+    text-shadow: 0 1px 1px #4d4d4d;
+    @extend %zelda;
+}
+
+%dropcap {
+    float: left;
+    font-family: Linux Libertine Initials;
+    font-size: 4em;
+    line-height: 0.8;
+    font-weight: normal;
+    font-variant: none;
 }

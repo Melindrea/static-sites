@@ -17,7 +17,7 @@ menu: false
 
 *This five-star story is written by Shirley Jackson.*
 
-It was originally published in 1959, and has been adapted to movies under the name *The Haunting* twice, first in 1963, and then again in 1999. While I enjoyed the 1999 one (I haven't seen the 1963 one), they are completely different in style. If you only do one, read the book and give the movies a miss.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">It was originally published in 1959, and has</span> been adapted to movies under the name *The Haunting* twice, first in 1963, and then again in 1999. While I enjoyed the 1999 one (I haven't seen the 1963 one), they are completely different in style. If you only do one, read the book and give the movies a miss.</p>
 
 The story is about four people--the supernatural investigator Dr. John Montague, the repressed Eleanor Vance, the flamboyant artist Theodora, and finally the heir of the house, Luke Sanderson--who come to Hill House, built by Hugh Crain for his wife, who died in an accident as she travelled to the house for the first time.
 

@@ -13,7 +13,7 @@ featuredImage: gender
 menu: false
 ---
 
-Gender is very much visible in the current media, with the transphobic bathroom laws being enacted in at least parts of the US. For anyone who knows me from twitter, it's probably not escaped you that I'm neither straight, nor cis. And more-or-less not a woman.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">Gender is very much visible in the current</span> media, with the transphobic bathroom laws being enacted in at least parts of the US. For anyone who knows me from twitter, it's probably not escaped you that I'm neither straight, nor cis. And more-or-less not a woman.</p>
 
 ![Not a Woman!](http://i.makeagif.com/media/5-30-2016/_CQ4LU.gif)
 

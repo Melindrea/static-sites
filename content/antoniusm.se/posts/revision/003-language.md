@@ -10,42 +10,13 @@ category: Writing
 tags:
     - revision
     - writing process
-featuredImage: new-year-2017
+featuredImage: revision-language
+menu: false
 ---
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-- [3.1: Themes & Motifs](#31-themes--motifs)
-  - [Practice](#practice)
-  - [Resources](#resources)
-- [3.2: Voice](#32-voice)
-- [3.3: Narrative Voice](#33-narrative-voice)
-  - [Practice](#practice-1)
-  - [Resources](#resources-1)
-- [3.4: Tailor language to setting](#34-tailor-language-to-setting)
-- [3.5: Remove filter words & adverbs](#35-remove-filter-words--adverbs)
-  - [Adding nothing](#adding-nothing)
-  - [Barrier between Point of View and reader](#barrier-between-point-of-view-and-reader)
-    - [Adverbs](#adverbs)
-  - [Practice](#practice-2)
-- [3.6: Grammar & Spelling](#36-grammar--spelling)
-- [Resources](#resources-2)
-- [3.7: Repeat step 2.3](#37-repeat-step-23)
-  - [Practice](#practice-3)
-    - [Recap](#recap)
-- [3.8: Own your words](#38-own-your-words)
-  - [A sidenote about hurtful content](#a-sidenote-about-hurtful-content)
-- [3.9: Evaluate the rhythm of each unit](#39-evaluate-the-rhythm-of-each-unit)
-  - [Practice](#practice-4)
-  - [Resources](#resources-3)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 3.1: Themes & Motifs
 
-Confession time! Of the sections in this rundown, I had the hardest time with this one. Probably because unlike the others that are subjective but tangible, this is subjective and intangible. A list of mixed reading material follows in the resources section.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">Confession time! Of the sections in this rundown, I</span> had the hardest time with this one. Probably because unlike the others that are subjective but tangible, this is subjective and intangible. A list of mixed reading material follows in the resources section.</p>
 
 To quote Chuck Wendig:
 
@@ -99,7 +70,14 @@ If there is a single PoV, you have a bit more freedom (though it should be consi
 
 ## 3.4: Tailor language to setting
 
-Now I'm about to get almost as abstract as when talking about themes and motifs, and I do believe that this is for a higher grade than most of the other things. This is also very heavily 
+Now I'm about to get almost as abstract as when talking about themes and motifs, and I do believe that this is for a higher grade than most of the other things. This is also very heavily subjective and based on my writing, which is florid and packed with vivid, ensouled imagery. If you write differently, this may not be as relevant to you. This is also more of thing for "realism slipping into the fantastic", rather than purely realism or purely fantastic.
+
+Consider every scene whether it's supposed to be realistic or fantastic.
+
+In a realistic scene, pare down the language and ground things with realistic details: gravel against feet, fire burning fingers, the smell of french-fry oil or the light of a smartphone. And then, to muddy the realistic waters, throw in details that make it more magical. Like suddenly using a minor chord in a major song. Just a bit, try to keep the realism high in realistic scenes.
+
+In a fantastic scene, use the magical metaphors that build up the fantastic. Even if there is nothing overtly magical, use language to suggest that something could be. But, keep the layer of realism to ground the reader. Keep them on their toes, but still on the ground.
+
 
 ## 3.5: Remove filter words & adverbs
 
@@ -181,7 +159,7 @@ First, the frenemy of any writer: the thesaurus. There's nothing wrong with usin
 
 Next up, problematic words. This is a lot harder, and goes back to knowing the meaning and the etymology of the words you're using, to do your best to avoid furthering bad stereotypes. As an example, let us go with a series of words that all have some meaning of "swindle".
 
-* Gyp, gip, jip: from the term gypsy, a racial slur for a member of the Romani people, meaning to swindle someone
+* Gyp, gip, jip: from the term gypsy--a sometimes slur for a member of the Romani--, meaning to swindle someone
 * Jew: etymology fairly clear, meaning to defraud someone
 * Welsh: once again, etymology fairly clear, meaning to "swindle by defaulting on a debt"
 

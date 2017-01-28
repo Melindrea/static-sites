@@ -14,7 +14,7 @@ featuredImage: landscape
 menu: false
 ---
 
-Cerulean waves tipped with lace cradled her as they pulled her from the warm cliff. They caressed her freckled legs and rounded hips. With the gentleness of a lover they guided her into the chilled water, away from the jagged cove striated with crimson and granite. She slipped, unresisting, into the primal eternity. It soothed her torn dress and smoothed her wrinkled forehead.
+<p class="c-lead c-lead--dropcap"><span class="c-lead__opening">Cerulean waves tipped with lace cradled</span> her as they pulled her from the warm cliff. They caressed her freckled legs and rounded hips. With the gentleness of a lover they guided her into the chilled water, away from the jagged cove striated with crimson and granite. She slipped, unresisting, into the primal eternity. It soothed her torn dress and smoothed her wrinkled forehead.</p>
 
 Tendrils of flaxen hair swayed in the clucking water as a halo of scarlet spread from the back of her head. Honeysuckle slipped out of her white hands, and bloody petals escaped the once-constraining wreathe on her pale brow. They danced on the surface and swirled around her. Her blue eyes stared beyond, and her lips of pale rose were forever parted. Her sandals slipped off her bare feet and bobbed away into the distance.
 

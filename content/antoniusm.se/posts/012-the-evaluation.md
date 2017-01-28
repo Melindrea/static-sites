@@ -15,7 +15,7 @@ featuredImage: evaluation
 menu: false
 ---
 
-She scanned the case book a final time before acknowledging the patient slouched in a chair across the table. Shackles held his arms behind him, and his legs fastened to the chair. Under the glower his face was ashen, and blonde tests of hair veiled his serene eyes.
+<p class="c-lead c-lead--dropcap"><span class="c-lead__opening">She scanned the case book a final time</span> before acknowledging the patient slouched in a chair across the table. Shackles held his arms behind him, and his legs fastened to the chair. Under the glower his face was ashen, and blonde tests of hair veiled his serene eyes.</p>
 
 "I am Doctor Vera Fridh, and I am here to evaluate you because ..." How odd. She hid her confusion by skimming through the notes again. No diagnosis. That was probably it, then. "Because I'm hoping to get you a diagnosis so you can get proper medication."
 

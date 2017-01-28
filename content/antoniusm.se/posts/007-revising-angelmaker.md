@@ -19,7 +19,7 @@ images:
         id: cover-anglamakerskan
 ---
 
-As I promised last week, I will offer up a "dual feature" to make up for my computer exploding and thereby stopping me from posting anything last Monday. While I hope you'll want to read both of them, if you're only here for the [cover reveal](#cover) I won't hold it against you.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">As I promised last week, I will offer</span> up a "dual feature" to make up for my computer exploding and thereby stopping me from posting anything last Monday. While I hope you'll want to read both of them, if you're only here for the [cover reveal](#cover) I won't hold it against you.</p>
 
 ## Look at revision
 

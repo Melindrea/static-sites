@@ -10,30 +10,13 @@ category: Writing
 tags:
     - revision
     - writing process
-featuredImage: new-year-2017
+featuredImage: revision-narrative
+menu: false
 ---
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-- [2.1: Consistency](#21-consistency)
-- [2.2: Character development](#22-character-development)
-  - [Tips & Tricks](#tips--tricks)
-- [2.3: Scenes-by-paragraphs](#23-scenes-by-paragraphs)
-  - [Practice](#practice)
-  - [Resources](#resources)
-- [2.4: Pacing](#24-pacing)
-  - [Practice](#practice-1)
-- [2.5: Chapter/act division](#25-chapteract-division)
-  - [Practice](#practice-2)
-  - [Resources](#resources-1)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 2.1: Consistency
 
-You should by now have a complete story with few plot holes, though you still have a long way to go. If you need to go back to prior steps, that's fine, but in the ideal world you shouldn't.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">You should by now have a complete</span> story with few plot holes, though you still have a long way to go. If you need to go back to prior steps, that's fine, but in the ideal world you shouldn't.</p>
 
 First step here is to read through the story carefully and jot down notes for yourself. What do you need to fact check? What contradicts itself? How's the timeline holding up? Did you remember to introduce the Mother that gives the final clue *before* she waltzes onto the stage? And please tell me the heroine didn't magically get, well ... magic without anything foreshadowing it?
 
@@ -68,6 +51,7 @@ The theory behind this is that it needs to come in the right order.
     1. Feeling/thought
     2. Action (including involuntary physical response such as heart racing)
     3. Speech
+
 
 Example:
 

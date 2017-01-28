@@ -11,6 +11,7 @@
   "homepage": "https://antoniusm.se",
   "private": true,
   "devDependencies": {
+    "assemble": "^0.17.1",
     "assemble-collections": "^0.2.1",
     "assemble-indexer": "^0.1.2",
     "assemble-navigation": "^0.4.0",
@@ -42,6 +43,7 @@
     "gulp-jsvalidate": "^2.1.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-modernizr": "0.0.0",
+    "gulp-notify": "^2.2.0",
     "gulp-pleeease": "^2.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-rev-all": "^0.8.22",

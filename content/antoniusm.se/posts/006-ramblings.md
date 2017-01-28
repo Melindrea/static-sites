@@ -13,7 +13,7 @@ featuredImage: ramblings
 menu: false
 ---
 
-“Mom, I never smile.”
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">“Mom, I never smile.”</span></p>
 
 A nine-year-old me had already recognised one of the key differences between myself and my peers. It would, however, be another twelve years before my depression was diagnosed. We didn’t talk about mental health issues at home.
 

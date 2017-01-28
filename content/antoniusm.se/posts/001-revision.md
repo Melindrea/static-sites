@@ -11,10 +11,11 @@ tags:
     - revision
     - series index
     - writing process
-featuredImage: new-year-2017
+featuredImage: revision-index
+menu: false
 ---
 
-This series details how I write and revise. Every step is based on how I work and what my drafts look like. It's very likely that not all these steps will jibe with your way of working. It's even possible that you will not be able to use even a single step here, though if that's the case, you've learned quite a few new ways that don't work for you. That's progress in itself!
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">This series details how I write and revise. Every step</span> is based on how I work and what my drafts look like. It's very likely that not all these steps will jibe with your way of working. It's even possible that you will not be able to use even a single step here, though if that's the case, you've learned quite a few new ways that don't work for you. That's progress in itself!</p>
 
 I recommend you to read through the guide to get a feeling for it before you start using it, since part of what I like with my process is the division of tasks. For me, it's easier to go through a section several times, with different focus for each time, than to catch **everything** in a single go.
 
@@ -57,4 +58,5 @@ I've divided the steps into three different sections.
 5. Remove filter words
 6. Spelling- and grammar check. Hemingway app is nice for language structure **suggestions**
 7. Repeat step 3 from the Narrative, keeping in mind the pacing from step 4
-8. Evaluate the rhythm on each unit (word/sentence/etc)
+8. How to minimise the hurt you spread with your words
+9. Evaluate the rhythm on each unit (word/sentence/etc)

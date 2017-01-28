@@ -154,6 +154,12 @@
         padding-right: 2rem;
         padding-left: 2rem;
     }
+
+    main h4,
+    main h5,
+    main h6 {
+        padding-left: 2rem;
+    }
 }
 /* @media screen and (min-width: 1200px) */
 @media screen and (min-width: 75em) {
@@ -173,6 +179,11 @@
 
     main p {
         padding-right: 4rem;
+        padding-left: 4rem;
+    }
+    main h4,
+    main h5,
+    main h6 {
         padding-left: 4rem;
     }
 }

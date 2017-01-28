@@ -10,34 +10,13 @@ category: Writing
 tags:
     - revision
     - writing process
-featuredImage: new-year-2017
+featuredImage: revision-writing
+menu: false
 ---
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-
-- [1.1: First draft and pre-first draft](#11-first-draft-and-pre-first-draft)
-  - [Practice](#practice)
-  - [Tips & Tricks](#tips--tricks)
-  - [Resources](#resources)
-- [1.2: Structure and usefulness of scenes](#12-structure-and-usefulness-of-scenes)
-  - [Jami Gold's Elements of a Good Scene Checklist](#jami-golds-elements-of-a-good-scene-checklist)
-  - [Practice](#practice-1)
-  - [Resources](#resources-1)
-- [1.3: Plot points and word count](#13-plot-points-and-word-count)
-  - [Practice](#practice-2)
-  - [Resources](#resources-2)
-- [1.4: Scene-Sequel Pattern](#14-scene-sequel-pattern)
-  - [Practice](#practice-3)
-  - [Tips & Tricks](#tips--tricks-1)
-  - [Resources](#resources-3)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 1.1: First draft and pre-first draft
 
-It's personal to figure out how much you plan, and how much you let the story/characters drive you. I tend to start with some kind of concept, idea or character, and from there ask "what if ...?" until I have enough of a story to start writing.
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">It's personal to figure out how much you plan, and</span> how much you let the story/characters drive you. I tend to start with some kind of concept, idea or character, and from there ask "what if ...?" until I have enough of a story to start writing.</p>
 
 Sometimes I won't have enough of a story to start writing until I've written a few scenes, but that's acceptable as well! I prefer to have a bit more of a structure than just explore what'll happen next, but if the story takes a while to shape in your mind, there's worse ways to handle it than writing.
 
@@ -111,7 +90,7 @@ Each scene can also reveal:
 Mark up if you think a scene needs to be Rewritten (and if so, what needs to be fixed), Deleted or Kept. I tend to delete the to-be-deleted scenes immediately, but I know others who puts them in a specific pile, in case they can be reused.
 
 ### Resources
-* [Jami Gold's Worksheets](http://jamigold.com/for-writers/worksheets-for-writers/#Scene Checklist)
+* [Jami Gold's Worksheets](http://jamigold.com/for-writers/worksheets-for-writers)
 
 ## 1.3: Plot points and word count
 

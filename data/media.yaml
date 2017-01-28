@@ -19,6 +19,30 @@ galleries:
             - midnatt-yoga
 
 images:
+    revision-index:
+        alt: Old-fashioned typewriter
+        caption: Old-fashioned typewriter
+        src: revision-index.jpeg
+        copyright:
+            photographer: Chris Leggat
+    revision-writing:
+        alt: Fountain pen and cursive writing
+        caption: Fountain pen and cursive writing
+        src: revision-writing.jpeg
+        copyright:
+            photographer: Alvaro Serrano
+    revision-narrative:
+        alt: A pen, an open notepad and steaming tea
+        caption: A pen, an open notepad and steaming tea
+        src: revision-narrative.jpeg
+        copyright:
+            photographer: Carli Jeen
+    revision-language:
+        alt: An old manuscript in Latin
+        caption: An old manuscript in Latin
+        src: revision-language.jpeg
+        copyright:
+            photographer: Brigitte Tohm
     new-year-2017:
         alt: 2017 written in fireworks
         caption: 2017 written in fireworks
