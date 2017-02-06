@@ -14,7 +14,7 @@ featuredImage: superheroes
 menu: false
 ---
 
-<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">I am working on a serial, [Stockholm Sentinels](https://tablo.io/melindrea/stockholm-sentinels) which will</span> be updated as I have the time. Currently only the first chapter is out, and only the two first have been introduced, but I decided to post this anyway.</p>
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">I am working on a serial, <a href="https://tablo.io/melindrea/stockholm-sentinels">Stockholm Sentinels</a> which will</span> be updated as I have the time. Currently only the first chapter is out, and only the two first have been introduced, but I decided to post this anyway.</p>
 
 The images are created through [HeroMachine](http://www.heromachine.com/heromachine-3-lab/), and while it's a nice and very useful tool that I like to use, its body types are limited, and the same is true about the positions you can place the characters in.
 

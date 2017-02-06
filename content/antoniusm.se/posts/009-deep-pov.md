@@ -14,7 +14,7 @@ featuredImage: deep-pov
 menu: false
 ---
 
-<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">One of the big buzzwords of today's writing</span> advice is *deep point of view*. For the uninitated, it's the idea of making everything about your point of view's view. Write only what they notice and how they notice it. This can be done in either first person or third person. Either way it's about immersing the reader in the narrative.</p>
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">One of the big buzzwords of today's writing</span> advice is <em>deep point of view</em>. For the uninitated, it's the idea of making everything about your point of view's view. Write only what they notice and how they notice it. This can be done in either first person or third person. Either way it's about immersing the reader in the narrative.</p>
 
 Now, despite my somewhat click-baity title, I don't have big issues with it. If you've read my work, you know how much I enjoy to cut away everything to make it all about the point-of-view character. There is however one piece of advice that keeps gnawing at me, and it's about what a point of view percieves.
 

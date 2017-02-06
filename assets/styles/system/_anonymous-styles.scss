@@ -62,7 +62,7 @@
 }
 
 %accent-typeface {
-    text-shadow: 0 1px 1px #4d4d4d;
+    text-shadow: 0 0 10px rgba($red-light,0.8);
     @extend %zelda;
 }
 

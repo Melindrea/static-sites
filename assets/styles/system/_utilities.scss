@@ -3,3 +3,15 @@
 .u-clearfix {
     @extend %clearfix;
 }
+
+.u-bold {
+    font-weight: 700 !important;
+}
+
+.u-small-caps {
+    font-variant: small-caps !important;
+}
+
+.u-linux-libertine {
+    font-family: Linux Libertine, Georgia, serif !important;
+}

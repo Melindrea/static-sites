@@ -19,6 +19,12 @@ galleries:
             - midnatt-yoga
 
 images:
+    smaty:
+        alt: Headers in Atreyu
+        caption: Headers in Atreyu
+        src: smaty.jpeg
+        copyright:
+            photographer: Antonius M. Hogebrandt
     revision-index:
         alt: Old-fashioned typewriter
         caption: Old-fashioned typewriter

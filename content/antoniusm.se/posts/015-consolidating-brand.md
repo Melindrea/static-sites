@@ -10,16 +10,17 @@ category: Tangential Tutorials
 tags:
     - brand
     - series index
+    - digital art
 featuredImage: consolidating-brands
 menu: false
 ---
 
-<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">Since I am part of [Raimey Gallant's Blog Hop](https://raimeygallant.wordpress.com/2016/12/05/nano-blog-social-media-hop-time-to-start-hopping/) I decided</span> to look over my "brand" on social media and my sites. Now, I am *not* a marketing specialist, nor a designer, so this will be a WIP and a learning curve.</p>
+<p class="c-lead c-lead--ornamented"><span class="c-lead__opening">Since I am part of <a href="https://raimeygallant.wordpress.com/2016/12/05/nano-blog-social-media-hop-time-to-start-hopping/">Raimey Gallant's Blog Hop</a> I decided</span> to look over my "brand" on social media and my sites. Now, I am *not* a marketing specialist, nor a designer, so this will be a WIP and a learning curve.</p>
 
 Things I know I want to do:
 
 * [Setup a recognisable image profile](#image-profile)
-* Decide on typefaces, where they need to be a mix between unique-per-site and recognisable across sites
+* [Decide on typefaces, where they need to be a mix between unique-per-site and recognisable across sites](/blog/brand-typography/)
 * Make a clearer connection between my sites
 
 For the first step, let me go through how I create the sepia polaroid images.

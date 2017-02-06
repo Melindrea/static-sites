@@ -249,6 +249,15 @@ taxonomies:
                 metaType: website
                 layout: master
 
+        diversitybingo2017:
+                name: diversitybingo2017
+                title: Twitter challenge for branching out in reading
+                excerpt: A mix of books, all hitting one specific requirement, such as written by a PoC or featuring a queer main chararacter.
+                blurb: A mix of books, all hitting one specific requirement, such as written by a PoC or featuring a queer main chararacter.
+                metaType: website
+                layout: master
+
+
 indices:
     index:
         excerpt: List of blog posts on various topics including random facts, inspiration and why I write, as well as short stories, written portraits and how-tos.

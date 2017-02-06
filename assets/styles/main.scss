@@ -1,9 +1,11 @@
 html * {
     box-sizing: border-box;
 }
-@import "normalize-css/normalize";
 @import "colours";
 @import "variables";
+@import "normalize-css/normalize";
+@import "typeplate-starter-kit/scss/typeplate";
+@import "normalize-opentype.css/normalize-opentype.scss";
 @import "system/mixins";
 @import "system/functions";
 @import "system/anonymous-styles";
@@ -18,13 +20,18 @@ html * {
 @import "navigation";
 @import "magnific-popup/src/css/main";
 
+// Objects
+@import "objects/header";
+
 // Components
 @import "components/site";
 @import "components/pager";
 @import "components/pullquote";
+@import "components/lead";
 @import "components/navigation";
 @import "components/ribbon";
-
+@import "components/article";
+@import "components/featured-image";
 
 
 html {
@@ -59,7 +66,7 @@ main {
 
     &:before,
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       z-index: -1;
       bottom: 15px;
@@ -86,29 +93,6 @@ samp {
     font-family: Source Code Pro, Courier, monospace;
 }
 
-ul {
-    list-style: square;
-}
-
-ul ul {
-    list-style: disc;
-}
-
-ul ul ul {
-    list-style: circle;
-}
-ol {
-    list-style: upper-roman;
-}
-
-ol ol {
-    list-style: decimal;
-}
-
-ol ol ol {
-    list-style: lower-alpha;
-}
-
 abbr {
      color: $red-light;
 }
@@ -124,52 +108,6 @@ mark,
     background: $purple;
     color: $purple-light;
     text-shadow: none;
-}
-
-.c-article__footer {
-  border-top: 2px solid $red;
-}
-.c-article__meta {
-  font-style: italic;
-  font-size: 85%;
-}
-
-.c-article__meta--list {
-    margin-top: -1.4rem;
-}
-
-.c-article__list {
-    list-style: none;
-
-
-    .even .featured-image {
-        float: left;
-        margin-right: 1.2rem;
-        transform: rotate(5deg);
-    }
-
-    .odd .featured-image {
-        float: right;
-        margin-left: 1.2rem;
-        transform: rotate(-5deg);
-    }
-
-    a {
-        &:link,
-        &:visited {
-            color: $red;
-        }
-
-        &:hover,
-        &:active {
-            color: $color-primary-1;
-        }
-    }
-}
-
-.o-header {
-    margin-right: -2rem;
-    margin-left: -2rem;
 }
 
 main #mc_embed_signup_scroll {

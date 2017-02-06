@@ -1,21 +1,23 @@
 ---
-title: "January 2017: A new start"
+title: "February 2017: A new start"
 ---
 
 ## Dear friends,
 
 A new year, and a new start! I'm not planning on doing much of changes, but I've setup a few writing goals (which you can [find on my site](https://antoniusm.se/blog/2017/)). I'm planning on making this year the year that I finally publish something and not just talk about!
 
+Also, I turn 35 on the 2nd, so I have that to look forward to.
+
 Now to last months writing plans:
 
 * I did update [Stockholm Sentinels](https://tablo.io/melindrea/stockholm-sentinels) with a new chapter, which takes the teaser from last month and a bit more
-* I haven't had time to give Helga her final revision, but I've decided that my main novel focus will be on her story, so that's actually a goal for January
+* I haven't had time to give Helga her final revision, but I've decided that my main novel focus will be on her story, so that's actually a goal for February
 * I haven't had time to look over my stories from the writing class, but I think there's some really nice ones in the pile, and the teacher was very encouraging (to the extent of expression surprise that I hadn't taken writing classes before her)
 
 ### Writing plans
 
 * Continue updating Stockholm Sentinels
-* Finish the first act of Last Priestess of Ran
+* Finish the first act of Ranrike series
 * Setup a plan for revising Angel Maker
 
 ### Teaser

@@ -1,0 +1,18 @@
+//-- Lead paragraphs --\\
+.c-lead {
+    text-indent: 0;
+}
+
+.c-lead__opening {
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+.c-lead--ornamented::before {
+    @include ornament(map-get($ornaments, p), 'paragraph');
+}
+
+.c-lead--dropcap::first-letter {
+    text-shadow: 0 2px 3px rgba($red, 0.5);
+    @extend %dropcap;
+}

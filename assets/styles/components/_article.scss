@@ -1,0 +1,28 @@
+//-- ARTICLE --//
+.c-article__footer {
+  border-top: 2px solid $red;
+}
+.c-article__meta {
+  font-style: italic;
+  font-size: 85%;
+}
+
+.c-article__meta--list {
+    margin-top: -1.4rem;
+}
+
+.c-article__list {
+    list-style: none;
+
+    a {
+        &:link,
+        &:visited {
+            color: $red;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-1;
+        }
+    }
+}

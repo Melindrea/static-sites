@@ -1,6 +1,6 @@
-<li class="{{ striped @index }}"><article itemscope itemtype="BlogPosting" class="u-clearfix c-article {{ taxonomies }}"><a href="{{linkTo key "posts"}}">
+<li class="c-article__list__item--{{ striped @index }}"><article itemscope itemtype="BlogPosting" class="u-clearfix c-article {{ taxonomies }}"><a href="{{linkTo key "posts"}}">
     <header>
-        {{#if data.featuredImage}}<img itemtype="thumbnailUrl" src="{{ data.featuredImage.320Url }}" class="featured-image" alt="{{ data.featuredImage.alt }} by {{ data.featuredImage.copyright.photographer }}">{{/if}}
+        {{#if data.featuredImage}}<img itemtype="thumbnailUrl" src="{{ data.featuredImage.320Url }}" class="c-featured-image c-featured-image--list" alt="{{ data.featuredImage.alt }} by {{ data.featuredImage.copyright.photographer }}">{{/if}}
         <h2 class="c-article__title" itemprop="name headline">{{data.title}}</h2>
         <div class="c-article__meta c-article__meta--list">
             Posted <time itemtype="dateModified" datetime="{{moment data.posted format="YYYY-MM-DDTHH:mm:ssZ"}}">{{moment data.posted format="MMMM Do, YYYY"}}</time><br>
