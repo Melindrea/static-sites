@@ -6,6 +6,7 @@
   ],
   "feature-detects": [
     "test/css/rgba",
-    "test/dom/hidden"
+    "test/dom/hidden",
+    "test/svg"
   ]
 }

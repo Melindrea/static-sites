@@ -137,6 +137,14 @@ taxonomies:
                 metaType: website
                 layout: master
 
+        dystopia:
+                name: dystopia
+                title: Worlds with bleak outlooks
+                excerpt: Stories set in bleak worlds
+                blurb: Stories set in bleak worlds
+                metaType: website
+                layout: master
+
         literary-horror:
                 name: literary horror
                 title: Horror written in a careful style

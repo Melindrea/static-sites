@@ -19,6 +19,25 @@ galleries:
             - midnatt-yoga
 
 images:
+    header-chameleon-moon:
+        alt: Chameleon Moon book cover, on a background of books
+        caption: Chameleon Moon
+        src: chameleon-moon.jpeg
+        copyright:
+            photographer: Syd Wachs
+    open-book:
+        alt: An old book, laying open
+        caption: Book header
+        src: open-book.jpeg
+        copyright:
+            photographer: Jazmin Quaynor
+
+    header-other-place:
+        alt: The Other Place book cover, on a background of books
+        caption: The Other Place
+        src: the-other-place.jpeg
+        copyright:
+            photographer: Syd Wachs
     smaty:
         alt: Headers in Atreyu
         caption: Headers in Atreyu

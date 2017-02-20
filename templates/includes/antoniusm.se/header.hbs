@@ -1,5 +1,6 @@
 <header class="o-header">
-    <h1>{{ pageTitle }}{{#if subTitle}} <small>{{ subTitle }}</small>{{/if}}</h1>
+    <h1>{{ pageTitle }}</h1>
+    {{#if subTitle}}<h2><small>{{ subTitle }}</small></h2>{{/if}}
     {{#if featuredImage}}{{#with featuredImage}}
         {{> image }}
     {{/with}}{{/if}}

@@ -98,6 +98,6 @@
     "deployDir": "build/Release"
   },
   "scripts": {
-    "server": "cd build && python -m SimpleHTTPServer 9000"
+    "start": "cd build && python -m SimpleHTTPServer 9000"
   }
 }
