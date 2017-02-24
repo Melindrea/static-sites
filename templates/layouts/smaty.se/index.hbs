@@ -1,0 +1,28 @@
+---
+layout: master
+---
+<div class="l-container">
+    {{> sidebar }}
+    <main id="content">
+            <header>
+                <p>Don't let the modern world trick you;<br>
+                not everything is as it seems.<br>
+                Magic exists in the shadows,<br>
+                it glitters and glimmers and gleams.</p>
+
+                <p>Mist-fairies dance in the dawnlight;<br>
+                a fiddler still plays by the falls;<br>
+                the forest is guarded by skogsrå.<br>
+                They know you can sense through the walls.</p>
+
+                <p>Ancestral roads do remember,<br>
+                as does the far-reaching sea.<br>
+                Red granite cliffs lines the King's way;<br>
+                together let's walk: you and me.</p>
+
+                <p class="byline">Antonius Marie Hogebrandt</p>
+            </header>
+            <h2>{{ pageTitle }}</h2>
+            {{#markdown}}{% body %}{{/markdown}}
+    </main>
+</div>

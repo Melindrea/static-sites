@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en" itemscope itemtype="http://schema.org/WebSite"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" itemscope itemtype="http://schema.org/WebSite"> <!--<![endif]-->
+  <head {{#if hasFeed}} class="h-feed"{{/if}}>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{> metadata }}
+
+    <!-- build:css /assets/styles/main.css -->
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js /assets/scripts/head.js -->
+    <script src="/assets/scripts/modernizr.js"></script>
+    <script src="/node_modules/picturefill/dist/picturefill.js"></script>
+    <!-- endbuild -->
+
+    {{> favicons }}
+  </head>
+
+  <body>
+{{> gtm }}
+    <header class="c-site__header">
+      <a href="/" class="c-site__logo"><img src="/assets/images/logo-original.png" alt="Antonius M. Hogebrandt logo"></a><div class="typl8-beta">Antonius M. Hogebrandt <small>Author—-Dreamer</small>
+       </div>
+      </header>
+<main>
+<div class="c-ribbon__non-semantic-protector">
+<div class="c-ribbon">
+    <nav class="c-ribbon__content c-navigation--main">
+          {{ navItems "root" }}
+            <div id="c-navigation--main__item--current">Current page / Main content</div>
+    </nav>
+    </div>
+</div>
+<div id="content" class="content" itemscope itemtype="{{ item-type }}">
+        <meta itemprop="author publisher">
+            <meta itemprop="name" content="Antonius M. Hogebrandt">
+        </meta>
+        <meta itemprop="dateModified" content="{{ lastUpdated "YYYY-MM-DDTHH:mm:ssZ" }}">

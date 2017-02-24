@@ -15,7 +15,8 @@ module.exports = (function () {
             .argv;
 
         var data = {},
-            dir = __dirname + '/' + argv.dataDir + '/';
+            dir = __dirname + '/' + argv.dataDir + '/' + argv.site + '/';
+
         fs.readdirSync(dir).forEach(function (file) {
             if (path.extname(file) === '.yaml') {
                 data[file.replace(/\.yaml$/, '')] = YAML.load(dir + file);
@@ -23,6 +24,8 @@ module.exports = (function () {
                 data[file.replace(/\.json$/, '')] = require(dir + file);
             }
         });
+
+        data.global =  YAML.load(__dirname + '/' + argv.dataDir + '/global.yaml');
 
     switch (argv.env) {
         case 'local':

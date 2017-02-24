@@ -61,7 +61,7 @@ module.exports = function () {
             return app.src('build/index.html')
                 .pipe(robots({
                     useragent: '*',
-                    sitemap: 'https://antoniusm.se/sitemap.xml'
+                    sitemap: config.site.url + '/sitemap.xml'
                 }))
                 .pipe(app.dest('build'));
         });
@@ -78,7 +78,6 @@ module.exports = function () {
                     svgoPlugins: [{cleanupIDs: false}]
                 })))
                 .pipe(app.dest(function (file) {
-                    app.logDebug(file.path);
                     file.path = file.path.replace('.jpg', '.jpeg');
                     return 'processed/images';
                 }));
@@ -124,7 +123,7 @@ module.exports = function () {
                 .pipe(revAll.revision())
                 .pipe(app.dest(deployDir))
                 .pipe(revAll.manifestFile())
-                .pipe(app.dest('data'))
+                .pipe(app.dest('data/' + config.site))
                 .pipe(gp.notify('Finished cache-busting'));
         });
     };

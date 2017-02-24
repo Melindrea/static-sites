@@ -1,0 +1,7 @@
+paths:
+    content:
+        base: content
+        posts: '%s/%s/posts'
+        pages: '%s/%s/pages'
+    includes: templates/includes
+    layouts: templates/layouts

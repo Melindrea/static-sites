@@ -1,0 +1,26 @@
+default:
+    title: n/a
+    povs:
+        -
+            name: n/a
+            description: n/a
+            link: (if interviewed)
+    notableCharacters:
+        -
+            name: n/a
+            description: n/a
+            link: (if interviewed)
+    blurb: 1 paragraph
+    status:
+        term: "(unfinished 1st draft, 1st/2nd draft, revision, self-edit, edit, querying, published)"
+        progress: 79
+    words: 1234
+    cover: (key in media)
+    links:
+        -
+            title: n/a
+            link: n/a
+    reviews:
+        -
+            name: n/a
+            link: n/a

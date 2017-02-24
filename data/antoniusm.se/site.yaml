@@ -1,20 +1,15 @@
 title: AntoniusM.se
-titleSeparator: "/"
-copyright: "2016-2017 © Antonius M. Hogebrandt"
+titleSeparator: /
+copyright: '2016-2017 © Antonius M. Hogebrandt'
 language: en
-
-paths:
-    content:
-        base: content
-        posts: '%s/%s/posts'
-        pages: '%s/%s/pages'
-    includes: templates/includes
-    layouts: templates/layouts
-
+publishedDate: "November 17, 2016 19:22:00 GMT"
+url: https://antoniusm.se
+description: Author site for Antonius M. Hogebrandt
 
 gtm:
     local: GTM-N2JHDQ
     production: GTM-PFTL8C
+
 navigation:
     index:
         path: /

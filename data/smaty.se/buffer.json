@@ -1,0 +1,16 @@
+{
+    "log": {
+        "twitter": {},
+        "facebook": {}
+    },
+    "facebook": {
+        "daily": 2,
+        "min": 20,
+        "max": 40
+    },
+    "twitter": {
+        "daily": 6,
+        "min": 50,
+        "max": 70
+    }
+}

@@ -1,0 +1,366 @@
+questions:
+    - "What's your name"
+    - "How old are you"
+    - "What do you look like"
+    - "Where were you at the start of the story"
+    - "What did you want, when the story started"
+    - "Who are your parents"
+    - "What was your education like"
+    - "Do you make friends easily"
+    - "Do you have a best friend"
+    - "Can you get people to do what you want them to? If so, how"
+    - "Do you have scars? Where did they come from"
+    - "Can you navigate without getting lost? To what degree"
+    - "Can you bake a cake"
+    - "Do you know how to perform basic maintenance on a car"
+    - "Is there something you do that most other people don’t"
+    - "What is the most formative moment in your past"
+    - "Do you have any phobias"
+    - "What are some of your bad habits"
+    - "Do you have a moral code? To what extent are your actions dictated by this code"
+
+characters:
+    bothildr:
+        answers:
+            - "Bóthildr Gudhleksdotter, which means Bóthildr, daughter of Gudhlek"
+            - "I have seen nine-teen midwinter feasts"
+            - "I have blonde hair down to my shoulders and green eyes. Kóri calls my hair golden and my eyes 'vivid green', but he is a poet at heart"
+            - "Fleeing from my burned down village and my dead father"
+            - "To restore my family's honour by killing the foreign mare who murdered my father"
+            - "My father was Gudhlek Eriksson, smith in Grotjby. He was killed in an attack by foreign raiders. My mother was Jorunn Sigurdsdotter, and a talented merchant. She wasted away in a sickness that almost took my father as well"
+            - "Nanna taught me herbs and basic cures, my mother taught me to count, keep a household and magic, and my father taught me to shoot a bow, hunt and trap"
+            - "Yes, I think I do"
+            - "Arna Gormsdotter. We grew up together, and when she lost her husband during the attack, Kóri and I took her and her unborn child in"
+            - "Not really, unless it is very important to me"
+            - "Several, from when I helped fight of the Dál Riatan invaders"
+            - "On the ocean, you mean? Some, but I have only been out to fish, never on longer trips"
+            - "Yes, of course. My favourite is a nuts-and-blackberry"
+            - "A what?"
+            - "Most women do not know how to fight. Most people do not know how to weave good luck"
+            - "I am unsure. Either the first visit from Kóri where I realised what being his wife would mean, the death of my mother, or the death of my father"
+            - "No"
+            - "I crack my knuckles and hum to myself"
+            - "Of course. Honour and the family is more important than anything else"
+        names:
+            - "Bóthildr Smith's daughter"
+            - "Bóthildr Warrior"
+        pronouns: She
+        stories:
+            -
+                name: Awaiting Valhalla
+        status: alive
+        era: "Iron Age"
+        age: 19
+        origin: Ranrike
+        allegiance: Randulfr Ragnarsson
+        culture: Ranrike
+        family:
+            - "Gudhlek Eriksson, father (deceased)"
+            - "Jorunn Sigurdsdotter, mother (deceased)"
+            - "Saga Gudhleksdotter, sister (deceased)"
+            - "Gunnemar Gudhleksson, brother (deceased)"
+            - "Erik Gudhleksson, brother (deceased)"
+            - "Sigurd Gudhleksson, brother (deceased)"
+            - "Kóri Brandrsson, husband"
+            - "Vigar Kórisson, son"
+    alexis:
+        answers:
+            - "Alexis. Falk, if you want all of it, I guess"
+            - "I turned seventeen in April"
+            - "Wavy nut-brown hair, eyes that shift in blue, green or grey depending on my mood. Normal height, I guess"
+            - "Packing, getting ready for summer camp. Some kind of chirpy, cheerful “let’s get troubled teens back on their feet” crap, but eh, I even get paid a bit"
+            - "To make it all go away. Though, maybe not Helene. I know she’s dead, and that she’s a hallucination, but I miss her so much"
+            - "Do I have to …? Okay. My mother Simona is a paranoid schizophrenic who’s in an institution for kidnapping and murder. I don’t know where my dad is. He walked out on me and mom when I was five, right before I was put in the system because mom’s bug-fuck crazy"
+            - "Eh, schools. I guess I learned the basics, at least"
+            - "Does the “crazy killer’s daughter” make friends easily? Yeah, right"
+            - "I did. Helene is—was—close as a sister to me"
+            - "Not really, no"
+            - "Are we talking mental or physical? I’ve got plenty of both, from mom’s religious torture, and … well, myself"
+            - "I don’t know. I guess I didn’t suck at it in school"
+            - "Nope"
+            - "Nope"
+            - "I can throw my voice"
+            - "Walking into a foster home for the first time, and realising that the only one who’ll fight for me is me"
+            - "I’m afraid of drowning, of being locked in small spaces, and … well, of certain Judeo-Christian symbols"
+            - "I pick my nose and bite my nails"
+            - "I swore, once I got away from my mother, that I would never wilfully hurt anyone, and that I would do whatever I could to protect people from getting hurt. It’s gotten me beaten up by bullies from time to time, but better me than the weaker kids"
+        names:
+        pronouns: She
+        stories:
+            -
+                name: Halfway-house of Souls
+        status: alive
+        era: "Contemporary"
+        age: 17
+        origin: Gothenburg
+        allegiance: Self
+        culture: Swedish
+        family:
+            - "Henrik Falk, father"
+            - "Simona Falk, mother"
+            - "Helene Jansson, foster-sister (deceased)"
+    yngve:
+        answers:
+            - "Yngve Jarl"
+            - "I'm sixteen"
+            - "Afro mohawk with shaved patterns on the sides of my head, enough chains-and-studs to be seriously in trouble in a fight with Magneto, still-too-feminine features, and hazel eyes. A copper dragon climbing through and around my right ear, a ring through my left eyebrow, and a stud through my tongue. For other piercings, we’ll need to get better acquainted"
+            - "Celebrating summer by watching my peers, alone"
+            - "To make a true connection, if only for a night"
+            - "Please don’t remind me. Dad’s in prison for killing my sister (though her body’s never been found, and he denies it, not that I believe him), and mom couldn’t handle the stress of that and me being trans (“both my girls are gone!”), so I was shunted into foster care when I was twelve"
+            - "Okay, I guess. I’ve been through a few schools, but Tanum's is decent enough"
+            - "Not really. They’re generally too busy gossiping to care about me"
+            - "Nope"
+            - "Don’t make me laugh"
+            - "Plenty, both burns and cuts from dad, but also a few scarification tattoos. My favourite is a series of runes on my right shoulder"
+            - "Sure, we used to sail a lot before Mia-Maria disappeared"
+            - "Not well, at least"
+            - "No, but I do know boats"
+            - "I dunno"
+            - "Coming out as trans—and my sister’s full acceptance, my sister’s disappearance and the trial against my dad, or being abandoned by my mom"
+            - "No, not really"
+            - "I don’t think I have too many"
+            - "Doesn’t everyone have some kind of code not to hurt people if they can help it?"
+        names:
+        pronouns: He
+        stories:
+            -
+                name: Solitary Duality
+                href: /stories/solitary-duality
+        status: alive
+        era: "Contemporary"
+        age: 16
+        origin: Sweden
+        culture: Swedish
+        family:
+            - "Johannes Jarl, father"
+            - "Amina Jarl, mother"
+            - "Mia-Maria Jarl, sister (deceased)"
+    runfrid:
+        answers:
+            - "Runfrid Hildrisdotter"
+            - "I have seen twenty-five midsummers"
+            - "Strawberry blonde hair down to my lower back. My eyes are mis-matching, with one sapphire blue and one pale grey"
+            - "Visiting my husband's memorial. It had been six months since he threw himself into Rán's embrace"
+            - "I wanted to forgive him for what he did to me, to his family, to his children"
+            - "Hildri Gormsson and Arna Kórisdotter. They died in a fire three years ago"
+            - "I think quite normal. I learned all the things I needed to keep a household, and when I was fourteen midsummers, I married Mór Bjalfisson. Of course, my grandmother also taught me runes and the art of magic"
+            - "Yes, I am good at diplomacy. I had to, to handle the household after my father-in-law died and Mór was out on Viking"
+            - "My sister Snöfrid, but she moved to the other side of the country, so I rarely see her"
+            - "As I said, I am good at diplomacy"
+            - "None I wish to speak about"
+            - "It has never been something I needed to do"
+            - "Quite a few different kinds"
+            - "I am not sure what that is"
+            - "I practice runes in secret, so my brother-in-law does not find out. Mór never minded, but Leifr is Christian and does not like the old faith"
+            - "Holding my daughter in my arms. That something so precious could come from me and Mór"
+            - "No"
+            - "I talk to myself"
+            - "Honour and family above everything"
+        pronouns: She
+        stories:
+            -
+                name: Forgive and forget
+        status: alive
+        era: "Iron Age"
+        age: 25
+        origin: Norway
+        allegiance: Old faith
+        culture: Scandinavian
+        family:
+            - "Hildri Gormsson, father (deceased)"
+            - "Arna Korisdotter, mother (deceased)"
+            - "Snöfrid Hildrisdotter, sister"
+            - "Mór Bjalfisson, husband (deceased)"
+            - "Ragna Mórsdotter, daughter"
+            - "Bjalfi Mórsson, son"
+            - "Yngvi Mórsson, son"
+    helga:
+        answers:
+            - "Helga Yngvesdotter, though also sometimes Helga Ramn, which means raven"
+            - "Seventeen years"
+            - "Curly black hair with bleached ends, dark skin and grey eyes. A blaumann"
+            - "Preparing to address my people. The King's men called me a changeling and threw me into the water after they executed my father and my stepmother. Joke's on them, though. I will get my vengeance"
+            - "In the long term, I want to avenge my father. Short term, I have been tasked by the deity Ran to recover an important artefact that will help me gain what I need. As her priestess, I will have power"
+            - "My father was Yngve Agrarsson, a chieftain in Viken. He bought my mother in Constantinople, and called her Svaneblau—the Black Swan, as her given name was too hard for him to pronounce. He loved her so much that he married her. And she loved him"
+            - "My mother taught me songs from her homeland, and my stepmother Torun Hildingsdotter taught what I would need to know as my father's heir. I think it hurt her that she could never bear my father a son, but she never took it out on me. I think she loved me like a daughter"
+            - "Yes, I do"
+            - "Saga. She was born a thrall on my father's estate, and is a year younger than I am"
+            - "Yes, I can talk people into a lot of things"
+            - "Above my left eye. I fell from a horse"
+            - "Decently. My father thought it was important I knew how to"
+            - "Yes. The one I prefer is blueberries"
+            - "I am not sure what you are asking me"
+            - "I have more ambition, but it is necessary for my survival, and the few of my people who still look to me"
+            - "Two things. A diplomat who suggested to my father that he sell me, and my father's dismissal. That was the day I recognised that I would be underestimated, and that I had my father's trust. The second moment was my father's execution. He refused to bow to the King, and he paid for it with his life"
+            - "No"
+            - "I snap my fingers when I think"
+            - "Yes, I am very careful with who is affected by my actions. Honour and family is more important than anything else"
+        names:
+            - "Helga Ramn"
+            - "Helga Ransdotter"
+            - "Helga of Ran"
+        pronouns: She
+        stories:
+            -
+                name: Out of Ocean and Ashes
+            -
+                name: Last Priestess of Ran
+        status: alive
+        era: "Iron Age"
+        age: 17
+        origin: "Viken, Norway"
+        allegiance: Ran
+        culture: Norwegian
+        family:
+            - "Yngve Agrarsson, father (deceased)"
+            - "Svaneblau, mother (deceased)"
+            - "Torun Hildingsdotter, stepmother (deceased)"
+    katja:
+        answers:
+            - "Katja Bradley"
+            - "It's rude to ask a woman's age"
+            - "Black braids, black eyes, and with a flair for colourful fasion. Athletic, I guess"
+            - "Dealing with nightmares about the dead, after I a month earlier made a deal I didn't understand at the time. Still worth it, though"
+            - "To further my career, and be happy with my lovely girlfriend Sia"
+            - "Thomas and Magdalene. Dad's African-American and came to Sweden during the Vietnam war. Mom was a model who turned sewing teacher after she met Dad"
+            - "Fairly standard. Basic years in Hudiksvall, and went to Stockholm to study sewing and patterns. I always knew I wanted to become a fashion designer"
+            - "Oh, yes. Really easily infact. I love meeting new people"
+            - "Not really, though Andrej is a really close friend, and Sia's more than friends, but also a good friend"
+            - "Yes, I have a knack for talking people into things"
+            - "None as of yet, but I'm expecting that'll change"
+            - "If you put a map in my hand I'll ... be sure to be lost"
+            - "Occasionally, but I prefer buying them"
+            - "Very basic, sure"
+            - "Sew, I guess. Fight with spears. Ride massive wolves into battle"
+            - "I think, honestly, the fights my parents used to have. Made me quite certain to never tie myself up in a committed relationship"
+            - "Only if you count 'committed relationships'"
+            - "I snore and pick my teeth"
+            - "I never thought so. Lately, I'm not as sure"
+        pronouns: She
+        stories:
+            -
+                name: Shards of the Eld
+                href: /stories/shards-of-the-eld
+            -
+                name: Bound by Blood
+            -
+                name: Moments Lost
+
+        status: alive
+        era: Contemporary
+        age: 27
+        origin: "Hudiksvall, Sweden"
+        allegiance: Freja
+        culture: Swedish
+        family:
+            - "Thomas Bradley, father"
+            - "Magdalene Bradley, mother"
+            - "Robert Bradley, brother"
+            - "Sia Starholm, girlfriend"
+    vanja:
+        answers:
+            - "Vanja Hulth"
+            - "16. Well, almost, my birthday is in July"
+            - "Do I have to? Reddish blonde hair, bluish-grey eyes. Tall, I guess, with long legs"
+            - "Moved in with my grandpa, since my parents decided that they prefered doing volunteer work in Rwanda to dealing with their offspring. They'd promised me my own apartment when I went to school, but since I've been, in their words 'acting up', they decided to punish me by sending me to grandpa, who I don't even know"
+            - "I want to be a musician. The best musician in the world"
+            - "Tina and Rolf. Mom's a doctor, and dad's a carpenter"
+            - "I just finished my basic years in Stockholm, and since my parents were going to Rwanda, they suggested I continue in Uddevalla. Going to study music there"
+            - "Not really. I'm a private person, and some people were picking on me, which made me even more careful with what I let people know about me"
+            - "No, I don't"
+            - "Don't make me laugh"
+            - "Hey, I don't cut"
+            - "Not exactly something I've needed to learn, no"
+            - "Simple cakes, at least"
+            - "I don't even know how to drive"
+            - "I play the violin decently, though I can get better"
+            - "The day I realised that the reason I feel uncomfortable with all the 'girly' things my mom wants me to have and do is because I'm not a girl. Gender's not a binary, and I'm somewhere else on the spectrum"
+            - "No"
+            - "I don't think I have any, really"
+            - "I'm not even sure on where to begin with that question"
+        pronouns: They
+        stories:
+            -
+                name: The Fiddler
+        status: alive
+        era: Contemporary
+        age: 15
+        origin: "Stockholm, Sweden"
+        allegiance: Unaligned
+        culture: Swedish
+        family:
+            - "Rolf Hulth, father"
+            - "Tina Hulth, mother"
+            - "Johannes Eriksson, grandfather"
+            - "Linnea Eriksson, grandmother (deceased)"
+    linda:
+        answers:
+            - "Linda Wijk"
+            - "25"
+            - "Brown shoulder-length hair, dark blue eyes, the kind of skin that goes from pale to burned, but never over to tanned. Tall, I guess"
+            - "Preparing to head home for the summer, I study mathematics at Uppsala University"
+            - "Finish my masters so I can go into researching. My dream is to win the Fields Medal"
+            - "Mom's Margareta, she's worked long shifts as a nurse at the hospital for as long as I remember. I don't know who my father is, it was a one-night-stand, from what I understand. Until I was seven, it was just me and my aunt Helen, but Helen died in the accident that cost me my leg, so then it was just me and mom"
+            - "Basic school years in Tanumshede and Uddevalla, then Bachelor's degree in mathematics at Uppsala University, and now a Master's degree at Uppsala"
+            - "No, I prefer a few really close friends to several shallow ones"
+            - "I used to, but Sofi and I drifted apart and lost touch when I moved to Uppsala"
+            - "Not really, I'm not very social"
+            - "Several, mainly from the car accident when I was seven. I was trapped in the car for four hours, and they had to cut my leg off"
+            - "Decently, I can at least read a map"
+            - "Some, though I prefer cookies"
+            - "Very, very basic, yes"
+            - "I know how to count the way the Egyptians did, if that counts"
+            - "We had a substitute teacher when I was sixteen, who really loved mathematics. She spent the three weeks we had her teaching us interesting facts, rather than just going by the book"
+            - "Snakes. I just can't stand them"
+            - "I smoke. Yeah, I know, but it's, well, a bad habit"
+            - "I guess so. I follow the laws, and I try to be a good person"
+        pronouns: She
+        stories:
+            -
+                name: Why did it have to be snakes?
+        status: alive
+        era: Contemporary
+        age: 25
+        origin: "Tanumshede, Sweden"
+        allegiance: Unaligned
+        culture: Swedish
+        family:
+            - "Margareta Wijk, mother"
+            - "Helen Wijk, aunt (deceased)"
+    satinder:
+        answers:
+            - "Legally, or the name I've taken for myself? If the second, Satinder Kaur Singh. I'd prefer not to share my legal name, if it's all the same"
+            - "I'm twenty-five"
+            - "Do I have to ...? Okay. Blonde. Blue eyes. Average height, I guess. I'm not a 'rye-blonde Nordic viking', if that's what you're asking. I am pleased that I finally managed to grow a beard, though"
+            - "On an island in the Bohuslän archipelago, fleeing from my pain after miscarrying"
+            - "Get a family. Or, if that's impossible, at least not be in pain anymore"
+            - "I haven't the faintest. My earliest memories are from foster parents in Tanumshede, and I was five or six then"
+            - "School, I guess. Dropped out when I was 18, though Gabriel has been trying to get me to go back. I'm good with my hands, though, so do I really need a piece of paper saying I can read and write? I don't think so"
+            - "Not really. I'm a rather private person"
+            - "I guess that's probably Gabriel. I used to think he was my everything, but when I told him I was pregnant things changed. I think he was happy when I miscarried"
+            - "Not really. I can't even stop them from misgendering me"
+            - "The biggest is probably on my upper arm. I was at a party when I was sixteen or so. Some guy were picking a fight, and I decided to give it to him. I won, and got two years in juvie for my troubles"
+            - "Assuming I have chart and some way to figure out directions, sure. I even know how to sail"
+            - "I ... what kind of question is that? No. I don't"
+            - "If it has a motor, I can fix it"
+            - "I see ghosts. Or, at least, I think so. Does that count?"
+            - "When I in juvie first heard the word 'trans', and got a name for my feelings. Especially the bit where gender is a spectrum, and it's okay that I don't really have a gender. I'm still far more of a man than a woman though. I hate my stupid body! I guess that another formative moment have to be when I met Jasbir Singh. He first taught me what it is to be Sikh, and for the first time in my life I had faith"
+            - "Cramped spaces, and heights"
+            - "I have a bad temper, but I'm working on it"
+            - "Doesn't everyone? I do my best to treat everyone with respect"
+        status: alive
+        pronouns: They
+        stories:
+            -
+                name: The Angel Maker
+        era: Contemporary
+        age: 25
+        origin: "Grebbestad, Sweden"
+        allegiance: Unaligned
+        culture: Swedish
+        family:
+            - "Gabriel Vinge, spouse"
+            - "Jasbir Singh, mentor"
+            - "Inderjit Kaur, mentor"
+            - "Ronja Eriksson, foster sister"
+            - "Gunilla Eriksson, foster mother"

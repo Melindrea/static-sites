@@ -1,0 +1,37 @@
+<div class="l-container">
+<footer class="site-footer">
+    {{> mailchimp }}
+    {{>footer-links}}
+</footer>
+</div>
+<!-- smoosh -->
+<script src="/node_modules/fontfaceobserver/fontfaceobserver.js"></script>
+<script src="/assets/scripts/fontLoader.js"></script>
+<!-- endsmoosh -->
+<!-- build:js /assets/scripts/foot.js -->
+<!-- bower:js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+<!-- endbower -->
+<script src="/assets/scripts/main.js"></script>
+<!-- endbuild -->
+{{#if hasTwitter}}
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+{{/if}}
+</body>
+</html>

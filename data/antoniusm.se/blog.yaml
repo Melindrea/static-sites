@@ -1,7 +1,7 @@
 list-limit: 5
 helpers: 'blog/helpers/*.js'
 templates:
-    header: '{{> header }}{{#if blurb}}{{> blurb }}{{/if}}'
+    header: '{{> page-header }}{{#if blurb}}{{> blurb }}{{/if}}'
     footer: '{{> archives-display-pager }}'
 permalink:
     archive: :site.base/blog/:permalink(filename)

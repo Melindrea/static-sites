@@ -1,6 +1,6 @@
 'use strict';
 module.exports.canonical = function (fullUrl) {
-    var site = this.context.pkg.homepage,
+    var site = this.context.site.url,
         buildDir = this.context.pkg.config.buildDir,
         canonical = this.permalink
             .replace(buildDir, site)

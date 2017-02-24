@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<!-- [todo] - Write better design -->
+<h2 class="character-quote">Quote</h2>
+{{#markdown}}
+    {% body %}
+{{/markdown}}
+
+{{ characterProfile key}}
+
+{{ characterInterview key}}
+
+<h2>Excerpt</h2>
+{{ loadExcerpt key }}

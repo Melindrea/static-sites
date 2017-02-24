@@ -100,19 +100,19 @@ app.helpers(require('handlebars-helpers')());
 app.task('load', function (cb) {
     navigation.clearMenus();
 
-    app.partials(config.data.site.paths.includes + '/*.hbs');
-    app.partials(config.data.site.paths.includes + '/' + config.site + '/*.hbs');
-    app.layouts(config.data.site.paths.layouts + '/*.hbs');
-    app.layouts(config.data.site.paths.layouts + '/' + config.site + '/*.hbs');
+    app.partials(config.data.global.paths.includes + '/*.hbs');
+    app.partials(config.data.global.paths.includes + '/' + config.site + '/*.hbs');
+    app.layouts(config.data.global.paths.layouts + '/*.hbs');
+    app.layouts(config.data.global.paths.layouts + '/' + config.site + '/*.hbs');
     app.pages(sprintf(
-        config.data.site.paths.content.pages,
-        config.data.site.paths.content.base,
+        config.data.global.paths.content.pages,
+        config.data.global.paths.content.base,
         config.site
     ) + '/**/*.hbs');
 
     app.posts(sprintf(
-        config.data.site.paths.content.posts,
-        config.data.site.paths.content.base,
+        config.data.global.paths.content.posts,
+        config.data.global.paths.content.base,
         config.site
     ) + '/**/*.md');
 
@@ -175,7 +175,7 @@ app.task('build', ['load'], function (cb) {
 app.task('sitemap', function () {
     return app.src('build/**/*.html')
         .pipe(gp.sitemap({
-                siteUrl: config.pkg.homepage
+                siteUrl: config.site.url
         })) // Returns sitemap.xml
         .pipe(app.dest(buildDir));
 });

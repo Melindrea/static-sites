@@ -1,0 +1,43 @@
+<div class="character-profile">
+    <h2>Profile</h2>
+    <dl>
+        {{#if stories}}
+            <dt>Stories</dt>
+            {{#each stories}}
+            <dd class="group">{{#if href }}<a href="{{ href }}">{{/if}}{{ name }}{{#if href }}</a>{{/if}}</dd>
+            {{/each}}
+        {{/if}}
+        {{#if names}}
+            <dt>Names</dt>
+            {{#each names}}
+            <dd class="group">{{ . }}</dd>
+            {{/each}}
+        {{/if}}
+        {{#if titles}}
+            <dt>Titles</dt>
+            {{#each titles}}
+            <dd class="group">{{ . }}</dd>
+            {{/each}}
+        {{/if}}
+        <dt class="inline">Pronouns</dt>
+        <dd>{{ pronouns }}</dd>
+        <dt class="inline">Era</dt>
+        <dd>{{ era }}</dd>
+        <dt class="inline">Status</dt>
+        <dd>{{ status }}</dd>
+        <dt class="inline">Age</dt>
+        <dd>{{ age }}</dd>
+        <dt class="inline">Origin</dt>
+        <dd>{{ origin }}</dd>
+        <dt class="inline">Culture</dt>
+        <dd>{{ culture }}</dd>
+        <dt class="inline">Allegiance</dt>
+        <dd>{{ allegiance }}</dd>
+        {{#if family}}
+            <dt>Family</dt>
+            {{#each family}}
+            <dd class="group">{{ . }}</dd>
+            {{/each}}
+        {{/if}}
+    </dl>
+</div>

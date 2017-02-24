@@ -1,0 +1,85 @@
+title: Småty in the land
+titleSeparator: "/"
+copyright: "2015 Marie Hogebrandt"
+language: en
+publishedDate: "March 8, 2015 15:00:00 GMT"
+url: https://smaty.se
+description: Site for the stories set in the Småty world
+
+gtm:
+    local: GTM-N2JHDQ
+    production: GTM-TK3LN4
+
+navigation:
+    index:
+        path: /
+        item: Home
+    series:
+        path: /series
+        item: Series
+    characters:
+        path: /characters
+        item: Characters
+        children:
+            alexis-falk:
+                path: /characters/alexis-falk
+                item: Alexis
+            bothildr-gudhleksdotter:
+                path: /characters/bothildr-gudhleksdotter
+                item: Bóthildr
+            helga-yngvesdotter:
+                path: /characters/helga-yngvesdotter
+                item: Helga
+            katja-bradley:
+                path: /characters/katja-bradley
+                item: Katja
+            linda-wijk:
+                path: /characters/linda-wijk
+                item: Linda
+            runfrid-hildrisdotter:
+                path: /characters/runfrid-hildrisdotter
+                item: Runfrid
+            satinder-singh:
+                path: /characters/satinder-singh
+                item: Satinder
+            vanja-hulth:
+                path: /characters/vanja-hulth
+                item: Vanja
+            yngve-jarl:
+                path: /characters/yngve-jarl
+                item: Yngve
+    locations:
+        path: /locations
+        item: Locations
+        children:
+            gallery:
+                path: /locations/gallery
+                item: Gallery
+    stories:
+        path: /stories
+        item: Stories
+        children:
+            shards-of-the-eld:
+                path: /stories/shards-of-the-eld
+                item: Shards of the Eld
+            solitary-duality:
+                path: /stories/solitary-duality
+                item: Solitary Duality
+            flashfiction:
+                path: /stories/flashfiction
+                item: Flashfiction
+            microfiction:
+                path: /stories/microfiction
+                item: Microfiction
+            nanowrimo:
+                path: /stories/nanowrimo
+                item: NaNoWriMo
+            wip-teasers:
+                path: /stories/wip-teasers
+                item: Teasers
+    author:
+        path: /author
+        item: Bio
+    contact:
+        path: /contact
+        item: Contact

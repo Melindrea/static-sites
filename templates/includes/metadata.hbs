@@ -13,7 +13,7 @@
 {{/if}}
 
 {{#if featuredImage }}
-    <meta itemprop="image" content="{{ pkg.homepage }}/{{ featuredImage.revSrc }}">
+    <meta itemprop="image" content="{{ site.url }}/{{ featuredImage.revSrc }}">
 {{/if}}
 
 <!-- Twitter Card data -->
@@ -25,14 +25,14 @@
 <meta name="twitter:creator" content="@melindrea">
 {{#if featuredImage }}
     <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="{{ pkg.homepage }}/{{ featuredImage.revSrc }}">
+    <meta name="twitter:image:src" content="{{ site.url }}/{{ featuredImage.revSrc }}">
 {{/if}}
 <!-- Open Graph data -->
 <meta property="og:title" content="{{ title }}">
 <meta property="og:type" content="{{ metaType }}">
 <meta property="og:url" content="{{ canonical }}">
 {{#if featuredImage}}
-    <meta property="og:image" content="{{ pkg.homepage }}/{{ featuredImage.revSrc }}">
+    <meta property="og:image" content="{{ site.url }}/{{ featuredImage.revSrc }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 {{/if}}

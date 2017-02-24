@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<p class="tagline">{{ tagline }}</p>
+<!-- [todo] - Write better design -->
+
+<div class="story-box">
+    {{#if cover}}
+    <figure id="covers-{{ key }}">
+        <a href="/assets/images/covers/{{ key }}.jpg" data-rel="thumbnail">
+            <img alt="Cover for {{ title }}" src="/assets/images/covers/thumbnails/{{ key }}.jpg" width="{{ cover.width }}" height="{{ cover.height }}">
+        </a>
+        <figcaption>{{ cover.caption }}</figcaption>
+    </figure>
+    {{/if}}
+    <div>
+        <h2>Status</h2>
+        <progress max="100" value="{{ progress }}"></progress>
+        <p>{{ status }}</p>
+        <p>{{ words }} words</p>
+    </div>
+    {{#if published}}
+    <h2>Links</h2>
+    <ul>
+    {{#each published.links}}
+        <li><a href="{{ href }}">{{ at }}</a></li>
+    {{/each}}
+    </ul>
+    {{/if}}
+    {{#if goodreads}}
+    <div id="gr_add_to_books">
+    <div class="gr_custom_each_container_">
+      <a href="https://www.goodreads.com/book/show/{{ goodreads.slug }}" style="border:none" target="_blank"><img alt="{{ goodreads.title }}" src="https://www.goodreads.com/images/atmb_add_book-70x25.png" /></a>
+    </div>
+  </div>
+  <!-- the identifier in the following script tag can be a GR book id or an isbn -->
+  <script src="https://www.goodreads.com/book/add_to_books_widget_frame/{{ goodreads.id }}?atmb_widget%5Bbutton%5D=atmb_widget_1.png&amp;atmb_widget"></script>
+  {{/if}}
+</div>
+
+<blockquote>{{ back }}</blockquote>
+
+{{#markdown}}
+    {% body %}
+{{/markdown}}
+
+<h2>Point of View Characters</h2>
+
+<ul>
+{{#each pov}}
+    <li><strong>{{#if href}}<a href="{{ href }}">{{/if}}{{ name }}{{#if href}}</a>{{/if}}</strong>–{{ tag }}</li>
+{{/each}}
+</ul>
+
+<h2>Other notable characters</h2>
+
+<ul>
+    {{#each other}}
+    <li><strong>{{#if href}}<a href="{{ href }}">{{/if}}{{ name }}{{#if href}}</a>{{/if}}</strong>–{{ tag }}</li>
+{{/each}}
+</ul>
+
+<h2>Excerpt</h2>
+{{ loadExcerpt key }}
