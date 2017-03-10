@@ -14,6 +14,7 @@ module.exports = (function () {
             })
             .argv;
 
+        console.log(argv);
         var data = {},
             dir = __dirname + '/' + argv.dataDir + '/' + argv.site + '/';
 

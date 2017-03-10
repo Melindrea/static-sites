@@ -61,7 +61,7 @@ module.exports = function () {
             return app.src('build/index.html')
                 .pipe(robots({
                     useragent: '*',
-                    sitemap: config.site.url + '/sitemap.xml'
+                    sitemap: config.data.site.url + '/sitemap.xml'
                 }))
                 .pipe(app.dest('build'));
         });

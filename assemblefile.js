@@ -175,7 +175,7 @@ app.task('build', ['load'], function (cb) {
 app.task('sitemap', function () {
     return app.src('build/**/*.html')
         .pipe(gp.sitemap({
-                siteUrl: config.site.url
+                siteUrl: config.data.site.url
         })) // Returns sitemap.xml
         .pipe(app.dest(buildDir));
 });
