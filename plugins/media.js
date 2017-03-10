@@ -147,7 +147,7 @@ function plugin()
                         src = path.resolve(__dirname + '/..' +
                             fileUrl.replace(
                                 'assets',
-                                'processed'
+                                'assets/processed/' + config.site
                             ));
 
                         gm(src).size(function(err, value) {

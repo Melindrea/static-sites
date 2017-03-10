@@ -1,10 +1,10 @@
 {
-  "name": "antoniusm.se",
-  "description": "Author site for Antonius M. Hogebrandt",
+  "name": "static-sites",
+  "description": "Site by Antonius M. Hogebrandt",
   "main": "",
   "version": "1.0.1",
   "authors": [
-    "Antonius Marie Hogebrandt <iam@mariehogebrandt.se>"
+    "Antonius Marie Hogebrandt <creator@antoniusm.se>"
   ],
   "license": "MIT",
   "moduleType": [],

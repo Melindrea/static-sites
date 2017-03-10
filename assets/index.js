@@ -14,11 +14,11 @@ module.exports = function () {
         app.task('jshint', function () {
             return app.src(
                     [
-                        'assets/scripts/*.js',
+                        'assets/' + config.site + '/scripts/*.js',
                         '*.js',
                         'helpers/**/*.js',
                         'plugins/**/*.js',
-                        'assets/*.js',
+                        'assets/' + config.site + '/*.js',
                         'blog/**/*.js'
                     ]
                 )
@@ -30,31 +30,40 @@ module.exports = function () {
         });
 
         app.task('fonts', function () {
-            return app.copy('assets/fonts/**/*', 'build/assets/fonts');
+            return app.copy('assets/' + config.site + '/fonts/**/*', 'build/assets/fonts');
+        });
+
+        app.task('fonts', function () {
+            // var fontsPaths = config.data.site.fonts.map(function (font) {
+            //     return 'assets/fonts/**/*';
+            // });
+            return app.copy(
+                'assets/fonts/{' + config.data.site.assets.fonts.join() + '}/*', 'build/assets/fonts'
+            );
         });
 
         app.task('favicon', function () {
-            return app.copy('assets/favicon/**/*', 'build/assets/favicon');
+            return app.copy('assets/' + config.site + '/favicon/**/*', 'build/assets/favicon');
         });
 
         app.task('favicon2', function () {
-            return app.copy('assets/favicon.ico', 'build');
+            return app.copy('assets/' + config.site + '/favicon.ico', 'build');
         });
 
         app.task('well-known', function () {
-            return app.copy('assets/well-known/**', 'build/.well-known');
+            return app.copy('assets/' + config.site + '/well-known/**', 'build/.well-known');
         });
 
         app.task('resources', function () {
-            return app.copy('assets/resources/**', 'build/assets/resources');
+            return app.copy('assets/' + config.site + '/resources/**', 'build/assets/resources');
         });
 
         app.task('images-copy', function () {
-            return app.copy('processed/images/**/**.{jpg,jpeg,png}', 'build/assets/images');
+            return app.copy('assets/processed/' + config.site + '/images/**/**.{jpg,jpeg,png}', 'build/assets/images');
         });
 
         app.task('ornaments', function () {
-            return app.copy('assets/styles/ornaments/**.svg', 'build/assets/styles/ornaments');
+            return app.copy('assets/' + config.site + '/styles/ornaments/**.svg', 'build/assets/styles/ornaments');
         });
 
         app.task('robots', function () {
@@ -66,10 +75,10 @@ module.exports = function () {
                 .pipe(app.dest('build'));
         });
 
-        app.task('assets', ['fonts', 'favicon', 'favicon2', 'robots', 'styles', 'well-known', 'ornaments']);
+        app.task('assets', config.data.site.assets.tasks);
 
         app.task('images', function () {
-            return app.src('assets/images/**/**.{jpg,jpeg,png}')
+            return app.src('assets/' + config.site + '/images/**/**.{jpg,jpeg,png}')
                 .pipe(gp.cache(gp.imagemin({
                     progressive: true,
                     interlaced: true,
@@ -79,12 +88,12 @@ module.exports = function () {
                 })))
                 .pipe(app.dest(function (file) {
                     file.path = file.path.replace('.jpg', '.jpeg');
-                    return 'processed/images';
+                    return 'processed/' + config.site + '/images';
                 }));
         });
 
         app.task('styles', function () {
-            return app.src('assets/styles/main.scss')
+            return app.src('assets/' + config.site + '/styles/main.scss')
                 .pipe(gp.sourcemaps.init())
                 .pipe(gp.sass({
                         outputStyle: 'expanded',
@@ -110,7 +119,7 @@ module.exports = function () {
         });
 
         app.task('modernizr', function () {
-            return app.src(['assets/**/**.{js,scss}', 'build/**/**.html'])
+            return app.src(['assets/' + config.site + '/**/**.{js,scss}', 'build/**/**.html'])
                 .pipe(gp.modernizr(config.data.modernizr))
                 .pipe(app.dest('.tmp/assets/scripts'));
         });

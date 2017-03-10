@@ -56,10 +56,9 @@ siteData.base = buildDir;
 
 app.data({
   site: siteData,
-  gtm: config.gtm,
+  gtmId: config.gtm,
   pkg: config.pkg
 });
-
 
 /**
  * Create views collection for our site pages

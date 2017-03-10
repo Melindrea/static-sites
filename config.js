@@ -9,12 +9,11 @@ module.exports = (function () {
         argv = require('yargs')
             .default({
                 env: process.env.NODE_ENV || 'local',
-                site: pkg.name || 'antoniusm.se',
+                site: process.env.SITE || 'antoniusm.se',
                 dataDir: 'data'
             })
             .argv;
 
-        console.log(argv);
         var data = {},
             dir = __dirname + '/' + argv.dataDir + '/' + argv.site + '/';
 

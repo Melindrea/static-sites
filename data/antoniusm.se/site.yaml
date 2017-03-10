@@ -6,6 +6,19 @@ publishedDate: "November 17, 2016 19:22:00 GMT"
 url: https://antoniusm.se
 description: Author site for Antonius M. Hogebrandt
 
+assets:
+    tasks:
+        - fonts
+        - favicon
+        - favicon2
+        - robots
+        - styles
+        - well-known
+        - ornaments
+
+    fonts:
+        - linux-libertine
+        - zelda
 gtm:
     local: GTM-N2JHDQ
     production: GTM-PFTL8C
