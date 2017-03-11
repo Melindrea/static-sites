@@ -1,14 +1,29 @@
 title: Småty in the land
 titleSeparator: "/"
-copyright: "2015 Marie Hogebrandt"
+copyright: "2015-2017 © Antonius M. Hogebrandt"
 language: en
 publishedDate: "March 8, 2015 15:00:00 GMT"
 url: https://smaty.se
 description: Site for the stories set in the Småty world
+types:
+    - pages
 
 gtm:
     local: GTM-N2JHDQ
     production: GTM-TK3LN4
+
+assets:
+    tasks:
+        - fonts
+        - favicon
+        - favicon2
+        - robots
+        - styles
+
+    fonts:
+        - linux-libertine
+        - linux-biolinum
+        - atreyu
 
 navigation:
     index:

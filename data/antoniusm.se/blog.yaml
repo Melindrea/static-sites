@@ -14,7 +14,7 @@ taxonomies:
                 excerpt: The category "Writing" has posts relating to my writing process, revision and similar information. It's a catch-all category.
                 blurb: The category "Writing" has posts relating to my writing process, revision and similar information. It's a catch-all category.
                 metaType: website
-                layout: master
+                layout: default
 
         personal-life:
                 name: Personal Life
@@ -22,7 +22,7 @@ taxonomies:
                 excerpt: Personal accounts, digging into what makes me what and who I am.
                 blurb: Personal accounts, digging into what makes me what and who I am.
                 metaType: website
-                layout: master
+                layout: default
 
         flash-fiction:
                 name: Flash Fiction
@@ -30,7 +30,7 @@ taxonomies:
                 excerpt: Shorter stories, rarely longer than 1000 words, never longer than 2500.
                 blurb: Shorter stories, rarely longer than 1000 words, never longer than 2500.
                 metaType: website
-                layout: master
+                layout: default
 
         review:
                 name: Review
@@ -38,7 +38,7 @@ taxonomies:
                 excerpt: Reviews of books I liked or didn't, both in my genres and outside of them.
                 blurb: Reviews of books I liked or didn't, both in my genres and outside of them.
                 metaType: website
-                layout: master
+                layout: default
 
         guest-post:
                 name: Guest Post
@@ -46,7 +46,7 @@ taxonomies:
                 excerpt: Posts that showcase other people; interviews, cover reveals and similar.
                 blurb: Posts that showcase other people; interviews, cover reveals and similar.
                 metaType: website
-                layout: master
+                layout: default
 
         characters:
                 name: Characters
@@ -54,7 +54,7 @@ taxonomies:
                 excerpt: About the characters that are part of my world(s), whether showcases, interviews or digging into their psychology.
                 blurb: About the characters that are part of my world(s), whether showcases, interviews or digging into their psychology.
                 metaType: website
-                layout: master
+                layout: default
 
         tangential-tutorials:
                 name: Tangential Tutorials
@@ -62,7 +62,7 @@ taxonomies:
                 excerpt: Tutorials showing how to do things that are not directly linked to my writing, but are connected to it, such as binding books or creating headers.
                 blurb: Tutorials showing how to do things that are not directly linked to my writing, but are connected to it, such as binding books or creating headers.
                 metaType: website
-                layout: master
+                layout: default
 
 
     tags:
@@ -72,21 +72,21 @@ taxonomies:
                 excerpt: Posts relating to social media and building a brand across platforms.
                 blurb: Posts relating to social media and building a brand across platforms.
                 metaType: website
-                layout: master
+                layout: default
         series-index:
                 name: series index
                 title: Index for series
                 excerpt: Posts that act as index for a specific series.
                 blurb: Posts that act as index for a specific series.
                 metaType: website
-                layout: master
+                layout: default
         superheroes:
                 name: superheroes
                 title: Superheroes
                 excerpt: Posts relating to superheroes, whether my own or others.
                 blurb: Posts relating to superheroes, whether my own or others.
                 metaType: website
-                layout: master
+                layout: default
 
 
         digital-art:
@@ -95,7 +95,7 @@ taxonomies:
                 excerpt: Posts relating to digital art, such as sizes of images or Gimp tutorials.
                 blurb: Posts relating to digital art, such as sizes of images or Gimp tutorials.
                 metaType: website
-                layout: master
+                layout: default
 
         writing-process:
                 name: writing process
@@ -103,7 +103,7 @@ taxonomies:
                 excerpt: Details on how my specific writing process happens, from software to how I come up with characters.
                 blurb: Details on how my specific writing process happens, from software to how I come up with characters.
                 metaType: website
-                layout: master
+                layout: default
 
         imho:
                 name: imho
@@ -111,7 +111,7 @@ taxonomies:
                 excerpt: Highly personal opinions.
                 blurb: Highly personal opinions.
                 metaType: website
-                layout: master
+                layout: default
 
         midnatt:
                 name: midnatt
@@ -119,7 +119,7 @@ taxonomies:
                 excerpt: The most gorgeous black cat in the world, or at least our apartment. A lovely pest!
                 blurb: The most gorgeous black cat in the world, or at least our apartment. A lovely pest!
                 metaType: website
-                layout: master
+                layout: default
 
         historical:
                 name: historical
@@ -127,7 +127,7 @@ taxonomies:
                 excerpt: Stories set in the past, generally at least 30 years back, though might be as much as 1500 years.
                 blurb: Stories set in the past, generally at least 30 years back, though might be as much as 1500 years.
                 metaType: website
-                layout: master
+                layout: default
 
         magical-realism:
                 name: magical realism
@@ -135,7 +135,7 @@ taxonomies:
                 excerpt: Stories about the magic that exists around us, whether we acknowledge it or not.
                 blurb: Stories about the magic that exists around us, whether we acknowledge it or not.
                 metaType: website
-                layout: master
+                layout: default
 
         dystopia:
                 name: dystopia
@@ -143,7 +143,7 @@ taxonomies:
                 excerpt: Stories set in bleak worlds
                 blurb: Stories set in bleak worlds
                 metaType: website
-                layout: master
+                layout: default
 
         literary-horror:
                 name: literary horror
@@ -151,7 +151,7 @@ taxonomies:
                 excerpt: Horror leaning towards literary due to its use of the language itself to build suspension and fear.
                 blurb: Horror leaning towards literary due to its use of the language itself to build suspension and fear.
                 metaType: website
-                layout: master
+                layout: default
 
         ghosts:
                 name: ghosts
@@ -159,7 +159,7 @@ taxonomies:
                 excerpt: Ghosts, ghouls and other icky things from beyond the grave.
                 blurb: Ghosts, ghouls and other icky things from beyond the grave.
                 metaType: website
-                layout: master
+                layout: default
 
         five-stars:
                 name: five stars
@@ -167,7 +167,7 @@ taxonomies:
                 excerpt: Reviews of books that were given 5 stars.
                 blurb: Reviews of books that were given 5 stars.
                 metaType: website
-                layout: master
+                layout: default
 
         mental-health:
                 name: mental health
@@ -175,7 +175,7 @@ taxonomies:
                 excerpt: Posts to bring attention to mental health and how it affects people.
                 blurb: Posts to bring attention to mental health and how it affects people.
                 metaType: website
-                layout: master
+                layout: default
 
         revision:
                 name: revision
@@ -183,7 +183,7 @@ taxonomies:
                 excerpt: Posts going into the nitty-gritty on revision and how to think about it.
                 blurb: Posts going into the nitty-gritty on revision and how to think about it.
                 metaType: website
-                layout: master
+                layout: default
 
         cover-reveal:
                 name: cover reveal
@@ -191,7 +191,7 @@ taxonomies:
                 excerpt: Digital covers for new publications, see them here among the first places.
                 blurb: Digital covers for new publications, see them here among the first places.
                 metaType: website
-                layout: master
+                layout: default
 
         landscape:
                 name: landscape
@@ -199,7 +199,7 @@ taxonomies:
                 excerpt: Writing is an art where words and metaphors are the paints.
                 blurb: Writing is an art where words and metaphors are the paints.
                 metaType: website
-                layout: master
+                layout: default
 
         ocean:
                 name: ocean
@@ -207,7 +207,7 @@ taxonomies:
                 excerpt: Posts about the ocean and all that is in it, mainly the waters off the west coast of Sweden.
                 blurb: Posts about the ocean and all that is in it, mainly the waters off the west coast of Sweden.
                 metaType: website
-                layout: master
+                layout: default
 
         writing-advice:
                 name: writing advice
@@ -215,7 +215,7 @@ taxonomies:
                 excerpt: Advice about writing, a catch-all tag.
                 blurb: Advice about writing, a catch-all tag.
                 metaType: website
-                layout: master
+                layout: default
 
         gender:
                 name: gender
@@ -223,7 +223,7 @@ taxonomies:
                 excerpt: Gender musings, theories, and overall waffling about that strange thing that so many take for granted.
                 blurb: Gender musings, theories, and overall waffling about that strange thing that so many take for granted.
                 metaType: website
-                layout: master
+                layout: default
 
         katherine-lampe:
                 name: Katherine Lampe
@@ -231,7 +231,7 @@ taxonomies:
                 excerpt: Post regarding the lovely Katherine Lampe, one of my favourite authors.
                 blurb: Post regarding the lovely Katherine Lampe, one of my favourite authors.
                 metaType: website
-                layout: master
+                layout: default
 
         teaser:
                 name: teaser
@@ -239,7 +239,7 @@ taxonomies:
                 excerpt: Tidbits and teasers to wet the appetite for the full stories.
                 blurb: Tidbits and teasers to wet the appetite for the full stories.
                 metaType: website
-                layout: master
+                layout: default
 
         writing-game:
                 name: writing game
@@ -247,7 +247,7 @@ taxonomies:
                 excerpt: Writing games in various forms, to spread awareness of ones stories.
                 blurb: Writing games in various forms, to spread awareness of ones stories.
                 metaType: website
-                layout: master
+                layout: default
 
         contemporary:
                 name: contemporary
@@ -255,7 +255,7 @@ taxonomies:
                 excerpt: Stories set in a modern time, which is no more than five or ten years in either direction from now.
                 blurb: Stories set in a modern time, which is no more than five or ten years in either direction from now.
                 metaType: website
-                layout: master
+                layout: default
 
         diversitybingo2017:
                 name: diversitybingo2017
@@ -263,7 +263,7 @@ taxonomies:
                 excerpt: A mix of books, all hitting one specific requirement, such as written by a PoC or featuring a queer main chararacter.
                 blurb: A mix of books, all hitting one specific requirement, such as written by a PoC or featuring a queer main chararacter.
                 metaType: website
-                layout: master
+                layout: default
 
 
 indices:
@@ -273,7 +273,7 @@ indices:
         pageTitle: Enjoy my musings
         blurb: I have a mix of posts, everything from random facts and inspiration, to flash fiction and written portraits
         metaType: website
-        layout: master
+        layout: default
         list: posts
         widgets:
             - categories

@@ -1,5 +1,5 @@
-<title>{{ siteTitle title }}</title>
-<link href="https://antoniusm.se/rss.xml" rel="alternate" type="application/rss+xml" title="What's New on AntoniusM.se">
+<title itemprop="name"{{#if hasFeed}} class="p-name"{{/if}}>{{ siteTitle title }}</title>
+<link href="{{ site.url }}/rss.xml" rel="alternate" type="application/rss+xml" title="What's New on {{ site.title }}">
 
 <link rel="canonical" href="{{ canonical }}">
 {{#if excerpt}}
@@ -27,6 +27,7 @@
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <meta name="twitter:image:src" content="{{ site.url }}/{{ featuredImage.revSrc }}">
 {{/if}}
+
 <!-- Open Graph data -->
 <meta property="og:title" content="{{ title }}">
 <meta property="og:type" content="{{ metaType }}">
@@ -40,7 +41,7 @@
 {{#if excerpt}}
     <meta property="og:description" content="{{ excerpt }}">
 {{/if}}
-<meta property="og:site_name" content="AntoniusM.se">
+<meta property="og:site_name" content="{{ site.title }}">
 
 {{#if article}}
     <meta property="article:published_time" content="{{ moment posted format="YYYY-MM-DDTHH:mm:ssZ" }}">
@@ -50,5 +51,7 @@
     <meta property="article:author:name" content="Antonius M. Hogebrandt">
 {{/if}}
 
+{{#if site.pinterest }}
 <!-- pinterest -->
-<meta name="p:domain_verify" content="e10a3e240439c6f94cc6e98951fa02dc"/>
+<meta name="p:domain_verify" content="{{ site.pinterest }}">
+{{/if}}

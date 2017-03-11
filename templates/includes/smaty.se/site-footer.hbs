@@ -4,17 +4,7 @@
     {{>footer-links}}
 </footer>
 </div>
-<!-- smoosh -->
-<script src="/node_modules/fontfaceobserver/fontfaceobserver.js"></script>
-<script src="/assets/scripts/fontLoader.js"></script>
-<!-- endsmoosh -->
-<!-- build:js /assets/scripts/foot.js -->
-<!-- bower:js -->
-<script src="/bower_components/jquery/dist/jquery.js"></script>
-<script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
-<!-- endbower -->
-<script src="/assets/scripts/main.js"></script>
-<!-- endbuild -->
+{{> footer-assets }}
 {{#if hasTwitter}}
 <script>window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],

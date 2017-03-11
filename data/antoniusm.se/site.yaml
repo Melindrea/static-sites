@@ -6,6 +6,10 @@ publishedDate: "November 17, 2016 19:22:00 GMT"
 url: https://antoniusm.se
 description: Author site for Antonius M. Hogebrandt
 
+types:
+    - pages
+    - posts
+
 assets:
     tasks:
         - fonts
@@ -22,6 +26,8 @@ assets:
 gtm:
     local: GTM-N2JHDQ
     production: GTM-PFTL8C
+
+pinterest: e10a3e240439c6f94cc6e98951fa02dc
 
 navigation:
     index:

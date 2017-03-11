@@ -1,21 +1,23 @@
 'use strict';
 module.exports.bodyClasses = function () {
-    var pageSlug = this.context.src.name,
+    var pageSlug = 'c-page__' + this.view.filename,
         classes = [];
 
+        classes.push(pageSlug);
         if (this.context.parent) {
-            pageSlug = this.context.parent + '-' + pageSlug;
+            classes.push('c-parent__' + this.context.parent);
         }
 
-        classes.push(pageSlug);
 
         if (this.context.layout) {
-            classes.push(this.context.layout);
+            classes.push('o-layout__' + this.context.layout);
         } else {
-            classes.push(this.context.options.layout);
+            classes.push('o-layout__-' + this.context.options.layout);
         }
 
-    return classes.filter(function (value, index, self) {
+    var thing =  classes.filter(function (value, index, self) {
         return self.indexOf(value) === index;
     }).join(' ');
+
+    return thing;
 };

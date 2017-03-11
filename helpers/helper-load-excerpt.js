@@ -5,7 +5,7 @@ module.exports.loadExcerpt = function (key) {
         sprintf = require('sprintf-js').sprintf,
         Remarkable = require('remarkable'),
         md = new Remarkable(),
-        file = sprintf('%s/../../%s/excerpts/%s.md', __dirname, this.options.contentDir, key),
+        file = sprintf('%s/../%s/excerpts/%s.md', __dirname, 'content/smaty.se', key),
         excerpt = fs.readFileSync(file, 'utf8');
 
     return new Handlebars.SafeString(md.render(excerpt));

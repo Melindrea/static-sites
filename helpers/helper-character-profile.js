@@ -1,9 +1,11 @@
 'use strict';
 module.exports.characterProfile = function (key) {
     var Handlebars = require('handlebars'),
-        characters = this.options.character,
-        character = characters.characters[key],
-        template = this.app.getPartial('character-profile');
+        config = require('./../config'),
+        characterData = config.data.characters,
+        character = characterData.characters[key],
+        partial = this.app.partials.getView('character-profile'),
+        template = Handlebars.compile(partial.content);
 
-    return new Handlebars.SafeString(template.render(character));
+    return template(character);
 };

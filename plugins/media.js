@@ -44,7 +44,7 @@ function plugin()
             }),
             sizes = config.data.media.sizes,
             manifest = config.data['rev-manifest'],
-            types = ['posts', 'pages'];
+            types = config.data.site.types;
 
         app.define(
             'loadImages',

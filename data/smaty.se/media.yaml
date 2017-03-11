@@ -1,0 +1,12 @@
+galleries:
+
+images:
+
+covers:
+
+sizes:
+    original: /assets/images/<type>/
+    1024: /assets/images/<type>/1024w/
+    640: /assets/images/<type>/640w/
+    320: /assets/images/<type>/320w/
+    thumbnail: /assets/images/<type>/thumbnails/

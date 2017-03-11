@@ -1,9 +1,12 @@
 'use strict';
 module.exports.characterInterview = function (key) {
     var Handlebars = require('handlebars'),
-        questions = this.options.character.questions,
-        answers = this.options.character.characters[key].answers,
-        template = this.app.getPartial('faq'),
+        config = require('./../config'),
+        characterData = config.data.characters,
+        questions = characterData.questions,
+        answers = characterData.characters[key].answers,
+        partial = this.app.partials.getView('faq'),
+        template = Handlebars.compile(partial.content),
         mapped = [], data = {};
 
     questions.forEach(function (value, index) {
@@ -14,5 +17,5 @@ module.exports.characterInterview = function (key) {
     });
 
     data.questions = mapped;
-    return new Handlebars.SafeString(template.render(data));
+    return template(data);
 };

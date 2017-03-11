@@ -39,7 +39,9 @@ app.use(permalinks());
 app.use(customPermalinks());
 app.use(getDest());
 app.use(media());
-app.use(blog());
+if (config.data.blog) {
+    app.use(blog());
+}
 app.use(rss());
 app.use(assets());
 app.use(revision());
@@ -57,8 +59,10 @@ siteData.base = buildDir;
 app.data({
   site: siteData,
   gtmId: config.gtm,
-  pkg: config.pkg
+  pkg: config.pkg,
+  siteDir: config.site
 });
+
 
 /**
  * Create views collection for our site pages
@@ -70,8 +74,10 @@ app.create('pages');
 app.pages.onLoad(/./, navigation.onLoad());
 app.pages.preRender(/./, navigation.preRender());
 
-app.posts.onLoad(/./, navigation.onLoad());
-app.posts.preRender(/./, navigation.preRender());
+if (config.data.blog) {
+    app.posts.onLoad(/./, navigation.onLoad());
+    app.posts.preRender(/./, navigation.preRender());
+}
 app.pages.use(
     permalinks(
         ':site.base/:permalink(filename)',
@@ -107,18 +113,20 @@ app.task('load', function (cb) {
         config.data.global.paths.content.pages,
         config.data.global.paths.content.base,
         config.site
-    ) + '/**/*.hbs');
+    ) + '/**/*.{hbs,md}');
 
-    app.posts(sprintf(
-        config.data.global.paths.content.posts,
-        config.data.global.paths.content.base,
-        config.site
-    ) + '/**/*.md');
+    if (config.data.blog) {
+        app.posts(sprintf(
+            config.data.global.paths.content.posts,
+            config.data.global.paths.content.base,
+            config.site
+        ) + '/**/*.md');
 
-    app.use(drafts('posts'));
-    app.use(wordCount('posts'));
+        app.use(drafts('posts'));
+        app.use(wordCount('posts'));
 
-    app.createArchives();
+        app.createArchives();
+    }
 
     cb();
 });
@@ -146,28 +154,49 @@ app.task('build', ['load'], function (cb) {
             return cb(err);
         }
 
-        app.loadWidgets('posts');
-        app.createRSSFile('posts');
+        if (config.data.blog) {
+            app.loadWidgets('posts');
+            app.createRSSFile('posts');
+        }
         app.loadImages();
 
-        app.toStream('pages')
-            .pipe(app.toStream('archives'))
-            .pipe(app.toStream('posts'))
-            .on('error', app.logError)
-            .pipe(app.renderFile('md'))
-            .on('error', app.logError)
-            .pipe(typogr())
-            .pipe(smoosher({
-                base: '.'
-            }))
-            .pipe(app.dest(function (file) {
-                file.path = file.data.permalink;
-                file.base = path.dirname(file.path);
-                file.extname = '.html';
-                // app.logDebug(file.path);
-                return file.base;
-            }))
-            .on('end', cb);
+        if (config.data.blog) {
+            app.toStream('pages')
+                .pipe(app.toStream('archives'))
+                .pipe(app.toStream('posts'))
+                .on('error', app.logError)
+                .pipe(app.renderFile('md'))
+                .on('error', app.logError)
+                .pipe(typogr())
+                .pipe(smoosher({
+                    base: '.'
+                }))
+                .pipe(app.dest(function (file) {
+                    file.path = file.data.permalink;
+                    file.base = path.dirname(file.path);
+                    file.extname = '.html';
+                    // app.logDebug(file.path);
+                    return file.base;
+                }))
+                .on('end', cb);
+        } else {
+            app.toStream('pages')
+                .on('error', app.logError)
+                .pipe(app.renderFile('md'))
+                .on('error', app.logError)
+                .pipe(typogr())
+                .pipe(smoosher({
+                    base: '.'
+                }))
+                .pipe(app.dest(function (file) {
+                    file.path = file.data.permalink;
+                    file.base = path.dirname(file.path);
+                    file.extname = '.html';
+                    // app.logDebug(file.path);
+                    return file.base;
+                }))
+                .on('end', cb);
+        }
     });
 });
 

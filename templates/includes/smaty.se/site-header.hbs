@@ -1,53 +1,10 @@
-<!DOCTYPE html>
-<!--[if lt IE 9]>         <html class="no-js ie"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-<head itemscope itemtype="http://schema.org/WebSite"{{#if hasFeed}} class="h-feed"{{/if}}>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{#if excerpt}}
-        <meta name="description" content="{{ excerpt }}"{{#if hasFeed}} class="p-summary"{{/if}}>
-        <meta property="og:description" content="{{ excerpt }}" >
-    {{/if}}
-    <meta property="og:type" content="website" >
-    <meta property="og:title" content="{{ siteTitle title }}" >
-    <meta property="og:url" content="{{ canonical }}" >
-    <meta property="og:site_name" content="Småty" >
-    <!-- <meta property="og:image" content="http://yoast-mercury.s3.amazonaws.com/uploads/2012/09/ionen_social_Twitter.png"> -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@melindrea">
-
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="profile" href="http://microformats.org/profile/hcard">
-    <link rel="canonical" href="{{ canonical }}">
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Smaty.se" href="/rss.xml" />
-
-    <title itemprop="name"{{#if hasFeed}} class="p-name"{{/if}}>{{ siteTitle title }}</title>
-
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-081711.css" rel="stylesheet">
-    <!-- build:css /assets/styles/main.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/normalize.css/normalize.css" />
-    <link rel="stylesheet" href="/bower_components/normalize-opentype.css/normalize-opentype.css" />
-    <!-- endbower -->
-
-    <link rel="stylesheet" href="/assets/styles/main.css">
-    <!-- endbuild -->
-
-    <!-- build:js /assets/scripts/head.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/picturefill/dist/picturefill.js"></script>
-    <!-- endbuild -->
-</head>
-<body class="{{ bodyClasses }}">
-    {{> gtm }}
+{{> head }}
 
     {{> top-navigation }}
-    <!--[if lt IE 10]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    {{> browse-happy }}
 <div class="l-container">
-<header class="site-header">
-        <div class="site-title"><a href="/">Småty</a></div>
+    <header class="c-site__header">
+        <div class="c-site__title"><a href="/">Småty</a></div>
         <p class="tagline">&mdash; a weave of Scandinavian folklore</p>
-</header>
+    </header>
 </div>
