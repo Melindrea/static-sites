@@ -6,6 +6,7 @@ parent: stories
 hasSubmenu: true
 hasTwitter: true
 excerpt: "Each story is less than 140 characters long, and explores how much of a twist you can create in that short a space. Most are 3rd person point-of-view."
+layout: markdown
 ---
 
 Every Friday, the hashtag #FP springs back into life. It's

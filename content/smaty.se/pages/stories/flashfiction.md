@@ -5,6 +5,7 @@ title: Flashfiction (< 1000 words)
 parent: stories
 hasSubmenu: true
 excerpt: "Each story is between 200 and 1000 words, and written as either an experiment/prompt, or as a specific short for a novel. Polish depends on the story."
+layout: markdown
 ---
 
 All of these are completed stories, though since none is longer than 1000, any conflicts are small as well.

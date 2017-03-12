@@ -3,6 +3,7 @@ shortTitle: Policy
 pageTitle: Privacy- & Cookies Policy
 title: Privacy- & Cookies policy
 excerpt: "Policy for how Småty.se deals with data reported to GA, and the usage of cookies. IP is anonymised, and no personal information is gathered or shared."
+layout: markdown
 ---
 
 ## Cookies

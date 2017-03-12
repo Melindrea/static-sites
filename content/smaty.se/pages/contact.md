@@ -2,10 +2,8 @@
 shortTitle: Contact
 pageTitle: Contact me
 title: My contact information
-excerpt: "Contact information for Marie Hogebrandt, author of the Småty series. It includes links to my personal page, my Public PGP key and places to find me."
-pageImage:
-    url: contact.jpg
-    alt: Black kitten
+excerpt: "Contact information for Antonius Marie Hogebrandt, author of the Småty series. It includes links to my personal page, my Public PGP key and places to find me."
+layout: markdown
 ---
 
 Whether you're looking to compliment me and offer me representation and/or a
@@ -16,7 +14,7 @@ on a subpage, or anything in between, I would love to hear from you. You can ...
 * Find my work on [Wattpad](http://www.wattpad.com/user/MarieHogebrandt)
 * Find my work on [Tablo](https://tablo.io/melindrea)
 * E-mail me at author[at]smaty[dot]se
-* Use the [contact form on my personal page](http://mariehogebrandt.se/contact)
+* Get more info on my [Author Page](https://antoniusm.se)
 
 ## Public PGP key
 [Key](https://keybase.io/melindrea/key.asc)

@@ -11,6 +11,7 @@ facebookables:
 pageImage:
     url: stories.jpg
     alt: Coloured pencils and highlighters
+layout: markdown
 ---
 
 While they all fit within the same world and same timeline, the themes

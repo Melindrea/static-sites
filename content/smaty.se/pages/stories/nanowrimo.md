@@ -5,6 +5,7 @@ title: National Novel Writing Month (and Camp)
 parent: stories
 hasSubmenu: true
 excerpt: "One way to keep motivated, for me, is to push my limits during a few months out of the year. The community around the events helps quite a lot."
+layout: markdown
 ---
 
 You don't know what that is? Well, no worries, I will help educate you.

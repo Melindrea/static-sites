@@ -4,6 +4,7 @@ pageTitle: Colophone
 title: Colophone
 slug: colophone
 excerpt: "Acknowledgment for typefaces, graphics, and people who have helped this site and the different stories to take flight. I owe them my thanks."
+layout: markdown
 ---
 
 ## Typefaces

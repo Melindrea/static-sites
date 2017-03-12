@@ -1,0 +1,9 @@
+//-- Percentage for columns
+@function calc-span( $span: 1, $columns: 16, $margin: 0 ) {
+    @return (100%/$columns)*$span - (2*$margin);
+}
+
+//-- Gutterwidth, not returned in ems, to get ems: #{calc-gutter()}em
+@function calc-gutter( $span: 1, $font-size: $typl8-font-size, $line-height: $typl8-line-height) {
+    @return (($line-height/2)/$font-size)*$span;
+}

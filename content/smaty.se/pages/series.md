@@ -10,6 +10,7 @@ facebookables:
 pageImage:
     url: series.jpg
     alt: Greby Burial Field
+layout: markdown
 ---
 
 *Småty* is a term for all mystical beings and creatures in Scandinavian

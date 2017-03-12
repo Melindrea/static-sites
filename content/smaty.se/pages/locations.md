@@ -11,6 +11,7 @@ facebookables:
 pageImage:
     url: locations.jpg
     alt: Bared bedrock
+layout: markdown
 ---
 
 ## Bohuslän

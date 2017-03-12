@@ -5,6 +5,7 @@ title: WIP Teasers
 parent: stories
 hasSubmenu: true
 excerpt: "Find your paragraph-length excerpts from works in progress here, and get a feel for my style, both themes and subject matter. The date gives a nice range."
+layout: markdown
 ---
 
 ## Shards of the Eld

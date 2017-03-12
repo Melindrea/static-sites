@@ -1,0 +1,49 @@
+@media print {
+    * {
+        border: 0 none;
+    }
+    nav,
+    .c-site__sidebar,
+    .twitter-timeline,
+    #mc_embed_signup,
+    .twitter-tweet,
+    .c-site__footer {
+        display: none;
+    }
+
+    img {
+        max-width: 500px;
+    }
+
+    html {
+        font-size: 12pt;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    main,
+    .c-site__header,
+    .c-site__footer {
+        background: #fff;
+        border: 0 none;
+        box-shadow: none;
+    }
+
+    a:link,
+    a:visited {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .c-site__header:before {
+        display: block;
+        content: "Thank you for printing my content at smaty.se. Please check back soon for new information.";
+        margin-bottom: 10px;
+        border: 1px solid #bbb;
+        padding: 3px 5px;
+        font-style: italic;
+    }
+}

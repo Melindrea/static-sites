@@ -5,9 +5,10 @@ title: Landscape Gallery
 parent: locations
 hasSubmenu: true
 excerpt: "Images of ancient sights around Tanumshede, Bohuslän (formerly Ranrike), taken by Marie Hogebrandt and Jonathan Buck. Inspiration and beauty."
+layout: default
 ---
 
-All these pictures are © Marie Hogebrandt and Jonathan Buck, and taken by us around Tanumshede in the north of Bohuslän. To not spoil anything, the image descriptions do not mention how--or if--they appear in the stories.
+All these pictures are © Antonius Marie Hogebrandt and Jonathan Buck, and taken by us around Tanumshede in the north of Bohuslän. To not spoil anything, the image descriptions do not mention how--or if--they appear in the stories.
 
 To get a larger image and a description on what it is, click on the image for a lightbox. However, if you are on a device that's smaller than a particular width (generally smartphones), clicking it will open the larger picture to allow you to zoom natively instead.
 

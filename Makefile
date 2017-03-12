@@ -24,10 +24,10 @@ pre-deploy:
 	@assemble cache-busting
 
 deploy: pre-deploy ## Deploys the site
-	rsync -rltvzp --checksum --delete ~/projects/antoniusm.se/build/Release/* root@vps:/srv/web/antoniusm.se
+	rsync -rltvzp --checksum --delete ~/projects/static-sites/build/Release/* root@vps:/srv/web/$(SITE)
 
-dry-deploy: pre-deploy ## Does a dry eeploy of the site
-	rsync -rltvzp --dry-run --checksum --delete ~/projects/antoniusm.se/build/Release/* root@vps:/srv/web/antoniusm.se
+dry-deploy: pre-deploy ## Does a dry deploy of the site
+	rsync -rltvzp --dry-run --checksum --delete ~/projects/static-sites/build/Release/* root@vps:/srv/web/$(SITE)
 
 images: ## Process raw images and copy to assets: make images folder=<foldername>
 	if [ -d assets/raw/$(folder) ]; then ./bin/process-images assets/raw/$(folder) && cp -R assets/raw/$(folder)/* processed/images/gallery; fi

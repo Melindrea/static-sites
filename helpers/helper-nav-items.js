@@ -6,7 +6,7 @@ module.exports.navItems = function (level) {
         view = this.context.view,
         pageName = view.basename.split('.'),
         pageSlug = pageName[0],
-        parentSlug = '', // [todo] - find
+        parentSlug = view.data.parent,
         navigationConfig = this.site.navigation,
         nav = {}, navItems = [], heading = '', slug;
 
@@ -14,6 +14,7 @@ module.exports.navItems = function (level) {
         nav = navigationConfig;
     } else if (level === 'submenu') {
         slug = (parentSlug) ? parentSlug : pageSlug;
+
         if (slug in navigationConfig && 'children' in navigationConfig[slug]) {
             nav = navigationConfig[slug].children;
             heading = '<h2>' + navigationConfig[slug].item + '</h2>\n';

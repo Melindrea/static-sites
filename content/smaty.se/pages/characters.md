@@ -3,6 +3,7 @@ shortTitle: Characters
 pageTitle: Among living and dead
 title: Characters of Småty
 hasSubmenu: true
+layout: markdown
 excerpt: "Meet the ancient and contemporary characters who's actions, successes and losses forms the story's heart, along with ups and downs."
 tweetables:
     - "Find all of my character profiles on one page for your perusal"

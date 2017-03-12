@@ -43,7 +43,7 @@ function plugin()
                 imageMagick: true
             }),
             sizes = config.data.media.sizes,
-            manifest = config.data['rev-manifest'],
+            manifest = config.data['rev-manifest'] || [],
             types = config.data.site.types;
 
         app.define(

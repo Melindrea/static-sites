@@ -1,0 +1,74 @@
+%inner-container {
+    @include inner-container;
+}
+
+%container {
+    @include container;
+}
+
+%clearfix {
+    @include clearfix;
+}
+
+%stitched {
+    background: url('/assets/images/sepia-linen.jpg');
+    padding: 2rem;
+    border: 2px dashed $white;
+    border-radius: 10px;
+    box-shadow: 0 0 0 4px $sepia-medium-dark, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+}
+
+%standard-box-shadow {
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.15);
+}
+
+%design-box {
+    @extend %inner-container;
+    @extend %stitched;
+    margin-bottom: $base-margin;
+}
+
+%reset-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+%inline-list {
+    @extend %reset-list;
+    li {
+        display: inline-block;
+    }
+}
+
+%ornamented-list {
+    @extend %inline-list;
+    li {
+        &:after,
+        &:first-child:before {
+            content: "\b7";
+            font-weight: bold;
+        }
+
+        &:after {
+            padding-left: 2px;
+        }
+
+        &:before {
+            padding-right: 2px;
+        }
+    }
+}
+
+%nav-anchor {
+    text-decoration: none;
+    display: inline-block;
+}
+
+%atreyu {
+    .fonts-loaded & {
+        font-family: Atreyu, Linux Libertine, serif;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+}

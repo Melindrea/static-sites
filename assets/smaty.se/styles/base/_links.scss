@@ -1,0 +1,13 @@
+a {
+    color: darken($white, 20);
+
+    &:visited {
+        color: $white;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        text-shadow: 0 0 2px $sepia-light;
+    }
+}

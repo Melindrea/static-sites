@@ -80,7 +80,7 @@ if (config.data.blog) {
 }
 app.pages.use(
     permalinks(
-        ':site.base/:permalink(filename)',
+        ':site.base/:permalink(path)',
         {
             permalink: app.pagePermalink
         }

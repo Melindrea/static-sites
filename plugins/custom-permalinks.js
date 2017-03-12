@@ -15,11 +15,17 @@ module.exports = function () {
         app.define(
             'pagePermalink',
             function (filename) {
-                if (filename === 'index') {
-                    return 'index.html';
+                var path = require('path'),
+                    filePath = path.dirname(filename),
+                    lastDir = filePath.match(/([^\/]*)\/*$/)[1],
+                    name = path.basename(filename, path.extname(filename)),
+                    folder = (lastDir !== 'pages') ? lastDir + '/' : '';
+
+                if (name === 'index') {
+                    return folder + 'index.html';
                 }
 
-                return filename + '/index.html';
+                return folder + name + '/index.html';
             }
         );
 

@@ -1,0 +1,12 @@
+{
+  "minify": true,
+  "options": [
+    "html5shiv",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/css/rgba",
+    "test/dom/hidden",
+    "test/svg"
+  ]
+}

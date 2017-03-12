@@ -1,3 +1,4 @@
 #!/bin/bash
 
-rsync -rltvzp --checksum --delete ~/projects/antoniusm.se/build/Release/* root@vps:/srv/web/antoniusm.se
+#echo /srv/web/$SITE
+rsync -rltvzp --checksum --delete ~/projects/static-sites/build/Release/* root@vps:/srv/web/$SITE

@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/melindrea
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://smaty.se
+  * I am melindrea (https://keybase.io/melindrea) on keybase.
+  * I have a public key with fingerprint F355 7836 9E71 10DB B0BA  25EA 48BE 226F 7DE0 2745
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "f35578369e7110dbb0ba25ea48be226f7de02745",
+            "host": "keybase.io",
+            "key_id": "48be226f7de02745",
+            "kid": "0101ff6a5f55a41bfa85a4afe88142ed6460ba112b0fa515d3a2b87dca694ba8e9aa0a",
+            "uid": "d0e21eb526657fa4d96bd62152112900",
+            "username": "melindrea"
+        },
+        "service": {
+            "hostname": "smaty.se",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1429208158,
+    "expire_in": 157680000,
+    "prev": "b8e0ded6fa4500bbb181c6af69e136189649b4c2528ff85b71de46f8a37ec6c2",
+    "seqno": 26,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMM1AnicbVJtTBxFGD4qnHIcIBVbtddyrDVFQdjdu93bO1tSLXoGFKQiqdBynbmd
+5TYct/fFtVdyKKIi8lEoJaUE+5VQay+gpFSKRAxUEqlUEGwkNmIjIVALbUipEcTi
+LKn/nD9v5pnned553plvIx9SqEJeX9VUTy1pqZDv+1NLFG+lrBSUElDi/YSplChC
+a0UQHYXI7XSLDi9hIgQdwxg4HWtEBooieQhJCGgGAT0HEU2zgoFHJG3QM0QSYZM8
+sgLbQOBByaKEMbyxiDxG/4dftHZAUiQlCCxgBIYBegoKgMMVCIjjKD2NeFbP4pYU
+RUNSAAzF8DpAQ87AWwFr1EPAISMAJMB2JWt2PIloCkGGZlnGIAA9b2Qhz9IUQ2ML
+I0nKRA9yO0AxwuxiZBcdvBsBIpBEYNgnWpE8AznKA4qnGHj9yR6EhU635JWskh2j
+Nq/XaZJFXr9TZh1A0PJAb4HYEs8QC3zI7RElB2GiMNPqFWVDHMpIkxzFcEkEOugU
+3cgiygzGwHIkXnIb5MOWkEMkj/PjEAxJQggpjrKyQMBPQelYijOyeiPUW2mG5gSB
+Y6CB4pGeFTigMyAra6UJOZHLIREmmsX3BIVyGLHQAbwlbkQEBvr3hipCVApl2Dr5
+GyhU4Y/+9zmioqJXiz+PG7MlfDZ2/lZV67l96ro99U2phuwqxd0ezd1XuuveuN09
+NdNSrTzoauysdLWWZp4fvXZ6ufty2Iyyg5hWPT+g5YXFa+s3FpR3JHycuJhweOs9
+9nKwouFWx4vfbPbmJUZuWiWebL/qqRyMVU6dqbme8WNbzvFjefPZIc+Gm184TdDL
+v33qybhxoa25qXufOTU9yjSyw1ebLW58rW1hp/rvInVUMFuT5TdnTA6O18wNR8zN
+Rl7q/2CbdqVQlWm5WthxyQfW1SSWv51b8VyzqSetdNC87Ph6JG2zaX/4orGv8on8
+BnMTf8f1M+/VztYHQdr95Hy1vXxhi233hgNlRX/pjrSQBSXWmaqsqnekL0xgrOv4
+Sx8GtPzckJQ1f0Gjm0gKXXabJ2rt0p+BoxFXtg8unp1Y6Bzv27blkOWfOPNXP8Uv
+qdxzXfDxTvrVsPdibDee+SVO4ifne6eH05/q88RUH87tcVlS/I9EfLd3Jd7Z8Pv4
+DtVCbnJBYLjh2NM/FDma83W7ak+BM2Wxv55SbbqZ2dj30Sh6OD6tffLi+u0npwJL
+45+8G92Sbr8YUx3aG31zRLHryp7g2fnbXY06Tc77L9+PzNtZXL/Anlh8s8pWMd43
+3Tqwe7/6zuyh3NGeof5gt3/rxGPKe9QGRVmj9rrv3JCy7ssTOUzvScCPpGT8Mdee
+JcT+C7s/pEo=
+=d9QI
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/melindrea
+
+==================================================================
