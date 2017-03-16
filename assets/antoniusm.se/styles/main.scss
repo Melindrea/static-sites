@@ -1,15 +1,11 @@
 html * {
     box-sizing: border-box;
 }
+
 @import "colours";
 @import "variables";
-@import "normalize-css/normalize";
-@import "typeplate-starter-kit/scss/typeplate";
-@import "normalize-opentype.css/normalize-opentype.scss";
-@import "system/mixins";
-@import "system/functions";
+@import "global";
 @import "system/anonymous-styles";
-@import "system/utilities";
 
 @import "base/typography";
 @import "base/layout";

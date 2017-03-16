@@ -17,7 +17,7 @@ module.exports = function () {
             blog = config.data.blog,
             sprintf = require('sprintf-js').sprintf;
 
-        app.task('createPost', function () {
+        app.task('create-post', function () {
             var prompt = require('prompt');
 
             prompt.start();
@@ -53,8 +53,8 @@ module.exports = function () {
                         YAML = require('json2yaml'),
                         slugify = require('underscore.string/slugify'),
                         metadata, dir = process.cwd() + '/' + sprintf(
-                            config.data.site.paths.content.posts,
-                            config.data.site.paths.content.base,
+                            config.data.global.paths.content.posts,
+                            config.data.global.paths.content.base,
                             config.site
                         ),
                         filename, text;
@@ -89,6 +89,7 @@ module.exports = function () {
                     filename = dir + '/' + slugify(result.permalink) + '.md';
                     text = YAML.stringify(metadata);
                     text += '---\n';
+
                     if (fs.existsSync(filename)) {
                         app.logError('The file with name ' + filename + ' already exists');
                     } else {

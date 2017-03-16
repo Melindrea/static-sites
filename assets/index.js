@@ -98,7 +98,7 @@ module.exports = function () {
                 .pipe(gp.sass({
                         outputStyle: 'expanded',
                         precision: 10,
-                        includePaths: ['.', './bower_components']
+                        includePaths: ['.', './bower_components', './node_modules', './assets/styles']
                     }).on('error', gp.sass.logError)
                 )
                 .pipe(gp.pleeease({browsers: ['last 1 version']}))

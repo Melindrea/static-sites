@@ -1,15 +1,3 @@
-%inner-container {
-    @include inner-container;
-}
-
-%container {
-    @include container;
-}
-
-%clearfix {
-    @include clearfix;
-}
-
 %stitched {
     background: url('/assets/images/sepia-linen.jpg');
     padding: 2rem;
@@ -26,19 +14,6 @@
     @extend %inner-container;
     @extend %stitched;
     margin-bottom: $base-margin;
-}
-
-%reset-list {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-}
-
-%inline-list {
-    @extend %reset-list;
-    li {
-        display: inline-block;
-    }
 }
 
 %ornamented-list {
@@ -58,11 +33,6 @@
             padding-right: 2px;
         }
     }
-}
-
-%nav-anchor {
-    text-decoration: none;
-    display: inline-block;
 }
 
 %atreyu {

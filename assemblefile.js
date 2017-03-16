@@ -23,6 +23,7 @@ var assemble = require('assemble'),
     assets = require('./assets'),
     media = require('./plugins/media'),
     revision = require('./plugins/revision'),
+    site = require('./plugins/site'),
     logger = require('./lib/logger'),
     sprintf = require('sprintf-js').sprintf,
 
@@ -45,6 +46,7 @@ if (config.data.blog) {
 app.use(rss());
 app.use(assets());
 app.use(revision());
+app.use(site());
 
 app.onPermalink(/./, function (file, next) {
   file.data = merge({}, app.cache.data, file.data);
