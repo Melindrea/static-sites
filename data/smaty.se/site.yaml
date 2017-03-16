@@ -19,6 +19,7 @@ assets:
         - favicon2
         - robots
         - styles
+        - ornaments
 
     fonts:
         - linux-libertine

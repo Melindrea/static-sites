@@ -34,9 +34,6 @@ module.exports = function () {
         });
 
         app.task('fonts', function () {
-            // var fontsPaths = config.data.site.fonts.map(function (font) {
-            //     return 'assets/fonts/**/*';
-            // });
             return app.copy(
                 'assets/fonts/{' + config.data.site.assets.fonts.join() + '}/*', 'build/assets/fonts'
             );

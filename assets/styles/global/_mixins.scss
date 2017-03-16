@@ -27,3 +27,14 @@
         clear: both;
     }
 }
+
+// Ornaments
+// -------
+// To not need to write all of the ornament code
+@mixin ornament($size, $ornament) {
+    content: '';
+    width: map-get($size, width);
+    height: map-get($size, height);
+    background: url(/assets/styles/ornaments/#{$ornament}.svg) 50% 0/contain no-repeat;
+    display: inline-block;
+}

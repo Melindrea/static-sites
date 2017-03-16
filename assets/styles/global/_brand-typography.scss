@@ -1,0 +1,84 @@
+html.fonts-loaded {
+    font-family: Linux Libertine, Georgia, serif;
+}
+
+h1, h2, h3, h4 {
+    @extend %accent-typeface;
+}
+
+h6 + p + p {
+    text-indent: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h4, h5 {
+    text-indent: $typl8-indent-val;
+}
+
+h5 {
+    font-style: italic;
+}
+
+h5, h6 {
+    font-variant: small-caps;
+}
+
+h6 {
+    font-size: inherit;
+    float: left;
+    padding-right: 0.22;
+    line-height: inherit;
+    margin-bottom: 0;
+}
+
+h1::before,
+h1::after {
+    @include ornament(map-get($ornaments, h1), 'h1');
+}
+
+h2::before {
+    @include ornament(map-get($ornaments, h2), 'h2-left');
+}
+
+h2::after {
+    @include ornament(map-get($ornaments, h2), 'h2-right');
+}
+
+h1::after {
+    margin-left: 12px;
+
+}
+
+// Quotes
+blockquote {
+    font-style: italic;
+    margin: 1rem 0;
+}
+
+sup {
+  top: -0.1em;
+}
+
+.ord {
+    @extend sup;
+}
+
+p .caps {
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+p .amp {
+    font-family: Georgia, Linux Libertine, serif;
+    font-size: 1.06em;
+}
+
+hr {
+    border: 0;
+    height: 2.5rem;
+    background: url(/assets/styles/ornaments/hr.svg) 50% 0/contain no-repeat;
+    margin: 0;
+}

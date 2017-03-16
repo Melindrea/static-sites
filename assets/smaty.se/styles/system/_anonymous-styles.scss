@@ -42,3 +42,7 @@
         letter-spacing: 2px;
     }
 }
+
+%accent-typeface {
+    @extend %atreyu;
+}
