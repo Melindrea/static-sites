@@ -25,6 +25,12 @@ images:
         src: chameleon-moon.jpeg
         copyright:
             photographer: Syd Wachs
+    frederick-douglass:
+        alt: The abolitionist Fredrick Douglass
+        caption: Chameleon Moon
+        src: frederick-douglass.jpeg
+        copyright:
+            photographer: Public Domain
     open-book:
         alt: An old book, laying open
         caption: Book header

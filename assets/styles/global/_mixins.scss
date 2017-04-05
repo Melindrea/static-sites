@@ -38,3 +38,18 @@
     background: url(/assets/styles/ornaments/#{$ornament}.svg) 50% 0/contain no-repeat;
     display: inline-block;
 }
+
+// Borders
+// -------
+@mixin border-separator-top {
+    border-bottom: 3px solid;
+    margin-bottom: 1px;
+}
+
+@mixin border-separator-bottom {
+    border-top: 1px solid;
+
+    &:last-child {
+        border-bottom: 0 none;
+    }
+}

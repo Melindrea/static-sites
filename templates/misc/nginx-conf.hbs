@@ -36,6 +36,9 @@ server {
 
     index  index.html index.htm;
 
+    access_log /var/log/nginx/{{ domainSlug }}.access.log;
+    error_log /var/log/nginx/{{ domainSlug }}.error.log;
+
     include /etc/nginx/snippets/assets.conf;
     include /etc/nginx/snippets/dotfiles.conf;
 }

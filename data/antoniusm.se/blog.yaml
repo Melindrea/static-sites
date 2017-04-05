@@ -137,6 +137,14 @@ taxonomies:
                 metaType: website
                 layout: default
 
+        non-fiction:
+                name: non-fiction
+                title: Memoirs and similar
+                excerpt: Memoirs and other things rooted in truth
+                blurb: Memoirs and other things rooted in truth
+                metaType: website
+                layout: default
+
         dystopia:
                 name: dystopia
                 title: Worlds with bleak outlooks

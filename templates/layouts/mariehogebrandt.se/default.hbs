@@ -1,0 +1,13 @@
+---
+layout: master
+---
+
+<div class="o-layout__container{{#if class}} {{class}}{{/if}}" role="document">
+    <main class="content" id="content"  itemscope itemtype="{{ item-type }}">
+    <meta itemprop="author publisher">
+        <meta itemprop="name" content="Marie. Hogebrandt">
+    </meta>
+    <meta itemprop="dateModified" content="{{ lastUpdated "YYYY-MM-DDTHH:mm:ssZ" }}">
+    {% body %}
+    </main>
+</div>

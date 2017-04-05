@@ -1,0 +1,48 @@
+title: MarieHogebrandt.se
+titleSeparator: /
+copyright: '2013-2017 © Marie Hogebrandt'
+language: en
+publishedDate: "April 6, 2013 19:22:00 GMT"
+url: https://mariehogebrandt.se
+description: Techsite for Marie Hogebrandt
+
+types:
+    - pages
+    # - posts
+
+assets:
+    tasks:
+        - fonts
+        - favicon
+        - favicon2
+        - robots
+        - styles
+        - well-known
+        - ornaments
+
+    fonts:
+        - linux-libertine
+
+gtm:
+    local: GTM-N2JHDQ
+    production: GTM-MK2TTV
+
+navigation:
+    index:
+        path: /
+        item: Home
+    contact:
+        path: /contact
+        item: Contact
+    works:
+        path: /articles
+        item: Articles
+    press:
+        path: /tutorials
+        item: Tutorials
+
+nav:
+    menus:
+        - main
+        - footer
+    default: main

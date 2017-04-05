@@ -30,13 +30,18 @@ module.exports = function () {
         });
 
         app.task('fonts', function () {
-            return app.copy('assets/' + config.site + '/fonts/**/*', 'build/assets/fonts');
-        });
+            var fonts = config.data.site.assets.fonts;
 
-        app.task('fonts', function () {
-            return app.copy(
-                'assets/fonts/{' + config.data.site.assets.fonts.join() + '}/*', 'build/assets/fonts'
-            );
+            if (fonts.length > 1) {
+                return app.copy(
+                    'assets/fonts/{' + fonts.join() + '}/*', 'build/assets/fonts'
+                );
+            } else {
+                return app.copy(
+                    'assets/fonts/' + fonts[0] + '/*', 'build/assets/fonts/' + fonts[0]
+                );
+            }
+
         });
 
         app.task('favicon', function () {
@@ -56,7 +61,7 @@ module.exports = function () {
         });
 
         app.task('images-copy', function () {
-            return app.copy('assets/processed/' + config.site + '/images/**/**.{jpg,jpeg,png}', 'build/assets/images');
+            return app.copy('assets/processed/' + config.site + '/images/**/**.{jpg,jpeg,png,svg}', 'build/assets/images');
         });
 
         app.task('ornaments', function () {

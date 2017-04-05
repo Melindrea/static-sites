@@ -1,0 +1,21 @@
+{{> head }}
+
+    <header class="o-layout__container c-site__header">
+        <a href="/" class="c-site__logo"><img src="/assets/images/logo.svg" alt="Marie Hogebrandt logo"></a>
+        <div class="typl8-beta">Marie Hogebrandt <small>Developer</small></div>
+
+        <nav class="c-navigation--main">
+            {{ navItems "root" }}
+            <div id="c-navigation--main__item--current">Current page / Main content</div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <span xmlns:v="http://rdf.data-vocabulary.org/#">
+                <span typeof="v:Breadcrumb">
+                    <a href="http://mariehogebrandt.se/" rel="v:url" property="v:title">Home</a> &raquo;
+                    <span class="breadcrumb_last">Contact</span>
+                </span>
+            </span>
+        </div>
+    </header>
+    {{> browse-happy }}

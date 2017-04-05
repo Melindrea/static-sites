@@ -1,0 +1,206 @@
+html * {
+    box-sizing: border-box;
+}
+
+@import "colours";
+@import "variables";
+@import "global";
+// @import "system/anonymous-styles";
+
+// @import "base/typography";
+// @import "base/images";
+// @import "base/list";
+// @import "base/links";
+
+// @import "navigation";
+// @import "magnific-popup/src/css/main";
+
+// // Objects
+// @import "objects/header";
+@import "objects/layout";
+
+// // Components
+// @import "components/site";
+// @import "components/pager";
+// @import "components/pullquote";
+// @import "components/lead";
+// @import "components/navigation";
+// @import "components/ribbon";
+// @import "components/article";
+// @import "components/featured-image";
+
+
+html {
+    background: url('/assets/images/exclusive-paper.png');
+    text-shadow: rgba(255, 255, 255, .4) 0 1px 0;
+}
+
+@media only screen and ( -webkit-min-device-pixel-ratio: 1.3 ),
+       only screen and (    min--moz-device-pixel-ratio: 1.3 ),
+       only screen and (      -o-min-device-pixel-ratio: 2.6/2 ), /* returns 1.3, see Dev.Opera */
+       only screen and (         min-device-pixel-ratio: 1.3 ),
+       only screen and ( min-resolution: 124.8dpi ),
+       only screen and ( min-resolution: 1.3dppx ) {
+
+   html {
+       background: url('/assets/images/exclusive-paper@2x.png');
+   }
+}
+
+
+// code,
+// kbd,
+// pre,
+// samp {
+//     font-family: Source Code Pro, Courier, monospace;
+// }
+
+// abbr {
+//      color: $red-light;
+// }
+
+// mark,
+// ::selection {
+//     background: $purple;
+//     color: $purple-light;
+//     text-shadow: none;
+// }
+
+// ::-moz-selection {
+//     background: $purple;
+//     color: $purple-light;
+//     text-shadow: none;
+// }
+
+// main #mc_embed_signup_scroll {
+//     padding-bottom: 2rem;
+// }
+
+@mixin build-svg($size, $x:center, $y:center) {
+    width: $size;
+    height: $size;
+
+    @if $x == left {
+        left: 0;
+    } @elseif $x == right {
+        right: 0;
+    } @else {
+        left: 50%;
+        margin-left: -($size / 2);
+    }
+
+    @if $y == top {
+        top: 0;
+    } @elseif $y == bottom {
+        bottom: 0;
+    } @else {
+        top: 50%;
+        margin-top: -($size / 2);
+    }
+}
+
+.o-site-footer {
+    margin-top: 1.5rem;
+}
+
+.o-site-footer__content {
+    font-size: 0.8rem;
+    margin: 1.5rem auto;
+    margin-bottom: 0;
+    padding: 1em;
+    padding-top: 1.5em;
+    color: rgba(153, 88, 206, 0.9);
+
+}
+
+.o-site-footer__mission {
+    font-style: italic;
+}
+
+.o-site-footer__mission em {
+    font-weight: 700;
+}
+
+.o-site-footer__links {
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.o-site-footer__links ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.o-site-footer__links li {
+    display: inline-block;
+
+}
+
+.o-site-footer__links li:after {
+    content: '/';
+    padding-left: 5px;
+}
+
+.o-site-footer__links li:last-child:after {
+    content: '';
+}
+
+.o-site-footer__links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.o-site-footer__links a:active,
+.o-site-footer__links a:hover,
+.o-site-footer__links a:focus {
+    background: rgba(253, 243, 50, 0.5);
+}
+
+.o-site-footer__footer {
+    height: 2rem;
+    background: linear-gradient(to bottom, rgba(76,76,76,0.1) 0%,rgba(89,89,89,0.24) 12%,rgba(102,102,102,0.39) 25%,rgba(100,100,100,0.4) 26%,rgba(71,71,71,0.51) 39%,rgba(44,44,44,0.6) 50%,rgba(17,17,17,0.68) 60%,rgba(43,43,43,0.82) 76%,rgba(33,33,33,0.9) 86%,rgba(28,28,28,0.94) 91%,rgba(19,19,19,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    font-size: 0.8rem;
+    font-style: italic;
+    text-align: center;
+
+    a {
+        text-decoration: none;
+        color: rgba(153, 88, 206, 0.9);
+    }
+}
+
+.c-svg-icon {
+    /* Base svg-icon */
+    position: relative;
+}
+
+.c-svg-icon--heart {
+    $fill-color: #9958ce;
+    padding-left: 18px;
+    margin-left: 2px;
+    fill: darken($fill-color, 10%);
+    width: 17px;
+    height: 17px;
+
+    transition: fill .2s linear;
+    &:hover,
+    &:focus {
+        fill: darken(#fdf332, 10%);
+    }
+}
+
+    .c-svg-icon--heart__svg {
+        $size: 13px;
+        @include build-svg($size, left);
+        transition: transform .4s ease-in-out;
+
+        .c-svg-icon--heart:hover & {
+            transform: scale(1.3);
+        }
+    }
+
+    .c-svg-icon__svg {
+        position: absolute;
+    }

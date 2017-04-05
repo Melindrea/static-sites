@@ -13,10 +13,7 @@
 module.exports = function () {
     return function(app) {
 
-        // var createConfd = function (domain, alias) {
-
-        // }
-        app.task('create-conf.d', function () {
+        app.task('create-site', function () {
             var prompt = require('prompt');
 
             prompt.start();
@@ -30,10 +27,15 @@ module.exports = function () {
                     }, {
                         name: 'domainAlias',
                         description: 'Domain Alias'
+                    },
+                    {
+                        name: 'hasBlog',
+                        type: 'boolean',
+                        description: 'Site with posts?'
                     }
                 ],
                 function (err, result) {
-                    var fs = require('fs');
+                    // var fs = require('fs');
 
                     if (err) {
                         return app.logError(err);
@@ -43,28 +45,37 @@ module.exports = function () {
                         result.domainAlias = 'www.' + result.domain;
                     }
 
-                    fs.readFile( __dirname + '/../templates/misc/nginx-conf.hbs', function (err, file) {
-                        if (err) {
-                            throw err;
-                        }
+                    result.domainSlug = result.domain.replace('.', '-');
 
-                        var Handlebars = require('handlebars'),
-                            template = Handlebars.compile(file.toString()),
-                            text = template(result),
-                            filename = __dirname + '/../../nginx/conf.d/' + result.domain.replace('.', '-')+ '.conf';
+                    if (result.hasBlog) {
+                        console.log('Site with blog');
+                    } else {
+                        console.log('Site without blog');
+                    }
+                    // fs.readFile( __dirname + '/../templates/misc/nginx-conf.hbs', function (err, file) {
+                    //     if (err) {
+                    //         throw err;
+                    //     }
 
-                        console.log(filename);
-                        if (fs.existsSync(filename)) {
-                            app.logError('The file with name ' + filename + ' already exists');
-                        } else {
-                            fs.writeFile(filename, text, function (err) {
-                                if (err) {
-                                    return app.logError(err);
-                                }
-                                app.logSuccess('Created new conf.d at ' + filename);
-                            });
-                        }
-                    });
+                    //     var Handlebars = require('handlebars'),
+                    //         template = Handlebars.compile(file.toString()),
+                    //         text = template(result),
+                    //         filename = __dirname + '/../../nginx/conf.d/' + result.domainSlug + '.conf';
+
+                    //     console.log(filename);
+                    //     if (fs.existsSync(filename)) {
+                    //         app.logError('The file with name ' + filename + ' already exists');
+                    //     } else {
+                    //         fs.writeFile(filename, text, function (err) {
+                    //             if (err) {
+                    //                 return app.logError(err);
+                    //             }
+                    //             app.logSuccess('Created new conf.d at ' + filename);
+                    //         });
+                    //     }
+                    // });
+
+                    console.log('/home/marie/certbot-auto certonly -a webroot --webroot-path=/srv/web/' + result.domain + ' -d ' + result.domain + ' -d ' + result.domainAlias);
                 }
             );
         });

@@ -15,7 +15,7 @@ featuredImage: header-chameleon-moon
 menu: false
 ---
 
-*This five-star story is story written by RoAnna Sylver.*
+*This five-star story is written by RoAnna Sylver.*
 
 <p class="c-lead c-lead--ornamented"><span class="c-lead__opening">The quarentined city of Parole is</span> burning and its citizens all have magical powers. We follow, mainly, the lizard man Regan whose memories are kept hostage by the ghostly boy Hans, and Evelyn, whose voice can be focused like a weapon. The plot revolves around finding out who Regan really is, and also to survive in a world that is getting even more hostile to them.</p>
 

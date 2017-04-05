@@ -12,6 +12,7 @@
 .c-featured-image--portrait {
     display: block;
     margin: 0 auto;
+    border-radius: 50%;
     @extend %polaroid;
 }
 
