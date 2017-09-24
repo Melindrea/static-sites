@@ -45,7 +45,7 @@ navigation:
     now:
         path: /now
         item: Now
-    blog-index:
+    blog:
         path: /blog
         item: Blog
 

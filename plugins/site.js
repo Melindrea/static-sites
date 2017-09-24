@@ -75,7 +75,7 @@ module.exports = function () {
                     //     }
                     // });
 
-                    console.log('/home/marie/certbot-auto certonly -a webroot --webroot-path=/srv/web/' + result.domain + ' -d ' + result.domain + ' -d ' + result.domainAlias);
+                    console.log('/home/marie/certbot-auto certonly -a webroot --webroot-path=/srv/web/nginx -d ' + result.domain + ' -d ' + result.domainAlias);
                 }
             );
         });

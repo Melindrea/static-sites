@@ -30,7 +30,7 @@ dry-deploy: pre-deploy ## Does a dry deploy of the site
 	rsync -rltvzp --dry-run --checksum --delete ~/projects/static-sites/build/Release/* root@vps:/srv/web/$(SITE)
 
 images: ## Process raw images and copy to assets: make images folder=<foldername>
-	@if [ -d assets/raw/$(folder) ]; then ./bin/process-images assets/raw/$(folder) && cp -R assets/raw/$(folder)/* processed/$(SITE)/images/gallery; fi
+	@if [ -d assets/$(SITE)/raw/$(folder) ]; then ./bin/process-images assets/$(SITE)/raw/$(folder) && cp -R assets/$(SITE)/raw/$(folder)/* assets/processed/$(SITE)/images/gallery; fi
 
 .PHONY: help
 help:

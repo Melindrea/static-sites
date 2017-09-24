@@ -21,6 +21,14 @@ module.exports.navItems = function (level) {
         }
     }
 
+    if (pageSlug.substring(0, 4) === 'blog'|| Number.isInteger(Number.parseInt(pageSlug.substring(0,3), 10))) {
+        if (pageSlug.substring(0, 10) === 'blog-index') {
+            pageSlug = 'blog';
+        } else {
+            parentSlug = 'blog';
+        }
+    }
+
     // Visit non-inherited enumerable keys
     Object.keys(nav).forEach(function (key) {
         var isCurrentPage = (key === pageSlug),

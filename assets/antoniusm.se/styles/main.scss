@@ -28,6 +28,7 @@ html * {
 @import "components/ribbon";
 @import "components/article";
 @import "components/featured-image";
+@import "components/mailchimp";
 
 
 html {
@@ -108,4 +109,8 @@ mark,
 
 main #mc_embed_signup_scroll {
     padding-bottom: 2rem;
+}
+
+.btn-container {
+    padding-bottom: 0.5rem;
 }

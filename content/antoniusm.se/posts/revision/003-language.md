@@ -66,7 +66,7 @@ For each PoV, go through the wording and sentence structure and make sure that e
 If there is a single PoV, you have a bit more freedom (though it should be consistent), but if you have several PoVs, they need to be distinct. Given a paragraph, it should be immediately obvious who we're seeing this through.
 
 ### Resources
- * [Josh Bertetta: A clever new way to bring your characters alive](http://www.writers-village.org/writing-award-blog/a-clever-new-way-to-bring-your-characters-alive)
+ * [Josh Bertetta: A clever new way to bring your characters alive](/blog/narrative-voice/)
 
 ## 3.4: Tailor language to setting
 

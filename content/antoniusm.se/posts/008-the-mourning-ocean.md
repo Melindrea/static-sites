@@ -24,7 +24,7 @@ Salt and seaweed harmonised with tangy iron and sweetness of flower into a dirge
 
 Each drop—more furious than the last—swirled into a maelstrom that tugged at her shroud of cotton and blushing lace. The heavy water lured and beckoned her below. Staring blindly at the world that had been hers, she surrendered. Brine rippled over parted lips as she sank into the watery embrace. Green tinted the clouds above, and only the barest of light accompanied the drops that danced on the surface.
 
-The current swept her towards the unknown, through black-striped shoals of silver. The fish parted for her in their summer dance, allowing her free passage past reefs covered in ocean tulips and scuttling shrimp. Delicate wrack replaced her wreathe of roses, and grass kelp wove into the lace of her dress. 
+The current swept her towards the unknown, through black-striped shoals of silver. The fish parted for her in their summer dance, allowing her free passage past reefs covered in ocean tulips and scuttling shrimp. Delicate wrack replaced her wreathe of roses, and grass kelp wove into the lace of her dress.
 
 Distant echoes brought pleading voices. Through oblivion they called for her to join them, for her to become them. For her to be forgotten like them.
 
